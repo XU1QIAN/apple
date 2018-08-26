@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>中国联通新零售运营平台</title>
+    <link rel="stylesheet" href="../../static/third/layui/css/layui.css">
+    <link rel="stylesheet" href="../../static/common/font/iconfont.css">
+    <link rel="stylesheet" href="../../static/common/css/common.css">
+    <link rel="stylesheet" href="../../static/common/css/page.css">
+
+</head>
+
+<body class="layui-layout-body">
+    <div class="layui-layout layui-layout-admin">
+        <div class="layui-header">
+            <i class="iconfont icon-logo"></i>
+            <div class="logo-text">
+                <div class="logo-text-CHI">中国联通新零售运营平台</div>
+                <div class="logo-text-ENG">CHINA UNICOM NEW RETAIL OPERATION</div>
+            </div>
+            <ul class="layui-nav layui-layout-right">
+                <li class="head-search">
+                    <div>
+                        <i class="iconfont icon-search"></i>
+                        <input type="text" class="layui-input" placeholder="智能搜索" />
+                    </div>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">
+                        <img src="http://t.cn/RCzsdCq" class="layui-nav-img"> 贤心
+                    </a>
+                    <dl class="layui-nav-child">
+                        <dd>
+                            <a href="">切换职位</a>
+                        </dd>
+                        <dd>
+                            <a href="">信息修改</a>
+                        </dd>
+                        <dd>
+                            <a href="">更改密码</a>
+                        </dd>
+                    </dl>
+                </li>
+                <div class="header-icon">
+                    <i class="iconfont icon-message"></i>
+                    <div class="header-number">89</div>
+                </div>
+                <div class="header-icon">
+                    <i class="iconfont icon-book"></i>
+                    <div class="header-number">999+</div>
+                </div>
+                <!-- <li class="layui-nav-item"><a href="">退了</a></li> -->
+            </ul>
+        </div>
+
+        <div class="layui-side layui-bg-black">
+            <div class="layui-side-scroll">
+                <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+                <ul class="layui-nav layui-nav-tree" lay-filter="test">
+                    <li class="layui-nav-item">
+                        <a class="" href="javascript:;">
+                            <i class="iconfont icon-home"></i>首页</a>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;">
+                            <i class="iconfont icon-channelQuery"></i>渠道查询</a>
+                        <dl class="layui-nav-child">
+                            <dd>
+                                <a href="javascript:;">渠道商品查询</a>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="">
+                            <i class="iconfont icon-store"></i>店铺管理</a>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="">
+                            <i class="iconfont icon-orderQuery"></i>订单查询</a>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="">
+                            <i class="iconfont icon-stock"></i>库存查询</a>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="">
+                            <i class="iconfont icon-commissions"></i>佣金查询</a>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="">
+                            <i class="iconfont icon-maintain"></i>佣金任务维护</a>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="">
+                            <i class="iconfont icon-test"></i>清算测试</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="layui-body homeWrap">
+            <!-- 内容主体区域 -->
+            <div class="layui-fluid">
+                <div class="layui-breadcrumb">
+                    <i class="bread-icon layui-icon">&#xe623;</i>
+                    <a>
+                        <cite>首页</cite>
+                    </a>
+                    </span>
+                </div>
+                <div class="homeWrap-main">
+                    <div class="layui-row layui-col-space10 homeWrap-main_top">
+                        <div class="layui-col-sm9">
+                            <div class="block-wrapper homeWrap-overview">
+                                <div class="bw-title">
+                                    <span class="bw-title-text">我的店铺</span>
+                                    <a class="layui-link bw-title-right">店铺管理 ></a>
+                                </div>
+                                <div class="layui-row">
+                                    <div class="layui-col-sm2 homeWrap-avatarWrap">
+                                        <img src="../../static/images/avatar.png" alt="头像" class="homeWrap-avatar" />
+                                        <p class="homeWrap-userName">南京路联通店铺</p>
+                                    </div>
+                                    <div class="layui-col-sm2">
+                                        <p class="overview-title">店员数量</p>
+                                        <p class="red bold overview-num">3</p>
+                                        <a class="layui-link layui-link-default" href="javascript:;">管理店员 ></a>
+                                    </div>
+                                    <div class="layui-col-sm2">
+                                        <p class="overview-title">在售商品数</p>
+                                        <p class="red bold overview-num">3</p>
+                                        <a class="layui-link layui-link-default" href="javascript:;">管理商品 ></a>
+                                    </div>
+                                    <div class="layui-col-sm2">
+                                        <p>昨日订单量</p>
+                                        <p class="red bold overview-num">3</p>
+                                    </div>
+                                    <div class="layui-col-sm2">
+                                        <p>昨日销售额(元)</p>
+                                        <p class="red bold overview-num">6,879</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="block-wrapper ">
+                                <div class="bw-title">
+                                    <span class="bw-title-text">收益统计</span>
+                                    <div class="bw-title-right">
+                                        <a class="layui-link layui-link-active">周</a>
+                                        <a class="layui-link">月</a>
+                                    </div>
+                                </div>
+                                <div class="bw-content homeWrap-profit">
+                                    <div>
+                                        <span>昨日销售额</span>
+                                        <span class="moneyText">¥6,582</span>
+                                        <span>7天累计销售额</span>
+                                        <span class="moneyText">¥621,098</span>
+                                    </div>
+                                    <div class="homeWrap-chart">
+                                        <div id="profit" class="chartWrap"></div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-col-sm3  homeWrap-main_topRight">
+                            <div class="block-wrapper">
+                                <div class="bw-title">
+                                    <span>店员审核</span>
+                                    <a class="layui-link bw-title-right">查看全部 ></a>
+                                </div>
+                                <div class="bw-content">
+                                    <p class="noData-tip">暂无需审核的店员</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="layui-row layui-col-space10">
+                        <div class="layui-col-sm7 ">
+                            <div class="block-wrapper">
+                                <div class="bw-title">
+                                    <span class="bw-title-text">商品销量排行</span>
+                                    <div class="bw-title-right">
+                                        <a class="layui-link layui-link-active">日</a>
+                                        <a class="layui-link">月</a>
+                                    </div>
+                                </div>
+                                <div class="table-simple">
+                                    <table class="layui-hide" id="table1"></table>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-col-sm5 ">
+                            <div class="block-wrapper">
+                                <div class="bw-title">
+                                    <span class="bw-title-text">店员销售额排行榜</span>
+                                    <div class="bw-title-right">
+                                        <a class="layui-link layui-link-active">日</a>
+                                        <a class="layui-link">月</a>
+                                    </div>
+                                </div>
+                                <div class="table-simple">
+                                    <table class="layui-hide" id="table3"></table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/html" id="saleTemp">
+        <div class="layui-progress" lay-filter="table-pro{{d.LAY_INDEX}}">
+            <!--此处需要一个总数，先用100000模拟的。或者数据返回时返回一个比例值 -->
+            <div class="layui-progress-bar saleTop{{d.LAY_INDEX}}" style="width:{{parseFloat(d.sale/100000)*100}}%"></div>
+        </div>
+        <span class="progress-text">{{thousandBitSeparator(d.sale)}}</span>
+    </script>
+    <script type="text/html" id="clerkTemp">
+      <span class="storeName storeTop{{d.LAY_INDEX}}">NO.{{d.LAY_INDEX}} {{d.clerk}}</span>
+    </script>
+    <script type="text/html" id="totalMoney">
+        <span class="">￥{{thousandBitSeparator(d.totalMoney)}}</span>
+      </script>
+    <script src="../../static/third/layui/layui.js"></script>
+    <script src="../../static/third/echarts.js"></script>
+    <script src="../../static/common/js/util.js"></script>
+    <script>
+        layui.config({
+            base: '../../static/busi/' //你存放新模块的目录，注意，不是layui的模块目录
+        }).use('home'); //加载入口
+    </script>
+</body>
+
+</html>

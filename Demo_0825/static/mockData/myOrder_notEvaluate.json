@@ -1,0 +1,45 @@
+{
+    "respCode":"200",
+    "operDesc":"响应成功",
+    "data": [
+	  	{
+            "shopName": "华为官方旗舰店",
+            "state": 1,
+            "stateName": "等待买家付款",
+            "totalCount": 2,
+            "totalPrice": 7186.00,
+            "freight": 0.00,
+            "productList": [
+                {
+                    "imgUrl": "../static/common/images/img_02.png",
+                    "productName": "Huawei/华为 P20 Pro 全面屏正品 手机Huawei/华为 P20 Pro 全面屏正品 手机Huawei/华为 P20 Pro 全面屏正品 手机",
+                    "service": "七天退换",
+                    "price": "4988.00",
+                    "count": "1"
+                }
+            ]
+        }, {
+            "shopName": "华为官方旗舰店",
+            "state": 1,
+            "stateName": "等待买家付款",
+            "totalCount": 2,
+            "totalPrice": 7186.00,
+            "freight": 0.00,
+            "productList": [
+                {
+                    "imgUrl": "../static/common/images/img_02.png",
+                    "productName": "Huawei/华为 P20 Pro 全面屏正品 手机Huawei/华为 P20 Pro 全面屏正品 手机Huawei/华为 P20 Pro 全面屏正品 手机",
+                    "service": "七天退换",
+                    "price": "4988.00",
+                    "count": "1"
+                }, {
+                    "imgUrl": "../static/common/images/img_01.png",
+                    "productName": "Huawei/华为 P20 Pro 全面屏正品 手机Huawei/华为 P20 Pro 全面屏正品 手机Huawei/华为 P20 Pro 全面屏正品 手机",
+                    "price": "4988.00",
+                    "originalPrice": "6288.00",
+                    "count": "2"
+                }
+            ]
+        }
+    ]
+}

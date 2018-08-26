@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>购物车</title>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <link rel="stylesheet" href="../static/common/iconfont/iconfont.css">
+    <link rel="stylesheet" href="../static/third/weui/lib/weui.min.css">
+    <link rel="stylesheet" href="../static/third/weui/css/jquery-weui.min.css">
+    <link rel="stylesheet" href="../static/common/css/swiper-3.2.5.min.css">
+    <link rel="stylesheet" href="../static/common/css/public.css">
+    <link rel="stylesheet" href="../static/common/css/common.css">
+    <link rel="stylesheet" href="../static/common/css/shoppingCart.css">
+</head>
+
+<body ontouchstart>
+    <header class="header">
+        <h1 class="header-title">亦庄文化园广场店</h1>
+    </header>
+
+    <!-- 商品列表 -->
+    <div id="shoppingCart" v-cloak>
+        <div class="product-list">
+            <div class="each-shop" v-for="shop in shopList">
+                <div class="shop-title">
+                    <i class="iconfont icon-weixuanzhongyuanquan w-radio radio-valid"></i>
+                    <div class="shop-info">
+                        <i class="iconfont icon-dianpu"></i>
+                        <p>{{shop.shopName}}</p>
+                        <i class="iconfont icon-more"></i>
+                    </div>
+                </div>
+                <div class="shopProduct-list">
+                    <div class="product" v-for="product in shop.productList" :productId="product.productId">
+                        <i class="iconfont icon-weixuanzhongyuanquan w-radio radio-valid"></i>
+                        <div class="product-detail">
+                            <div class="product-img">
+                                <img :src="product.imgUrl" />
+                                <div class="tip" v-if="product.tip">{{product.tip}}</div>
+                            </div>
+                            <div class="product-info">
+                                <div class="product-name">
+                                    <div>{{product.productName}}</div>
+                                    <div class="gray" :value="product.modelId">{{product.model}}</div>
+                                </div>
+                                <div class="priceAndNum">
+                                    <div class="price-area">
+                                        <div class="promotion">
+                                            <div class="promotion-text" v-if="product.promotion">{{product.promotion}}</div>
+                                        </div>
+                                        <div class="product-price" value=4999.98>¥ {{product.price}}<span class="original-price gray">{{product.originalPrice}}</span></div>
+                                    </div>
+                                    <div class="num-area">
+                                        <i class="iconfont icon-jian" v-bind:class="{'active': (product.count > 1)}" style="cursor: pointer;"></i>
+                                        <span class="quantity">{{product.count}}</span>
+                                        <i class="iconfont icon-jia active" style="cursor: pointer;"></i>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="delete-edit">
+                            <div class="edit-btn" @click="edit(product.productId, $event)">修改</div>
+                            <div class="delete-btn" @click="remove(product.productId, $event)">删除</div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="each-shop invalid" v-if="invalidList.length > 0">
+                <div class="shop-title">失效宝贝</div>
+                <div class="shopProduct-list">
+                    <div class="product" v-for="product in invalidList" :productId="product.productId">
+                        <i class="iconfont icon-invalid w-radio"></i>
+                        <div class="product-detail">
+                            <div class="product-img">
+                                <img :src="product.imgUrl" />
+                            </div>
+                            <div class="product-info">
+                                <div class="product-name">
+                                    <div>{{product.productName}}</div>
+                                </div>
+                                <div class="priceAndNum">宝贝已不能购买，请联系卖家</div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <div class="delete-edit">
+                            <div class="delete-btn" @click="remove(product.productId, $event)">删除</div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- footer -->
+        <div class="footer btn-area">
+            <!-- <div class="choose-all">
+                <i class="iconfont icon-weixuanzhongyuanquan w-radio"></i>
+                <i class="gray">全选</i>
+            </div> -->
+            <span class="mr20">合计 <span class="orange">¥ <span id="total">0.00</span></span></span>
+            <div class="buy">
+                <!-- <p class="btn01"><a href="orderBalanceSubmit.html">去结算</a></p> -->
+                <p class="btn01" @click="submit">去结算</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-col">
+            <a href="index.html">
+                <p><i class="icon iconfont icon-shouye1"></i></p>
+                <p>首页</p>
+            </a>
+        </div>
+        <div class="footer-col">
+            <a href="product.html">
+                <p><i class="icon iconfont icon-shop"></i></p>
+                <p>全部商品</p>
+            </a>
+        </div>
+        <div class="footer-col orange">
+            <a href="shoppingCart.html">
+                <p><i class="icon iconfont icon-gouwuche"></i></p>
+                <p>购物车</p>
+            </a>
+        </div>
+        <div class="footer-col">
+            <a href="myselfFunList.html">
+                <p><i class="icon iconfont icon-me"></i></p>
+                <p>我的</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="popup-diy-wrap" id="edit-area">
+        <span class="span-mask"></span>
+        <div class="edit-area popup-bottom animated-05" id="changeModel" v-cloak>
+            <div class="edit-info">
+                <img :src="selectedModel.imgUrl" />
+                <div class="edit-info-right">
+                    <div class="edit-name">{{name}}<br /><span class="orange">¥ {{selectedModel.price}}</span></div>
+                    <div class="select-product">已选:<span>{{selectedModel.modelName}}</span></div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="specifications">
+                <div class="specifications-title font30">规格</div>
+                <div class="specification" style="cursor: pointer;" v-for="(model, index) in modelList" v-bind:class="{'selected': model.checked}" @click="selectModel(index)">{{model.modelName}}</div>
+            </div>
+            <a class="weui-btn btn01" id="confirm-edit" @click="confirmEdit(productId, $event)">确认修改</a>
+        </div>
+    </div>
+</body>
+<script src="../static/third/weui/lib/jquery-2.1.4.js"></script>
+<script src="../static/third/weui/js/jquery-weui.js"></script>
+<script src="../static/third/weui/js/swiper.js"></script>
+<script src="../static/third/vue.min.js"></script>
+<script src="../static/third/axios.min.js"></script>
+<script src="../static/common/js/main.js"></script>
+<script src="../static/common/js/common.js"></script>
+<script src="../static/busi/shoppingCart.js"></script>
+</html>
+
+
+

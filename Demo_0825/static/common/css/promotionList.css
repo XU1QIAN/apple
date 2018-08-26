@@ -1,0 +1,50 @@
+html {
+    background-color: #f1f2f5;
+}
+
+.wrapper {
+    margin-top: 0.9rem;
+    padding-bottom: 0.96rem;
+}
+
+.promotionImg {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.commodity {
+    margin-bottom: 10px;
+    background-color: #fff;
+    padding: 10px;
+}
+
+.commodityImg {
+    width: 1.8rem;
+    height: 1.8rem;
+    float: left;
+}
+
+.commodityInfo {
+    margin-left: 10px;
+    float: left;
+    width: calc(100% - 1.8rem - 10px);
+}
+
+.commodityName {
+    min-height: 1.4rem;
+    line-height: 24px;
+}
+
+.saleInfo {
+    font-size: 14px;
+}
+
+.saleInfo .gray {
+    float: right;
+}
+
+.footer a {
+    color: #1B7DFC;
+    text-decoration: underline;
+    margin: 0 auto;
+}

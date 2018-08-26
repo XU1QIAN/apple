@@ -1,0 +1,49 @@
+{
+    "respCode":"200",
+    "operDesc":"响应成功",
+    "data":{
+        "state": 5,
+        "stateName": "派送中",
+        "predictReceive": "今天",
+        "expressCompany": "顺丰快递",
+        "expressNo": "1234567890",
+        "postStar": 4,
+        "orderDate": "05-09",
+        "orderTime": "15:30",
+        "sendDate": "05-10",
+        "sendTime": "16:30",
+        "stockPickDate": "05-11",
+        "stockPickTime": "17:30",
+        "collectDate": "05-12",
+        "collectTime": "18:30",
+        "collectName": "[南京市]南京鼓楼区的草莓甜甜",
+        "collectTel": "18647830310",
+        "transList": [{
+            "transDate": "05-17",
+            "transTime": "23:30",
+            "transSite": "到达[顺丰快递公司北京市大兴区亦庄投递部]"
+        }, {
+            "transDate": "05-16",
+            "transTime": "22:30",
+            "transSite": "[北京市]快递已离开北京发往亦庄开发区"
+        }, {
+            "transDate": "05-15",
+            "transTime": "21:30",
+            "transSite": "[北京市]快递已离开北京发往亦庄开发区"
+        }, {
+            "transDate": "05-14",
+            "transTime": "20:30",
+            "transSite": "[北京市]快递已离开北京发往亦庄开发区"
+        }, {
+            "transDate": "05-13",
+            "transTime": "19:30",
+            "transSite": "[北京市]快递已离开北京发往亦庄开发区"
+        }],
+        "deliveryDate": "05-18",
+        "deliveryTime": "12:30",
+        "deliveryDepart": "顺丰快递公司北京市大兴区亦庄投递部",
+        "deliveryName": "张宏强",
+        "deliveryTel": "18623438021",
+        "receiveAddress": "北京市大兴区北京经济开发区文化园东路6号3号楼汉庭快捷酒店"
+    }
+}

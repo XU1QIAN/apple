@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-on="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>冰淇淋套餐选择</title>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <link rel="stylesheet" href="../static/common/iconfont/iconfont.css">
+    <link rel="stylesheet" href="../static/third/weui/lib/weui.css">
+    <link rel="stylesheet" href="../static/third/weui/css/jquery-weui.min.css">
+    <link rel="stylesheet" href="../static/common/css/swiper-3.2.5.min.css">
+    <link rel="stylesheet" href="../static/common/css/animate.min.css">
+    <link rel="stylesheet" href="../static/common/css/public.css">
+    <link rel="stylesheet" href="../static/common/css/common.css">
+    <link rel="stylesheet" href="../static/common/css/iceCream.css">
+</head>
+
+<body>
+
+<div id="icecream">
+    <div class="">
+        <a href="javascript:;" class="ice-btn" id="iceBtn">iceCream</a>
+    </div>
+
+    <!-- 选择号码弹出 -->
+    <div class="popup-diy-wrap" id="choseTelMain">
+        <span class="span-mask span-mask-tm"></span>
+        <div class="popup-bottom animated-05">
+            <div class="popup-title-wrap">
+                <h3>选择新号码</h3>
+            </div>
+            <div class="popup-body-wrap">
+                <div class="tel-list-wrap">
+                    <div class="search-bar" id="search_bar">
+                        <div class="box-flex search-bar-wrap">
+                            <div class="flex">
+                                <div class="search-bar-main box-flex">
+                                    <i class="icon iconfont icon-sousuo"></i>
+                                    <div class="flex">
+                                        <input type="text" placeholder="输入生日、幸运数字等" v-model="phoneNum"/>
+                                    <!--    {{revert}}-->
+
+                                    </div>
+                                </div>
+                            </div>
+                            <a  v-on:click="cancel()">取消</a>
+                        </div>
+
+                    </div>
+                    <div class="tel-choose-wrap">
+                        <ul class="tel-choose-list box-flex">
+                            <li class="tel-choose-item"  v-for="num in numbers"  v-on:click="chooseNum($event)">
+                                <a href="javascirpt:;">{{num.num}}</a>
+                                <i class="icon iconfont icon-duihao"></i>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-footer-wrap">
+                <a  v-on:click="doChooseNum()">
+                   选择号码
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 冰淇淋套餐弹出层 -->
+    <div class="popup-diy-wrap" id="aa">
+        <span class="span-mask"></span>
+        <div class="popup-bottom animated-05">
+            <div class="popup-body-wrap">
+                <div class="box-flex img-text-wrapper">
+                    <div class="img-wrap-size">
+                        <img :src="productInfo.src" />
+                    </div>
+                    <div class="flex">
+                        <h4>{{productInfo.desc}}</h4>
+                        <p>{{productInfo.price}}</p>
+                        <span>{{productInfo.stock}}</span>
+                        <span>请选择套餐</span>
+                    </div>
+                </div>
+                <dl class="pkg-panpel">
+                    <dt class="pkg-dt">套餐</dt>
+                    <dd class="pkg-dd">
+                        <ul class="pkg-dd-list box-flex">
+                            <li class="pkg-list-li " v-on:click="changePackage($event)" v-for="package in productInfo.packages">
+                                <a href="javascript:;">{{package.desc}}</a>
+                                <i class="icon iconfont icon-xuanzejiaobiao"></i>
+                            </li>
+                           <!-- <li class="pkg-list-li active">
+                                <a href="javascript:;">小冰神套餐卡 99元</a>
+                                <i class="icon iconfont icon-xuanzejiaobiao"></i>
+                            </li>
+                            <li class="pkg-list-li">
+                                <a href="javascript:;">小冰神套餐卡 99元</a>
+                                <i class="icon iconfont icon-xuanzejiaobiao"></i>
+                            </li>-->
+                        </ul>
+                    </dd>
+                </dl>
+                <dl class="pkg-panpel">
+                    <dt class="pkg-dt">入网信息</dt>
+                    <dd class="pkg-dd">
+                        <ul class="other-ul-list">
+                            <li class="box-flex ou-li-items">
+                                <p class="lable-p-ly">号码归属地</p>
+                                <div class="flex">
+                                    <div href="javascript:;" class="box-flex">
+                                        <p class="flex text-right">{{belongTo}}</p>
+                                        <i class="icon iconfont icon-more"></i>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="box-flex ou-li-items">
+                                <p class="lable-p-ly">手机号码</p>
+                                <div class="flex">
+                                    <div href="javascript:;" class="box-flex" id="chooseTel">
+                                        <p class="flex text-right">{{choosenNum}}</p>
+                                        <i class="icon iconfont icon-more"></i>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </dd>
+                </dl>
+            </div>
+            <div class="popup-footer-wrap">
+                <a v-on:click="submit()">
+                    确认修改
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../static/third/weui/lib/jquery-2.1.4.js"></script>
+<script src="../static/third/weui/js/jquery-weui.js"></script>
+<script src="../static/third/weui/js/swiper.js"></script>
+<script src="../static/third/vue.min.js"></script>
+<script src="../static/third/axios.min.js"></script>
+<script src="../static/busi/iceCream.js"></script>
+
+
+</html>

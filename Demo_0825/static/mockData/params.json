@@ -1,0 +1,19 @@
+{
+    "respCode": "200",
+    "operDesc": "响应成功",
+    "data": {
+        "params": [{
+            "paraName": "品牌",
+            "parabox": ["佳能", "尼康", "索尼", "奥林巴斯"]
+        }, {
+            "paraName": "单反画幅",
+            "parabox": ["全画幅", "APS-C画幅", "APS-C画幅"]
+        }, {
+            "paraName": "单反画幅",
+            "parabox": ["全画幅", "APS-C画幅", "APS-C画幅"]
+        }, {
+            "paraName": "单反画幅",
+            "parabox": ["全画幅", "APS-C画幅", "APS-C画幅"]
+        }]
+    }
+}

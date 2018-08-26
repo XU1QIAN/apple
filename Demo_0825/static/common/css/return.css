@@ -1,0 +1,48 @@
+.text-color {
+    color: #fa7a07;
+}
+
+.return-text span:first-child {
+    font-size: .28rem;
+    color: #fa7a07;
+}
+
+.return-text span:last-child {
+    font-size: .24rem;
+    color: #b8b8b8;
+}
+
+.retrunbox {
+    margin-top: .4rem
+}
+
+.retrunbox .return-time {
+    color: #b8b8b8;
+    font-size: .2rem;
+}
+
+.retrunbox .icon-wancheng {
+    margin-left: .18rem;
+}
+
+.retrunbox .icon-wanjietuijian {
+    margin-left: .13rem;
+    color: #b8b8b8;
+    font-size: .5rem;
+}
+
+.retrun-done p {
+    font-size: .2rem;
+    color: #3e3e3e;
+    line-height: .3rem;
+}
+
+.retrun-grey p {
+    font-size: .2rem;
+    color: #b8b8b8;
+    line-height: .3rem;
+}
+
+.retrunbox .icon-more {
+    margin-top: .7rem;
+}

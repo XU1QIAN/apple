@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>能人申请</title>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <link rel="stylesheet" href="../static/common/iconfont/iconfont.css">
+    <link rel="stylesheet" href="../static//third/weui/lib/weui.min.css">
+    <link rel="stylesheet" href="../static/third/weui/css/jquery-weui.min.css">
+    <link rel="stylesheet" href="../static/common/css/swiper-3.2.5.min.css">
+    <link rel="stylesheet" href="../static/common/css/animate.min.css">
+    <link rel="stylesheet" href="../static/common/css/public.css">
+    <link rel="stylesheet" href="../static/common/css/common.css">
+    <link rel="stylesheet" href="../static/common/css/login.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-button is-left">
+            <a href="javascript:history.go(-1);" class="router-link-active">
+                <button class="mint-button mint-button--default mint-button--normal">
+                    <span class="mint-button-icon">
+                        <i class="icon iconfont icon-fanhui color-black"></i>
+                    </span>
+                    <label class="mint-button-text"></label>
+                </button>
+            </a>
+        </div>
+        <h1 class="header-title">能人申请</h1>
+        <div class="header-button is-right"></div>
+    </header>
+    <div class="login-wrapper">
+        <div class="register-wrap">
+            <div class="weui_cells weui_cells_form weui_cells_form_diy" id="capableManInfo">
+                <div class="weui-cell">
+                    <div class="weui-cell__hd">
+                        <label class="weui-label">姓名</label>
+                    </div>
+                    <div class="weui-cell__bd">
+                        <input class="weui-input" type="text" placeholder="请输入姓名" v-model="name">
+                    </div>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__hd">
+                        <label class="weui-label" id="registerTypeSelect">
+                            <em>手机号码</em>
+                            <i class="icon iconfont icon-moreunfold color-black"></i>
+                        </label>
+                    </div>
+                    <div class="weui-cell__bd">
+                        <div class="tel-item">
+                            <div class="box-flex">
+                                <em class="em-86">+86</em>
+                                <input class="weui-input flex" type="text" placeholder="请输入手机号码" v-model="tel">
+                            </div>
+                        </div>
+                        <div class="email-item" style="display: none;">
+                            <input class="weui-input" type="text" placeholder="请输入email" v-model="email">
+                        </div>
+                    </div>
+                </div>
+                <div class="weui-cell">
+                    <div class="weui-cell__hd">
+                        <label class="weui-label">验证码</label>
+                    </div>
+                    <div class="weui-cell__bd">
+                        <input class="weui-input" type="text" placeholder="请输入六位验证码" id="code" v-model="verificationCode">
+                    </div>
+                    <div class="weui-cell__ft">
+                        <div class="resend-btn-wrap">
+                            <input type="button" value="发送验证码" class="weui-btn_primary" id="vCode">
+                        </div>
+                    </div>
+                </div>
+                <div class="login-btn-wrap">
+                    <a class="weui-btn weui-btn_primary" @click="edit">提交</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 选择注册方式的弹出层 -->
+    <div class="popup-diy-wrap" id="registerType">
+        <span class="span-mask"></span>
+        <div class="popup-bottom animated-05">
+            <div class="popup-title-wrap">
+                <h3>注册类型</h3>
+            </div>
+            <div class="popup-body-wrap">
+                <div class="register-select-wrap">
+                    <div class="weui_cells weui_cells_form weui_cells_form_diy" id="selectChoose">
+                        <div class="weui-cell active">
+                            <div class="weui-cell__bd">
+                                <p>手机号码</p>
+                            </div>
+                            <div class="weui-cell__ft">
+                                <span class="eys-icon">
+                                   <i class="icon iconfont icon-duihao"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="weui-cell">
+                            <div class="weui-cell__bd">
+                                <p>邮箱号码</p>
+                            </div>
+                            <div class="weui-cell__ft">
+                                <span class="eys-icon">
+                                   <i class="icon iconfont icon-duihao"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../static/third/weui/lib/jquery-2.1.4.js"></script>
+<script src="../static/third/weui/js/jquery-weui.js"></script>
+<script src="../static/third/weui/js/swiper.js"></script>
+<script src="../static/common/js/common.js"></script>
+<script src="../static/third/vue.min.js"></script>
+<script src="../static/third/axios.min.js"></script>
+<script src="../static/common/js/main.js"></script>
+<script src="../static/busi/capableManApply.js"></script>
+
+
+</html>

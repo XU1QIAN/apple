@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>店铺信息</title>
+    <link rel="stylesheet" href="../../static/third/layui/css/layui.css">
+    <link rel="stylesheet" href="../../static/common/font/iconfont.css">
+    <link rel="stylesheet" href="../../static/common/css/common.css">
+    <link rel="stylesheet" href="../../static/common/css/store.css">
+</head>
+
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+    <div class="layui-header">
+        <i class="iconfont icon-logo"></i>
+        <div class="logo-text">
+            <div class="logo-text-CHI">中国联通新零售运营平台</div>
+            <div class="logo-text-ENG">CHINA UNICOM NEW RETAIL OPERATION</div>
+        </div>
+        <ul class="layui-nav layui-layout-right">
+            <li class="head-search">
+                <div>
+                    <i class="iconfont icon-search"></i>
+                    <input type="text" class="layui-input" placeholder="智能搜索"/>
+                </div>
+            </li>
+            <li class="layui-nav-item">
+                <a href="javascript:;">
+                    <img src="http://t.cn/RCzsdCq" class="layui-nav-img"> 贤心
+                </a>
+                <dl class="layui-nav-child">
+                    <dd>
+                        <a href="">基本资料</a>
+                    </dd>
+                    <dd>
+                        <a href="">安全设置</a>
+                    </dd>
+                </dl>
+            </li>
+            <i class="iconfont icon-message"></i>
+            <i class="iconfont icon-book"></i>
+            <!-- <li class="layui-nav-item"><a href="">退了</a></li> -->
+        </ul>
+    </div>
+
+    <div class="layui-side layui-bg-black">
+        <div class="layui-side-scroll">
+            <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+            <ul class="layui-nav layui-nav-tree" lay-filter="test">
+                <li class="layui-nav-item"><a class="" href="javascript:;"><i class="iconfont icon-home"></i>首页</a></li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;"><i class="iconfont icon-sale"></i>销售</a>
+                    <dl class="layui-nav-child">
+                        <dd><a href="javascript:;">销售查询</a></dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item"><a href=""><i class="iconfont icon-orderQuery"></i>订单</a></li>
+                <li class="layui-nav-item"><a href=""><i class="iconfont icon-store"></i>店铺</a></li>
+                <li class="layui-nav-item"><a href=""><i class="iconfont icon-commissions"></i>佣金</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="layui-body">
+        <div class="layui-fluid">
+            <div class="decoration-tabs">
+                <div class="decoration-tab active" id="tab-storeDecoration">店铺装修</div>
+                <div class="decoration-tab" id="tab-materialCenter">素材中心</div>
+            </div>
+            <div class="main-content" id="content-storeDecoration">
+                <div class="decoration-left-tabs" style="height:500px;">
+                    <div class="decoration-left-tab active">
+                        <div class="tab-text">店铺页面</div>
+                    </div>
+                    <div class="decoration-left-tab">
+                        <div class="tab-text">商品分类</div>
+                    </div>
+                    <div class="decoration-left-tab">
+                        <div class="tab-text">店铺风格</div>
+                    </div>
+                </div>
+                <div class="decoration-content" id="decoration-page">
+                    <div class="block-wrapper">
+                        <div class="fr mt20 mr20">
+                            <button class="layui-btn layui-btn-sure">取消</button>
+                            <button class="layui-btn layui-btn-back">保存</button>
+                        </div>
+                        <div class="h5-area">
+                            <!-- <iframe src="" id="" class="h5_touch" scrolling="no" frameborder="0"></iframe> -->
+                            <img src="../../static/images/touch2.png" class="h5_touch"/>
+                        </div>
+                        <!-- 模拟三个模块，引入h5页面后，将id赋给对应的模块，然后删除模拟模块 -->
+                        <div class="decoration-modules" style="float: left;">
+                            <div class="decoration-module" id="carousel-module"
+                                 style="margin-top: 150px;position: relative;">
+                                <div class="page-module" style="cursor:pointer">轮播</div>
+                                <div class="module-edit">
+                                    <div class="module-edit-title">
+                                        <div class="module-name">轮播图模块<i class="iconfont icon-question"></i></div>
+                                        <div class="close-btn"></div>
+                                    </div>
+                                    <div class="module-edit-content">
+                                        <div>上传图片<span class="red">*</span></div>
+                                        <div class="mt10 gray">建议图片宽度750，高度200-950，支持类型：jpg、png。<br/>要求一组内的图片高度必须一致。
+                                        </div>
+                                        <div class="image-list">
+                                            <div class="each-image">
+                                                <div class="arrow-area">
+                                                    <i class="iconfont icon-arrowUp"></i>
+                                                    <i class="iconfont icon-arrowDown"></i>
+                                                </div>
+                                                <img src="../../static/images/commodity/02.jpg"/>
+                                                <div class="change-img-btn">替换图片</div>
+                                                <input type="text" value="https://www.10010.shop.com/img/00…"
+                                                       class="layui-input">
+                                                <i class="iconfont icon-eye"></i>
+                                                <i class="iconfont icon-link"></i>
+                                                <i class="iconfont icon-delete"></i>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                            <div class="each-image">
+                                                <div class="arrow-area">
+                                                    <i class="iconfont icon-arrowUp"></i>
+                                                    <i class="iconfont icon-arrowDown"></i>
+                                                </div>
+                                                <img src="../../static/images/commodity/03.jpg"/>
+                                                <div class="change-img-btn">替换图片</div>
+                                                <input type="text" value="https://www.10010.shop.com/img/00…"
+                                                       class="layui-input">
+                                                <i class="iconfont icon-eye"></i>
+                                                <i class="iconfont icon-link"></i>
+                                                <i class="iconfont icon-delete"></i>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                            <div class="each-image">
+                                                <div class="arrow-area">
+                                                    <i class="iconfont icon-arrowUp"></i>
+                                                    <i class="iconfont icon-arrowDown"></i>
+                                                </div>
+                                                <img src="../../static/images/commodity/04.jpg"/>
+                                                <div class="change-img-btn">替换图片</div>
+                                                <input type="text" value="https://www.10010.shop.com/img/00…"
+                                                       class="layui-input">
+                                                <i class="iconfont icon-eye"></i>
+                                                <i class="iconfont icon-link"></i>
+                                                <i class="iconfont icon-delete"></i>
+                                                <div class="clearfix"></div>
+                                            </div>
+                                        </div>
+                                        <div id="add-btn"><i class="iconfont icon-plus"></i>添加 <span class="red"
+                                                                                                     id="img-number">3</span>/4
+                                        </div>
+                                        <div class="layui-form mt10">
+                                            <div class="layui-form-item layui-form-item_vertical">
+                                                <input type="checkbox" lay-skin="primary" title="隐藏该模块下的白色间隙">
+                                            </div>
+                                        </div>
+                                        <div class="btn-area">
+                                            <button class="layui-btn layui-btn-sure">保存</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="decoration-module" id="singleImg-module"
+                                 style="margin-top: 100px;position: relative;">
+                                <div class="page-module" style="cursor:pointer">单图</div>
+                                <div class="module-edit">
+                                    <div class="module-edit-title">
+                                        <div class="module-name">单列图片模块<i class="iconfont icon-question"></i></div>
+                                        <div class="close-btn"></div>
+                                    </div>
+                                    <div class="module-edit-content">
+                                        <div>图片<span class="red">*</span></div>
+                                        <div class="mt10 gray">建议图片宽度750，高度200-950，支持类型：jpg、png。</div>
+                                        <div class="image-list">
+                                            <div class="each-image">
+                                                <img src="../../static/images/img01.png"/>
+                                                <div class="change-img-btn">替换图片</div>
+                                            </div>
+                                            <div class="link-area">
+                                                <label class="layui-form-label gray">链接：</label>
+                                                <input type="text" value="https://www.10010.shop.com/img/00…"
+                                                       class="layui-input">
+                                                <i class="iconfont icon-eye"></i>
+                                                <i class="iconfont icon-link"></i>
+                                            </div>
+                                        </div>
+                                        <div class="layui-form mt10">
+                                            <div class="layui-form-item layui-form-item_vertical">
+                                                <input type="checkbox" lay-skin="primary" title="隐藏该模块下的白色间隙">
+                                            </div>
+                                        </div>
+                                        <div class="btn-area">
+                                            <button class="layui-btn layui-btn-sure">保存</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="decoration-module" id="rank-module"
+                                 style="margin-top: 100px;position: relative;">
+                                <div class="page-module" style="cursor:pointer">排行</div>
+                                <div class="module-edit">
+                                    <div class="module-edit-title">
+                                        <div class="module-name">宝贝排行<i class="iconfont icon-question"></i></div>
+                                        <div class="close-btn"></div>
+                                    </div>
+                                    <div class="layui-form module-edit-content">
+                                        <div class="layui-form">
+                                            <div class="layui-col-sm12">
+                                                <div class="layui-form-item layui-form-item_vertical">
+                                                    <label class="layui-form-label">选择分类</label>
+                                                    <div class="layui-input-block layui-input-other">
+                                                        <select name="commodityType" lay-filter="commodityType"
+                                                                id="commodityType">
+                                                            <option selected>所有宝贝</option>
+                                                            <option value="0">分类1</option>
+                                                            <option value="1">分类2</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="new-classification-btn">+新建分类</div>
+                                            <div class="layui-col-sm12">
+                                                <div class="layui-form-item layui-form-item_vertical layui-form-item_require">
+                                                    <label class="layui-form-label">过滤价格</label>
+                                                    <div class="layui-input-inline" style="width: 123px;">
+                                                        <input type="text" name="price_min" placeholder="￥"
+                                                               id="price_min" lay-filter="price_min" autocomplete="off"
+                                                               class="layui-input">
+                                                    </div>
+                                                    <div class="layui-form-mid">至</div>
+                                                    <div class="layui-input-inline mr0" style="width: 123px;">
+                                                        <input type="text" name="price_max" placeholder="￥"
+                                                               id="price_max" lay-filter="price_max" autocomplete="off"
+                                                               class="layui-input">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                        <div class="btn-area">
+                                            <button class="layui-btn layui-btn-sure" id="saveType" lay-submit="">保存
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 选择图片弹出框 -->
+<div id="imageSelect" style="display:none">
+    <div class="mt20">
+        <img src="../../static/images/commodity/02.jpg"/>
+        <img src="../../static/images/commodity/03.jpg"/>
+        <img src="../../static/images/commodity/04.jpg"/>
+    </div>
+</div>
+
+<!-- 新建分类弹出框 -->
+<div id="new-classification" style="display:none">
+    <div class="mt30">
+        <div class="layui-col-sm9">
+            <div class="layui-form-item layui-form-item_require">
+                <label class="layui-form-label">分类名称：</label>
+                <div class="layui-input-block layui-input-other">
+                    <input type="text" id="new-classification-name" class="layui-input">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 链接选择弹出框 -->
+<div id="link-select" style="display:none">
+    <div class="layui-form">
+        <div class="layui-col-sm12">
+            <div class="layui-form-item layui-form-item_require">
+                <label class="layui-form-label">添加链接</label>
+                <div class="layui-input-block layui-input-other">
+                    <input type="text" class="layui-input" placeholder="https://www.10010.shop.com/img/00932479203491" id="popupLink">
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="layui-tab layui-tab-brief" lay-filter="">
+        <ul class="layui-tab-title">
+            <li class="layui-this">常用链接</li>
+            <li>商品链接</li>
+            <li>活动链接</li>
+            <li>页面链接</li>
+        </ul>
+        <div class="layui-tab-content layui-row layui-col-space15 layui-form">
+            <div class="layui-tab-item layui-show">
+                <div class="layui-col-sm12 checked">
+                    <div class="layui-form-item">
+                        <div class="layui-input-block layui-input-other">
+                            <input type="radio" name="link" value="https://www.10010.shop.com/img/00932479203491" title="店铺首页" checked>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-col-sm12">
+                    <div class="layui-form-item">
+                        <div class="layui-input-block layui-input-other">
+                            <input type="radio" name="link" value="https://www.10010.shop.com/img/00932479203492" title="页面2">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-tab-item">
+                <div class="layui-col-sm12">
+                    <div class="layui-form-item">
+                        <div class="layui-input-block layui-input-other">
+                            <input type="radio" name="link" value="https://www.10010.shop.com/img/00932479203493" title="页面3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="layui-tab-item">内容3</div>
+            <div class="layui-tab-item">内容4</div>
+        </div>
+    </div>
+</div>
+
+<script src="../../static/third/layui/layui.js"></script>
+<script>
+    layui.config({
+        base: '../../static/busi/' //你存放新模块的目录，注意，不是layui的模块目录
+    }).use('pageDecoration'); //加载入口
+</script>
+</body>
+
+</html>

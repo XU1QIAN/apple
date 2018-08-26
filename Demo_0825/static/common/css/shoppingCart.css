@@ -1,0 +1,295 @@
+html {
+    background-color: #f1f2f5;
+}
+
+body {
+    padding-bottom: 70px;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.product-list {
+    margin-top: 50px;
+    font-size: 0.28rem;
+    margin-top: 0.9rem;
+    padding-bottom: 0.96rem;
+}
+
+.each-shop {
+    margin-bottom: 10px;
+    background-color: #fff;
+}
+
+.shop-title {
+    border-bottom: 1px solid #f2f2f2;
+    margin-left: 10px;
+    height: 40px;
+    line-height: 40px;
+}
+
+.shop-info p {
+    display: inline-block;
+}
+
+.shop-info {
+    height: 40px;
+    line-height: 40px;
+}
+
+.shop-title .icon-dianpu {
+    position: relative;
+    top: 1px;
+    font-size: 0.36rem;
+    margin-right: 5px;
+}
+
+.shop-title .icon-more {
+    color: #cccccc;
+    position: relative;
+    top: 1px;
+    font-size: 0.28rem;
+    font-weight: bold;
+}
+
+.product-img {
+    position: relative;
+    float: left;
+    margin-top: 3px;
+}
+
+.product-img img {
+    width: 1.8rem;
+    height: 1.8rem;
+    border: 1px solid #eeeeee;
+}
+
+.product-img .tip {
+    position: absolute;
+    top: -2px;
+    left: 2px;
+    width: 30px;
+    height: 30px;
+    background: url(../images/icons/tip.png) no-repeat;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    font-size: 12px;
+}
+
+.product-info {
+    margin-left: 10px;
+    border-bottom: 1px solid #eeeeee;
+    float: left;
+    width: calc(100% - 24px - 1.8rem);
+    padding-right: 12px;
+    padding-bottom: 10px;
+    min-height: 1.8rem;
+}
+
+.product-name {
+    margin-bottom: 8px;
+}
+
+.price-area {
+    float: left;
+}
+
+.promotion {
+    height: 24px;
+}
+
+.promotion-text {
+    border: 1px solid #e22121;
+    color: #e22121;
+    border-radius: 4px 4px 2px 2px;
+    padding: 0 3px;
+    font-size: 12px;
+    height: 20px;
+    line-height: 20px;
+    float: left;
+}
+
+.product-price {
+    color: #fa7a07;
+}
+
+.original-price {
+    margin-left: 10px;
+    text-decoration: line-through;
+}
+
+.num-area {
+    float: right;
+    margin-top: 18px;
+}
+
+.num-area span {
+    margin: 0 5px;
+    top: -1px;
+    position: relative;
+}
+
+.num-area .iconfont {
+    color: #dfdfdf;
+    font-size: 20px;
+}
+
+.num-area .iconfont.active {
+    color: #666666;
+}
+
+.shopProduct-list .product:last-child .product-info {
+    border-bottom: none;
+}
+
+.w-radio {
+    font-size: 24px;
+    float: left;
+    margin-right: 10px;
+    width: 24px;
+    text-align: center;
+}
+
+.icon-weixuanzhongyuanquan {
+    color: #cccccc;
+}
+
+.icon-circle {
+    color: #eeeeee;
+    font-size: 18px;
+}
+
+.icon-circle:before {
+    border: 1px solid #ccc;
+    border-radius: 50%;
+}
+
+.icon-wancheng {
+    color: #fa7a07;
+}
+
+.shopProduct-list .w-radio {
+    margin-top: calc(0.9rem - 2px);
+    margin-left: 10px;
+}
+
+.choose-all {
+    margin-left: 10px;
+    margin-right: 1.6rem;
+}
+
+.product-detail {
+    float: left;
+    padding-top: 10px;
+}
+
+.delete-edit {
+    width: 140px;
+    float: left;
+    background-color: red;
+}
+
+.delete-edit > div {
+    width: 70px;
+    float: left;
+    color: #fff;
+    height: 100%;
+    text-align: center;
+}
+
+.edit-btn {
+    background-color: #fa7a07;
+}
+
+.delete-btn {
+    background-color: #b8b8b8;
+}
+
+.shopProduct-list .product:last-child .product-detail {
+    padding-bottom: 10px;
+}
+
+.product {
+    overflow: hidden;
+}
+
+.edit-area {
+    width: 100%;
+    position: absolute;
+    z-index: 101;
+    background-color: #fff;
+    bottom: 0;
+    border-radius: 12px 12px 0 0;
+    padding: 15px 0;
+    line-height: .36rem;
+    font-size: .24rem;
+}
+
+.edit-area > div {
+    padding: 0 15px;
+}
+
+.edit-area img {
+    width: 2.2rem; 
+    height: 2.2rem;
+    border: 1px solid #eeeeee;
+    float: left;
+}
+
+.edit-info-right {
+    width: calc(100% - 2.2rem - 12px);
+    float: left;
+    margin-left: 10px;
+    margin-top: 12px;
+}
+
+.edit-name {
+    min-height: calc(1.8rem - 12px);
+}
+
+.edit-name .orange {
+    font-size: .3rem;
+}
+
+.specifications-title {
+    padding: 20px 0 10px 0;
+}
+
+.specification {
+    background-color: #f8f8f8;
+    padding: 5px 12px;
+    margin-bottom: 10px;
+    display: table;
+    border: 1px solid #f8f8f8;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.specification.selected {
+    border: 1px solid #fa7a07;
+    background: url(../images/icons/checkOn.png) no-repeat right bottom;
+}
+
+.edit-area .btn01 {
+    margin: 40px 15px 10px 15px;
+}
+
+.btn-area a {
+    color: #fff;
+}
+
+.btn-area {
+    bottom: .96rem;
+}
+
+.btn-area span {
+    width: 60%;
+}
+
+.icon-invalid {
+    font-size: 20px;
+}
+
+.invalid .delete-btn {
+    width: 140px;
+}

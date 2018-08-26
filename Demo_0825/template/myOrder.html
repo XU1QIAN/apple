@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>我的订单</title>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <link rel="stylesheet" href="../static/common/iconfont/iconfont.css">
+    <link rel="stylesheet" href="../static//third/weui/lib/weui.min.css">
+    <link rel="stylesheet" href="../static/third/weui/css/jquery-weui.min.css">
+    <link rel="stylesheet" href="../static/common/css/swiper-3.2.5.min.css">
+    <link rel="stylesheet" href="../static/common/css/public.css">
+    <link rel="stylesheet" href="../static/common/css/common.css">
+    <link rel="stylesheet" href="../static/common/css/myOrder.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-button is-left">
+            <a href="javascript:history.go(-1);" class="router-link-active">
+                <button class="mint-button mint-button--default mint-button--normal">
+                    <span class="mint-button-icon">
+                        <i class="icon iconfont icon-fanhui color-black"></i>
+                    </span>
+                    <label class="mint-button-text"></label>
+                </button>
+            </a>
+        </div>
+        <h1 class="header-title">我的订单</h1>
+        <div class="header-button is-right"></div>
+    </header>
+    <div class="top-bar" id="topBar">
+        <ul class="top-tab-ul box-flex clearfix">
+            <li class="top-tab-li flex active">
+                <a href="javascript:;">全部</a>
+            </li>
+            <li class="top-tab-li flex">
+                <a href="javascript:;">待付款</a>
+            </li>
+            <li class="top-tab-li flex">
+                <a href="javascript:;">待发货</a>
+            </li>
+            <li class="top-tab-li flex">
+                <a href="javascript:;">待收货</a>
+            </li>
+            <li class="top-tab-li flex">
+                <a href="javascript:;">待评价</a>
+            </li>
+        </ul>
+    </div>
+    <div class="myorder-wrapper">
+        <div class="swiper-container" id="tabs-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" id="myOrder_all">
+                    <ul class="my-order-center" v-cloak>
+                        <li class="my-order-item" v-for="shopOrder in orderList">
+                            <div class="my-order-item-header box-flex">
+                                <div class="flex">
+                                    <a href="javascript:;" class="box-flex">
+                                        <i class="icon iconfont icon-dianpu color-black"></i>
+                                        <p>{{shopOrder.shopName}}</p>
+                                        <i class="icon iconfont icon-more color-black"></i>
+                                    </a>
+                                </div>
+                                <span class="state-span">{{shopOrder.stateName}}</span>
+                            </div>
+                            <div class="my-order-item-body">
+                                <a href="javascript:;">
+                                    <ul class="store-list-wrap">
+                                        <li class="store-list-item box-flex" v-for="order in shopOrder.productList">
+                                            <div class="pro-img-wrap">
+                                                <img :src="order.imgUrl" />
+                                            </div>
+                                            <div class="flex">
+                                                <p class="pro-name-p">{{order.productName}}</p>
+                                                <em class="em-cn" v-if="order.service">{{order.service}}</em>
+                                            </div>
+                                            <div class="price-wrap">
+                                                <p class="prcie-m">
+                                                    <em class="x-price">¥ {{order.price}}</em>
+                                                    <em class="y-price" v-if="order.originalPrice">¥ {{order.originalPrice}}</em>
+                                                </p>
+                                                <p class="num-p">&times;{{order.count}}</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <p class="cunt-p">
+                                        共<em>{{shopOrder.totalCount}}</em>件商品 合计：<em>{{shopOrder.totalPrice}}</em>
+                                        <spam>（含运费 ¥<em>{{shopOrder.freight}}</em>）</spam>
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="my-order-item-footer">
+                                <a href="javascript:;" class="yl-a" v-if="shopOrder.state==0">再次购买</a>
+                                <a href="javascript:;" class="yl-a" v-if="shopOrder.state==0">查看发票<i>{{shopOrder.invoiceCount}}</i></a>
+                                <a href="javascript:;" class="yl-a" v-if="shopOrder.state==0">评价晒单</a>
+                                <a href="javascript:;" class="yl-a" v-if="shopOrder.state==0">申请售后</a>
+                                <a href="javascript:;" class="gl-a" v-if="shopOrder.state==1">去支付</a>
+                                <a href="javascript:;" class="yl-a" v-if="shopOrder.state==1">订单取消</a>
+                                <a href="javascript:;" class="yl-a" v-if="shopOrder.state==2">提醒发货</a>
+                                <a href="javascript:;" class="yl-a" v-if="shopOrder.state==4">删除订单</a>
+                                <a href="javascript:;" class="yl-a" v-if="shopOrder.state==3 || shopOrder.state==4">查看物流</a>
+                                <a href="javascript:;" class="yl-a" v-if="shopOrder.state==3">确认收货</a>
+                                <a href="javascript:;" class="gl-a" v-if="shopOrder.state==4">评价</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="swiper-slide" id="myOrder_notPay">
+                    <ul class="my-order-center" v-cloak>
+                        <li class="my-order-item" v-for="shopOrder in orderList">
+                            <div class="my-order-item-header box-flex">
+                                <div class="flex">
+                                    <a href="javascript:;" class="box-flex">
+                                        <i class="icon iconfont icon-dianpu color-black"></i>
+                                        <p>{{shopOrder.shopName}}</p>
+                                        <i class="icon iconfont icon-more color-black"></i>
+                                    </a>
+                                </div>
+                                <span class="state-span">{{shopOrder.stateName}}</span>
+                            </div>
+                            <div class="my-order-item-body">
+                                <a href="javascript:;">
+                                    <ul class="store-list-wrap">
+                                        <li class="store-list-item box-flex" v-for="order in shopOrder.productList">
+                                            <div class="pro-img-wrap">
+                                                <img :src="order.imgUrl" />
+                                            </div>
+                                            <div class="flex">
+                                                <p class="pro-name-p">{{order.productName}}</p>
+                                                <em class="em-cn" v-if="order.service">{{order.service}}</em>
+                                            </div>
+                                            <div class="price-wrap">
+                                                <p class="prcie-m">
+                                                    <em class="x-price">¥ {{order.price}}</em>
+                                                    <em class="y-price" v-if="order.originalPrice">¥ {{order.originalPrice}}</em>
+                                                </p>
+                                                <p class="num-p">&times;1</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <p class="cunt-p">
+                                        共<em>{{shopOrder.totalCount}}</em>件商品 合计：<em>{{shopOrder.totalPrice}}</em>
+                                        <spam>（含运费 ¥<em>{{shopOrder.freight}}</em>）</spam>
+                                    </p>
+                                </a>
+
+                            </div>
+                            <div class="my-order-item-footer">
+                                <a href="javascript:;" class="gl-a">去支付</a>
+                                <a href="javascript:;" class="yl-a">订单取消</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="swiper-slide" id="myOrder_notSend">
+                    <ul class="my-order-center" v-cloak>
+                        <li class="my-order-item" v-for="shopOrder in orderList">
+                            <div class="my-order-item-header box-flex">
+                                <div class="flex">
+                                    <a href="javascript:;" class="box-flex">
+                                        <i class="icon iconfont icon-dianpu color-black"></i>
+                                        <p>{{shopOrder.shopName}}</p>
+                                        <i class="icon iconfont icon-more color-black"></i>
+                                    </a>
+                                </div>
+                                <span class="state-span">{{shopOrder.stateName}}</span>
+                            </div>
+                            <div class="my-order-item-body">
+                                <a href="javascript:;">
+                                    <ul class="store-list-wrap">
+                                        <li class="store-list-item box-flex" v-for="order in shopOrder.productList">
+                                            <div class="pro-img-wrap">
+                                                <img :src="order.imgUrl" />
+                                            </div>
+                                            <div class="flex">
+                                                <p class="pro-name-p">{{order.productName}}</p>
+                                                <em class="em-cn" v-if="order.service">{{order.service}}</em>
+                                            </div>
+                                            <div class="price-wrap">
+                                                <p class="prcie-m">
+                                                    <em class="x-price">¥ {{order.price}}</em>
+                                                    <em class="y-price" v-if="order.originalPrice">¥ {{order.originalPrice}}</em>
+                                                </p>
+                                                <p class="num-p">&times;1</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <p class="cunt-p">
+                                        共<em>{{shopOrder.totalCount}}</em>件商品 合计：<em>{{shopOrder.totalPrice}}</em>
+                                        <spam>（含运费 ¥<em>{{shopOrder.freight}}</em>）</spam>
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="my-order-item-footer">
+                                    <a href="javascript:;" class="yl-a">提醒发货</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="swiper-slide" id="myOrder_notReceive">
+                    <ul class="my-order-center" v-cloak>
+                        <li class="my-order-item" v-for="shopOrder in orderList">
+                            <div class="my-order-item-header box-flex">
+                                <div class="flex">
+                                    <a href="javascript:;" class="box-flex">
+                                        <i class="icon iconfont icon-dianpu color-black"></i>
+                                        <p>{{shopOrder.shopName}}</p>
+                                        <i class="icon iconfont icon-more color-black"></i>
+                                    </a>
+                                </div>
+                                <span class="state-span">{{shopOrder.stateName}}</span>
+                            </div>
+                            <div class="my-order-item-body">
+                                <a href="javascript:;">
+                                    <ul class="store-list-wrap">
+                                        <li class="store-list-item box-flex" v-for="order in shopOrder.productList">
+                                            <div class="pro-img-wrap">
+                                                <img :src="order.imgUrl" />
+                                            </div>
+                                            <div class="flex">
+                                                <p class="pro-name-p">{{order.productName}}</p>
+                                                <em class="em-cn" v-if="order.service">{{order.service}}</em>
+                                            </div>
+                                            <div class="price-wrap">
+                                                <p class="prcie-m">
+                                                    <em class="x-price">¥ {{order.price}}</em>
+                                                    <em class="y-price" v-if="order.originalPrice">¥ {{order.originalPrice}}</em>
+                                                </p>
+                                                <p class="num-p">&times;1</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <p class="cunt-p">
+                                        共<em>{{shopOrder.totalCount}}</em>件商品 合计：<em>{{shopOrder.totalPrice}}</em>
+                                        <spam>（含运费 ¥<em>{{shopOrder.freight}}</em>）</spam>
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="my-order-item-footer">
+                                <a href="javascript:;" class="yl-a">查看物流</a>
+                                <a href="javascript:;" class="yl-a">确认收货</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="swiper-slide" id="myOrder_notEvaluate">
+                    <ul class="my-order-center" v-cloak>
+                        <li class="my-order-item" v-for="shopOrder in orderList">
+                            <div class="my-order-item-header box-flex">
+                                <div class="flex">
+                                    <a href="javascript:;" class="box-flex">
+                                        <i class="icon iconfont icon-dianpu color-black"></i>
+                                        <p>{{shopOrder.shopName}}</p>
+                                        <i class="icon iconfont icon-more color-black"></i>
+                                    </a>
+                                </div>
+                                <span class="state-span">{{shopOrder.stateName}}</span>
+                            </div>
+                            <div class="my-order-item-body">
+                                <a href="javascript:;">
+                                    <ul class="store-list-wrap">
+                                        <li class="store-list-item box-flex" v-for="order in shopOrder.productList">
+                                            <div class="pro-img-wrap">
+                                                <img :src="order.imgUrl" />
+                                            </div>
+                                            <div class="flex">
+                                                <p class="pro-name-p">{{order.productName}}</p>
+                                                <em class="em-cn" v-if="order.service">{{order.service}}</em>
+                                            </div>
+                                            <div class="price-wrap">
+                                                <p class="prcie-m">
+                                                    <em class="x-price">¥ {{order.price}}</em>
+                                                    <em class="y-price" v-if="order.originalPrice">¥ {{order.originalPrice}}</em>
+                                                </p>
+                                                <p class="num-p">&times;1</p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <p class="cunt-p">
+                                        共<em>{{shopOrder.totalCount}}</em>件商品 合计：<em>{{shopOrder.totalPrice}}</em>
+                                        <spam>（含运费 ¥<em>{{shopOrder.freight}}</em>）</spam>
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="my-order-item-footer">
+                                <a href="javascript:;" class="yl-a">删除订单</a>
+                                <a href="javascript:;" class="yl-a">查看物流</a>
+                                <a href="javascript:;" class="gl-a">评价</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="../static/third/weui/lib/jquery-2.1.4.js"></script>
+<script src="../static/third/weui/js/jquery-weui.js"></script>
+<script src="../static/third/weui/js/swiper.js"></script>
+<script src="../static/third/vue.min.js"></script>
+<script src="../static/third/axios.min.js"></script>
+<script src="../static/common/js/main.js"></script>
+<script src="../static/busi/myOrder.js"></script>
+
+
+</html>

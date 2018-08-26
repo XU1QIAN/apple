@@ -1,0 +1,40 @@
+{
+    "respCode":"200",
+    "operDesc":"响应成功",
+    "data": {
+        "promotionImg": "../static/common/images/promotion.png",
+        "commodityList": [
+            {
+                "commodityId": "001",
+                "imgUrl": "../static/common/images/img_05.png",
+                "name": "佳能750D单反套机数码高清相机中高端触屏翻屏相机",
+                "price": "4999.98",
+                "sale": 1531
+            }, {
+                "commodityId": "002",
+                "imgUrl": "../static/common/images/img_06.png",
+                "name": "苏泊尔榨汁机杯家用全自动果蔬多功能迷你学生小型破壁机",
+                "price": "4999.98",
+                "sale": 1531
+            }, {
+                "commodityId": "003",
+                "imgUrl": "../static/common/images/img_09.png",
+                "name": "VR眼镜手机专用一体机4d苹果眼睛头戴式游戏机头盔",
+                "price": "4999.98",
+                "sale": 1531
+            }, {
+                "commodityId": "004",
+                "imgUrl": "../static/common/images/img_10.png",
+                "name": "飞利浦电吹风机HP8203家用大功率恒温负离子冷热干发机",
+                "price": "4999.98",
+                "sale": 1531
+            }, {
+                "commodityId": "004",
+                "imgUrl": "../static/common/images/img_10.png",
+                "name": "飞利浦电吹风机HP8203家用大功率恒温负离子冷热干发机",
+                "price": "4999.98",
+                "sale": 1531
+            }
+        ]
+    }
+}

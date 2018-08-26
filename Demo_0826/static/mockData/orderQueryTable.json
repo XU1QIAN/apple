@@ -1,0 +1,52 @@
+{
+  "code": 0,
+  "msg": "",
+  "count": 30,
+  "data": [
+    {
+      "id": "6 935117 806365",
+      "money": "2399",
+      "totalMoney": "2399",
+      "num":"1",
+      "logistics":"01-04 已收件",
+      "from": "新零售",
+      "tel": "15620000330",
+      "developer": "李晓明",
+      "goods": {
+        "name": "Beats solo 2 无线耳机",
+        "code": "BEATS、APPLE、PHILIPS、HAIER",
+        "attr": "红色，经典款"
+      }
+    },
+    {
+      "id": "6 935117 806365",
+      "money": "2399",
+      "totalMoney": "2399",
+      "num":"1",
+      "logistics":"01-04 已收件",
+      "from": "新零售",
+      "tel": "15620000330",
+      "developer": "李晓明",
+      "goods": {
+        "name": "Beats solo 2 无线耳机",
+        "code": "BEATS、APPLE、PHILIPS、HAIER",
+        "attr": "红色，经典款"
+      }
+    },
+    {
+      "id": "6 935117 806365",
+      "money": "2399",
+      "totalMoney": "2399",
+      "num":"1",
+      "logistics":"01-04 已收件",
+      "from": "新零售",
+      "tel": "15620000330",
+      "developer": "李晓明",
+      "goods": {
+        "name": "Beats solo 2 无线耳机",
+        "code": "BEATS、APPLE、PHILIPS、HAIER",
+        "attr": "红色，经典款"
+      }
+    }
+  ]
+}

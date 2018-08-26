@@ -1,0 +1,13 @@
+{
+    "respCode":"200",
+    "operDesc":"响应成功",
+    "data": [
+        {
+			"invoiceSrc": "../static/common/images/invoice1.png",
+            "code": "123456789012345678"
+        }, {
+			"invoiceSrc": "../static/common/images/invoice2.png",
+            "code": "123456789012345679"
+        }
+    ]
+}

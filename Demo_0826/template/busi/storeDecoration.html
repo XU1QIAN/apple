@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>店铺装修</title>
+    <link rel="stylesheet" href="../../static/third/layui/css/layui.css">
+    <link rel="stylesheet" href="../../static/common/font/iconfont.css">
+    <link rel="stylesheet" href="../../static/common/css/common.css">
+    <link rel="stylesheet" href="../../static/common/css/table.css">
+    <link rel="stylesheet" href="../../static/common/css/store.css">
+</head>
+
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+    <div class="layui-header">
+        <i class="iconfont icon-logo"></i>
+        <div class="logo-text">
+            <div class="logo-text-CHI">中国联通新零售运营平台</div>
+            <div class="logo-text-ENG">CHINA UNICOM NEW RETAIL OPERATION</div>
+        </div>
+        <ul class="layui-nav layui-layout-right">
+            <li class="head-search">
+                <div>
+                    <i class="iconfont icon-search"></i>
+                    <input type="text" class="layui-input" placeholder="智能搜索" />
+                </div>
+            </li>
+            <li class="layui-nav-item">
+                <a href="javascript:;">
+                    <img src="http://t.cn/RCzsdCq" class="layui-nav-img"> 贤心
+                </a>
+                <dl class="layui-nav-child">
+                    <dd>
+                        <a href="">基本资料</a>
+                    </dd>
+                    <dd>
+                        <a href="">安全设置</a>
+                    </dd>
+                </dl>
+            </li>
+            <i class="iconfont icon-message"></i>
+            <i class="iconfont icon-book"></i>
+            <!-- <li class="layui-nav-item"><a href="">退了</a></li> -->
+        </ul>
+    </div>
+
+    <div class="layui-side layui-bg-black">
+    <div class="layui-side-scroll">
+        <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+        <ul class="layui-nav layui-nav-tree"  lay-filter="test">
+            <li class="layui-nav-item"><a class="" href="javascript:;"><i class="iconfont icon-home"></i>首页</a></li>
+            <li class="layui-nav-item">
+                <a href="javascript:;"><i class="iconfont icon-sale"></i>销售</a>
+                <dl class="layui-nav-child">
+                <dd><a href="javascript:;">销售查询</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item"><a href=""><i class="iconfont icon-orderQuery"></i>订单</a></li>
+            <li class="layui-nav-item"><a href=""><i class="iconfont icon-store"></i>店铺</a></li>
+            <li class="layui-nav-item"><a href=""><i class="iconfont icon-commissions"></i>佣金</a></li>
+        </ul>
+    </div>
+    </div>
+
+    <div class="layui-body">
+        <div class="layui-fluid">
+            <div class="decoration-tabs">
+                <div class="decoration-tab active" id="tab-storeDecoration">店铺装修</div>
+                <div class="decoration-tab" id="tab-materialCenter">素材中心</div>
+            </div>
+            <div class="main-content" id="content-storeDecoration">
+                <div class="decoration-left-tabs" style="height:500px;">
+                    <div class="decoration-left-tab active"><div class="tab-text">店铺页面</div></div>
+                    <div class="decoration-left-tab"><div class="tab-text">商品分类</div></div>
+                    <div class="decoration-left-tab"><div class="tab-text">店铺风格</div></div>
+                </div>
+                <div class="decoration-content" id="decoration-home">
+                    <div class="block-wrapper decoration-left">
+                        <div class="bw-content">
+                            <div class="fr mt20 mr20">
+                                <button class="layui-btn layui-btn-sure" id="oneKeyDecoration">一键装修</button>
+                                <button class="layui-btn layui-btn-back" id="new-page-btn">新建页面</button>
+                            </div>
+                            <div class="table-simple"><table class="layui-hide" id="table"></table></div>
+                        </div>
+                    </div>
+                    <div class="block-wrapper decoration-right">
+                        <div class="bw-content">
+                            <!-- <iframe src="" id="" class="h5_touch" scrolling="no" frameborder="0"></iframe> -->
+                            <img src="../../static/images/touch.png" class="h5_touch" />
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="main-content" id="content-materialCenter" style="display: none;">
+                <div class="block-wrapper">
+                    <div class="layui-upload" id="img-upload">
+                        <button type="button" class="layui-btn layui-btn-sure" id="images-btn">上传图片</button> 
+                        <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                            预览图：
+                            <div class="layui-upload-list" id="images-list">
+                                <img src="../../static/images/commodity/01.jpg" class="layui-upload-img">
+                                <img src="../../static/images/commodity/02.jpg" class="layui-upload-img">
+                            </div>
+                        </blockquote>
+                    </div>
+                    <div class="btn-area">
+                        <button class="layui-btn layui-btn-back">取消</button>
+                        <button class="layui-btn layui-btn-sure">确认</button>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="templateSelect" style="display:none">
+    <div class="template-area">
+        <a id="arrow-prev" class="arrow"><i class="iconfont icon-arrowLeft"></i></a>
+        <a id="arrow-next" class="arrow abled"><i class="iconfont icon-arrowRight"></i></a>
+        <div id="template-list" class="template-list">
+            <ul>
+                <li class="selected">
+                    <span>经典成熟</span>
+                    <img src="../../static/images/template1.png">
+                </li>
+                <li>
+                    <span>商务清新</span>
+                    <img src="../../static/images/template2.png">
+                </li>
+                <li>
+                    <span>个性阳光</span>
+                    <img src="../../static/images/template3.png">
+                </li>
+                <li>
+                    <span>经典成熟</span>
+                    <img src="../../static/images/template1.png">
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div id="homepageCommodity" style="display:none">
+    <div class="text">
+        <span>可拖拽商品调整排列顺序</span>
+        <span class="ml20">已选<span class="red">3</span>/8个商品</span>
+    </div>
+    <div id="elements-container" ondragstart="return false">
+        <img class="draggable-element d-1" src="../../static/images/commodity/02.jpg" />
+        <img class="draggable-element d-2" src="../../static/images/commodity/03.jpg" />
+        <img class="draggable-element d-3" src="../../static/images/commodity/04.jpg" />
+        <div id="add-product-btn">
+            <i class="icon iconfont icon-plus"></i>
+        </div>
+        <div class="clearfix"></div>
+        <div class="elements-order">
+            <div>01</div>
+            <div>02</div>
+            <div>03</div>
+        </div>
+    </div>
+</div>
+
+<!-- 新建页面弹出框 -->
+<div id="new-page" style="display:none">
+    <div class="mt30">
+        <div class="layui-col-sm9">
+            <div class="layui-form-item layui-form-item_require">
+                <label class="layui-form-label">页面名称：</label>
+                <div class="layui-input-block layui-input-other">
+                    <input type="text" id="new-page-name" class="layui-input">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../../static/third/layui/layui.js"></script>
+<script src="../../static/third/jquery/1.8.3/jquery.js"></script>
+<script src="../../static/third/drag-arrange.js"></script>
+
+<script type="text/html" id="barDemo">
+    <a class="layui-btn layui-btn-primary layui-btn-xs" id="page-decoration">页面装修</a>
+    <div class="layui-col-sm6">
+        <div class="layui-form-item layui-form-item_vertical">
+            <div class="layui-input-block layui-input-other">
+            <select name="interest" lay-filter="">
+                <option>更多</option>
+            </select>
+            </div>
+        </div>
+    </div>
+</script>
+<script>
+    layui.config({
+        base: '../../static/busi/' //你存放新模块的目录，注意，不是layui的模块目录
+    }).use('storeDecoration'); //加载入口
+</script>
+</body>
+
+</html>

@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>开始使用layui</title>
+  <link rel="stylesheet" href="../../static/third/layui/css/layui.css" media="all">
+  <link rel="stylesheet" href="../../static/common/font/iconfont.css">
+  <link rel="stylesheet" href="../../static/common/css/common.css">
+  <link rel="stylesheet" href="../../static/common/css/table.css">
+  <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+  <!--[if lt IE 9]>
+  <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+  <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <style type="text/css">
+    .marg-b-30 {
+      margin-bottom: 30px;
+    }
+
+    body {
+      background: #f2f2f2;
+    }
+
+
+
+    .layui-link {
+      margin-right: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="layui-container">
+    <div class="layui-fluid">
+      <div class="marg-b-30">
+        <fieldset class="layui-elem-field layui-field-title">
+          <legend>面包屑</legend>
+        </fieldset>
+        <div class="layui-breadcrumb">
+          <i class="bread-icon layui-icon">&#xe623;</i>
+          <a href="/">首页</a>
+          <a href="/demo/">演示</a>
+          <a>
+            <cite>导航元素</cite>
+          </a>
+        </div>
+      </div>
+      <div class="marg-b-30">
+        <fieldset class="layui-elem-field layui-field-title">
+          <legend>链接</legend>
+        </fieldset>
+        <div class="table-simple">
+          <a href="javascript:;" class="layui-link">layui-link</a>
+          <a href="javascript:;" class="layui-link layui-link-dec">layui-link-dec</a>
+          <a href="javascript:;" class="layui-link layui-link-default">layui-link-default</a>
+          <a href="javascript:;" class="layui-link layui-link-normal">layui-link-normal</a>
+          <a href="javascript:;" class="layui-link layui-link-delete">layui-link-delete</a>
+
+        </div>
+      </div>
+      <div class="marg-b-30">
+        <fieldset class="layui-elem-field layui-field-title">
+          <legend>白色区块</legend>
+        </fieldset>
+        <div class="table-simple">
+          <div class="block-wrapper" j style="min-height: 80px;">
+            <div class="bw-title">白色区块标题</div>
+            <div class="bw-content"></div>
+          </div>
+        </div>
+      </div>
+      <div class="marg-b-30">
+        <fieldset class="layui-elem-field layui-field-title">
+          <legend>表单</legend>
+        </fieldset>
+        <div class="layui-form">
+          <div class="layui-row layui-col-space15">
+
+            <div class="layui-col-sm3">
+              <!-- input ="text"  输入框 -->
+              <div class="layui-form-item layui-form-item_vertical layui-form-item_require">
+                <label class="layui-form-label">
+                  <em class="star">*</em>简单的 text 输入框</label>
+                <div class="layui-input-block layui-input-other">
+                  <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="" class="layui-input">
+                  <p class="from-tips errow-tips">请输入用户名</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="layui-col-sm3">
+              <!-- select  下拉选择框 -->
+              <div class="layui-form-item layui-form-item_vertical">
+                <label class="layui-form-label">
+                  <em class="star">*</em>下拉选择框</label>
+                <div class="layui-input-block layui-input-other">
+                  <select name="interest" lay-filter="aihao">
+                    <option value="0">写作</option>
+                    <option value="1">阅读</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="layui-col-sm3">
+              <!-- 时间选择范围  输入框 -->
+              <div class="layui-form-item layui-form-item_vertical layui-form-item_require">
+                <label class="layui-form-label">
+                  <em class="star">*</em>日期范围选择</label>
+                <div class="layui-input-block layui-input-other">
+                  <input type="text" class="layui-input layui-input-icon" id="date" placeholder="开始到结束时间范围">
+                  <i class="layui-icon layui-icon-other">&#xe637;</i>
+                  <p class="from-tips errow-tips"></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="layui-col-sm3">
+              <div class="layui-form-item layui-form-item_vertical">
+                <!-- 日期时间选择-->
+                <label class="layui-form-label">
+                  <em class="star">*</em>日期时间选择</label>
+                <div class="layui-input-block layui-input-other">
+                  <input type="text" class="layui-input layui-input-icon" id="datetime" placeholder="请选择上架时间">
+                  <i class="layui-icon layui-icon-other">&#xe637;</i>
+                  <p class="from-tips errow-tips"></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="layui-col-sm3">
+              <!-- radio  单选框 -->
+              <div class="layui-form-item layui-form-item_vertical">
+                <label class="layui-form-label">
+                  <em class="star">*</em>radio 单选框</label>
+                <div class="layui-input-block layui-input-other">
+                  <input type="radio" name="sex" value="男" title="男">
+                  <input type="radio" name="sex" value="女" title="女" checked>
+                </div>
+              </div>
+            </div>
+
+            <div class="layui-col-sm3">
+              <!-- checkbox  复选框 -->
+              <div class="layui-form-item layui-form-item_vertical">
+                <label class="layui-form-label">
+                  <em class="star">*</em>checkbox 复选框</label>
+                <div class="layui-input-block layui-input-other">
+                  <input type="checkbox" name="like1[write]" lay-skin="primary" title="写作" checked="">
+                  <input type="checkbox" name="like1[read]" lay-skin="primary" title="阅读">
+                  <input type="checkbox" name="like1[game]" lay-skin="primary" title="游戏" disabled="">
+                </div>
+              </div>
+            </div>
+            <div class="layui-col-sm3">
+              <!-- 时间选择范围  输入框 -->
+              <div class="layui-form-item layui-form-item_vertical layui-form-item_require">
+                <label class="layui-form-label">
+                  <em class="star">*</em>日期范围选择</label>
+                <div class="layui-input-block layui-input-other" style="position: relative">
+                  <div class="layui-date-wrap">
+                    <div class="layui-date-wrap_item layui-date-wrap_itemStar">
+                      <input type="text" class="layui-input layui-input-icon" id="star" placeholder="开始时间">
+                      <i class="layui-icon layui-icon-other" style="top: 0">&#xe637;</i>
+                    </div>
+                    <div class="layui-date-wrap_itemCent">至</div>
+                    <div class="layui-date-wrap_item layui-date-wrap_itemEnd">
+                      <input type="text" class="layui-input layui-input-icon" id="end" placeholder="结束时间">
+                      <i class="layui-icon layui-icon-other" style="top: 0">&#xe637;</i>
+                    </div>
+                  </div>
+
+                  <p class="from-tips errow-tips"></p>
+                </div>
+              </div>
+            </div>
+            <div class="layui-col-sm3">
+              <!-- 带搜索放大镜 -->
+              <div class="layui-form-item layui-form-item_vertical">
+                <label class="layui-form-label">
+                  <em class="star">*</em>渠道名称</label>
+                <div class="layui-input-block layui-input-other">
+                  <input type="text" class="layui-input layui-input-icon" id="" placeholder="搜索店铺">
+                  <a href="javascript:;" class="layui-icon layui-icon-other">&#xe615;</a>
+                  <p class="from-tips errow-tips"></p>
+                </div>
+              </div>
+            </div>
+            <div class="layui-col-sm3">
+              <div class="layui-form-item layui-form-item_vertical">
+                <!-- 带有按钮 的搜索下拉-->
+                <label class="layui-form-label">
+                  <em class="star">*</em>带有按钮</label>
+                <div class="layui-input-block layui-input-other">
+                  <select name="interest" lay-filter="aihao" lay-search>
+                    <option value="0">写作</option>
+                    <option value="1">阅读</option>
+                  </select>
+                  <div class="have-search">
+                    <button class="layui-btn layui-btn-back">搜索</button>
+                  </div>
+                  <p class="from-tips errow-tips"></p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="marg-b-30">
+        <fieldset class="layui-elem-field layui-field-title">
+          <legend>Button</legend>
+        </fieldset>
+        <div>
+          <button class="layui-btn layui-btn-primary">原始按钮</button>
+          <button class="layui-btn">原按钮</button>
+          <button class="layui-btn layui-btn-back">返回按钮</button>
+          <button class="layui-btn layui-btn-normal">信息按钮</button>
+          <button class="layui-btn layui-btn-warm">警告按钮</button>
+          <button class="layui-btn layui-btn-sure">确定按钮</button>
+          <button class="layui-btn layui-btn-disabled">禁用按钮</button>
+        </div>
+      </div>
+
+      <div class="marg-b-30">
+        <fieldset class="layui-elem-field layui-field-title">
+          <legend>tab选项卡</legend>
+        </fieldset>
+        <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+          <ul class="layui-tab-title">
+            <li class="layui-this">网站设置</li>
+            <li>用户管理</li>
+            <li>权限分配</li>
+            <li>商品管理</li>
+            <li>订单管理</li>
+          </ul>
+          <div class="layui-tab-content" style="height: 100px;">
+            <div class="layui-tab-item layui-show">内容不一样是要有，因为你可以监听tab事件（阅读下文档就是了）</div>
+            <div class="layui-tab-item">内容2</div>
+            <div class="layui-tab-item">内容3</div>
+            <div class="layui-tab-item">内容4</div>
+            <div class="layui-tab-item">内容5</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="marg-b-30">
+        <fieldset class="layui-elem-field layui-field-title">
+          <legend>table表格:</legend>
+        </fieldset>
+        <div class="table-simple">
+          <table class="layui-hide" id="table1"></table>
+        </div>
+      </div>
+      <div class="marg-b-30">
+        <fieldset class="layui-elem-field layui-field-title">
+          <legend>table表格:</legend>
+        </fieldset>
+        <div class="table-complex">
+          <table class="layui-hide" id="table2"></table>
+        </div>
+      </div>
+      <div class="marg-b-30">
+        <fieldset class="layui-elem-field layui-field-title">
+          <legend>带排序的信息</legend>
+        </fieldset>
+        <div class="block-wrapper export-wrapper block-wrapper-lightYellow">
+          <div class="layui-row">
+            <div class="layui-col-sm7 export-wrapper-left">
+              <h4 class="sort-title">排序</h4>
+              <ul class="sort-ul">
+                <li class="sort-li down">
+                  <a href="javascript:;">
+                    <span>销售</span>
+                    <i class="layui-icon">&#xe61a;</i>
+                  </a>
+                </li>
+                <li class="sort-li down">
+                  <a href="javascript:;">
+                    <span>销售库存</span>
+                    <i class="layui-icon">&#xe61a;</i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="layui-col-sm5 export-wrapper-right">
+              <span>满足条件商品共计
+                <em class="red">2</em>种，合计
+                <em class="red">12</em>件</span>
+              <button class="layui-btn layui-btn-back">导出数据</button>
+            </div>
+
+          </div>
+        </div>
+        <div class="block-wrapper export-wrapper ">
+          <div class="layui-row">
+            <div class="layui-col-sm7 export-wrapper-left">
+              <h4 class="sort-title">排序</h4>
+              <ul class="sort-ul">
+                <li class="sort-li down">
+                  <a href="javascript:;">
+                    <span>销售</span>
+                    <i class="layui-icon">&#xe61a;</i>
+                  </a>
+                </li>
+                <li class="sort-li down">
+                  <a href="javascript:;">
+                    <span>销售库存</span>
+                    <i class="layui-icon">&#xe61a;</i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="layui-col-sm5 export-wrapper-right">
+              <span>满足条件商品共计
+                <em class="red">2</em>种，合计
+                <em class="red">12</em>件</span>
+              <button class="layui-btn layui-btn-back">导出数据</button>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <div class="marg-b-30">
+        <fieldset class="layui-elem-field layui-field-title">
+          <legend>弹出框</legend>
+        </fieldset>
+        <div class="table-simple">
+          <div id="diastepDemo" style="margin-bottom: 0;">
+            <button data-method="examinePass" class="layui-btn layui-btn-primary">审核通过</button>
+            <button data-method="examineFail" class="layui-btn layui-btn-primary">审核不通过</button>
+            <button data-method="examining" class="layui-btn layui-btn-primary">正在审核</button>
+            <button data-method="roleSelect1" class="layui-btn layui-btn-primary">角色选择1</button>
+            <button data-method="roleSelect2" class="layui-btn layui-btn-primary">角色选择2</button>
+            <button data-method="logistics" class="layui-btn layui-btn-primary">物流详情</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="marg-b-30">
+        <fieldset class="layui-elem-field layui-field-title">
+          <legend>普通步骤条</legend>
+        </fieldset>
+        <div class="table-simple">
+          <ul class="clearfix step-wrap">
+            <li class="fl step-li step-active step-finish">
+              <div class="step-li-head">
+                <i class="step-li-line"></i>
+                <span class="step-icon">
+                  <i>1</i>
+                </span>
+              </div>
+              <p class="step-title">选择店铺类型</p>
+            </li>
+            <li class="fl step-li step-active ">
+              <div class="step-li-head">
+                <i class="step-li-line"></i>
+                <span class="step-icon">
+                  <i>2</i>
+                </span>
+              </div>
+              <p class="step-title">阅读开店须知</p>
+            </li>
+            <li class="fl step-li">
+              <div class="step-li-head">
+                <i class="step-li-line"></i>
+                <span class="step-icon">
+                  <i>3</i>
+                </span>
+              </div>
+              <p class="step-title">个人信息确认</p>
+            </li>
+            <li class="fl step-li">
+              <div class="step-li-head step-li-head_last">
+                <i class="step-li-line"></i>
+                <span class="step-icon">
+                  <i>4</i>
+                </span>
+              </div>
+              <p class="step-title">完成</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="marg-b-30">
+        <fieldset class="layui-elem-field layui-field-title">
+          <legend>订单步骤条</legend>
+        </fieldset>
+        <div class="table-simple">
+          <ul class="clearfix step-wrap logisticsStep-wrap">
+            <li class="fl step-li step-active step-finish">
+              <div class="step-li-head">
+                <i class="step-li-line"></i>
+                <span class="step-icon">
+                  <i class="icon iconfont icon-orderQuery"></i>
+                </span>
+              </div>
+              <p class="step-title">提交订单</p>
+              <p class="step-subTitle">
+                <span>2018-01-03</span>
+                <span>10:13:00</span>
+              </p>
+            </li>
+            <li class="fl step-li step-active ">
+              <div class="step-li-head">
+                <i class="step-li-line"></i>
+                <span class="step-icon">
+                  <i class="icon iconfont icon-channelQuery"></i>
+                </span>
+              </div>
+              <p class="step-title">付款成功</p>
+              <p class="step-subTitle">
+                <span>2018-01-03</span>
+                <span>10:13:00</span>
+              </p>
+            </li>
+            <li class="fl step-li">
+              <div class="step-li-head">
+                <i class="step-li-line"></i>
+                <span class="step-icon">
+                  <i class="icon iconfont icon-channelQuery"></i>
+                </span>
+              </div>
+              <p class="step-title">商品生产</p>
+              <p class="step-subTitle">
+                <span>2018-01-03</span>
+                <span>10:13:00</span>
+              </p>
+            </li>
+            <li class="fl step-li">
+              <div class="step-li-head">
+                <i class="step-li-line"></i>
+                <span class="step-icon">
+                  <i class="icon iconfont icon-channelQuery"></i>
+                </span>
+              </div>
+              <p class="step-title">商品出库</p>
+              <p class="step-subTitle">
+                <span>2018-01-03</span>
+                <span>10:13:00</span>
+              </p>
+            </li>
+            <li class="fl step-li">
+              <div class="step-li-head step-li-head_last">
+                <i class="step-li-line"></i>
+                <span class="step-icon">
+                  <i class="icon iconfont icon-channelQuery"></i>
+                </span>
+              </div>
+              <p class="step-title">完成</p>
+              <p class="step-subTitle">
+                <span>2018-01-03</span>
+                <span>10:13:00</span>
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="marg-b-30">
+        <fieldset class="layui-elem-field layui-field-title">
+          <legend>信息展示</legend>
+        </fieldset>
+        <div class="table-simple" style="padding-bottom:20px">
+          <div class="info-item">
+            <label class="info-label">姓名：</label>
+            <span class="info-value">李晓明</span>
+          </div>
+          <div class="info-item">
+            <label class="info-label">性别：</label>
+            <span class="info-value">男</span>
+          </div>
+          <div class="info-item">
+            <label class="info-label">工号：</label>
+            <div class="edit-part layui-form">
+              <div class="layui-input-inline">
+                <input type="text" placeholder="087499593" class="layui-input">
+              </div>
+              <button class="layui-btn layui-btn-sure">确定</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/html" id="detail">
+    <div class="table-detail-wrap">
+        <span>已完成</span>
+        <a class="layui-link layui-link-normal" href="./orderDetail.html" lay-event="detail">订单详情</a>
+    </div>
+  </script>
+  <script type="text/html" id="goodsInfo">
+    <div class="goodsInfo-wrap">
+        <dl class="clearfix">
+          <dt class="goodsInfo-img mr20"><img src="../../static/images/orderQueryTest.png"/></dt>
+          <dd class="">
+            <p class="goodsInfo-title">{{d.goods.name}}</p>
+            <ul class="goodsInfo-attr">
+              <li>
+                <span>商品编码：</span><span>{{d.goods.code}}</span>   
+              </li>
+              <li> 
+                <span> 商品属性：</span><span>{{d.goods.attr}}</span>
+              </li>
+            </ul>
+          </dd>
+        </dl>
+    </div>
+  </script>
+  <script type="text/html" id="moneyNum">
+     <span class="moneyText">￥{{d.money}}</span>
+  </script>
+  <script src="../../static/third/layui/layui.js"></script>
+  <script src="../../static/third/layui/lay/modules/jquery.js"></script>
+  <script>
+    function getExamineDiastep(option) {
+      option.linkCall = option.linkCall || 'layer.closeAll()';
+      return function () {
+        layer.open({
+          type: 1,
+          title: false, //不显示标题栏,
+          skin: 'pocDialog',//
+          closeBtn: false,//不显示关闭按钮 
+          area: ['420px', '300px'],
+          shade: [0.6, '#323232'],
+          shadeClose: true,//点击遮罩层关闭
+          id: option.id, //设定一个id，防止重复弹出
+          moveType: 1,//拖拽模式，0或者1
+          content: '<div><span class="examineIcon icon iconfont icon-' + option.iconClass + '"></span><p class="tipBig bold">' + option.title + '</p><p class="tipSmall">' + option.tip + '</p></div>',
+          btn: [option.link],
+          btnAlign: 'c',
+          yes: function (index, data) {
+            console.log(index, data);
+          }
+        });
+      }
+    }
+
+    layui.use(['jquery', 'element', 'layer', 'form', 'laydate', 'table'], function () {
+      var form = layui.form,
+        jquery = layui.jquery,
+        layer = layui.layer,
+        table = layui.table,
+        element = layui.element,
+        laydate = layui.laydate,
+        $ = layui.jquery;
+      var datalist = [
+        { "date": "2018-03-24 15:32", "text": "已签收，签收人是同事" },
+        { "date": "2018-03-24 12:32", "text": "【北京市】北京朝阳公司派件员：幸福路 17633165787正在为您派件请注意接听电话" },
+        { "date": "2018-03-24 10:32", "text": "快件已到达【北京公司】" },
+        { "date": "2018-03-21 15:32", "text": "由【江苏江阴航空部】发往【北京中转部】" },
+        { "date": "2018-03-21 13:32", "text": "【江苏江阴航空部】正在进行【装车】扫描" },
+        { "date": "2018-03-21 12:32", "text": "快件已到达【江苏江阴航空部】 扫描员是【江阴航空部到件称重16】" },
+        { "date": "2018-03-20 15:32", "text": "由【江苏江阴航空部】发往【北京中转部】" },
+        { "date": "2018-03-20 13:32", "text": "【江苏江阴航空部】正在进行【装车】扫描" },
+        { "date": "2018-03-20 12:32", "text": "快件已到达【江苏江阴航空部】 扫描员是【江阴航空部到件称重16】" }
+      ];
+
+
+      function listInfo(datalist) {
+
+        var html = [];
+        for (var i = 0; i < datalist.length; i++) {
+          var dates = [i > 0 && datalist[i - 1].date.substring(0, 10), datalist[i].date.substring(0, 10)],//截取时间，当前和当前的下一个
+            time = datalist[i].date.slice(11),
+            marginTop = dates[0] == dates[1] ? '' : 'mt20';
+          classDateShow = dates[0] == dates[1] ? "logistics-date hidden" : "logistics-date";
+          html.push('<li class="' + (i == datalist.length - 1 ? "latest " : "") + (i == 0 ? "logistics-current " : "") + marginTop + '">' +
+            '<span class="' + classDateShow + '">' + dates[1] + '</span>' +
+            '<span class="logistics-time">' + time + '</span>' +
+            '<span class="logistics-process">' + datalist[i].text + '</span>' +
+            '</li>');
+        }
+        // $('.logistics-wrap').html(html.join(''));
+        return html.join('')
+      }
+      //日期范围选择
+      laydate.render({
+        elem: '#date',
+        range: true
+      });
+      //时间选择
+      laydate.render({
+        elem: '#datetime',
+        type: 'datetime'
+      });
+      laydate.render({
+        elem: '#star'
+        , trigger: 'click'
+      });
+      laydate.render({
+        elem: '#end'
+        , trigger: 'click'
+      });
+      //table
+      table.render({
+        elem: '#table1',
+        url: '../../static/mockData/table.json',
+        cellMinWidth: 80, //全局定义常规单元格的最小宽度，layui 2.2.1 新增
+        cols: [
+          [{
+            field: 'id',
+            width: 80,
+            title: 'ID',
+            sort: true
+          }, {
+            field: 'username',
+            width: 80,
+            title: '用户名'
+          }, {
+            field: 'sex',
+            width: 80,
+            title: '性别',
+            sort: true
+          }, {
+            field: 'city',
+            width: 80,
+            title: '城市'
+          }, {
+            field: 'sign',
+            title: '签名',
+            width: '30%',
+            minWidth: 100
+          } //minWidth：局部定义当前单元格的最小宽度，layui 2.2.1 新增
+            , {
+            field: 'experience',
+            title: '积分',
+            sort: true
+          }, {
+            field: 'score',
+            title: '评分',
+            sort: true
+          }, {
+            field: 'classify',
+            title: '职业'
+          }, {
+            field: 'wealth',
+            width: 137,
+            title: '财富',
+            sort: true
+          }
+          ]
+        ]
+      });
+      table.render({
+        elem: '#table2',
+        url: '../../static/mockData/orderQueryTable.json',
+        cols: [
+          [{
+            field: 'id',
+            width: 140,
+            title: '子订单编号'
+          }, {
+            field: '',
+            title: '商品信息',
+            minWidth: 400,
+            templet: '#goodsInfo'
+          }, {
+            field: 'money',
+            title: '实收金额（元）',
+            width: 150,
+            templet: '#moneyNum',
+            align: 'right'
+            // style:'text-align:right'
+          }, {
+            field: 'from',
+            width: 150,
+            title: '订单来源'
+          }, {
+            field: 'tel',
+            width: 120,
+            title: '客户手机',
+          }, {
+            field: 'developer',
+            width: 150,
+            title: '发展人',
+          }, {
+            field: '',
+            width: 150,
+            title: '订单状态',
+            templet: '#detail'
+          }
+          ]
+        ]
+      });
+      //弹出框
+      var active = {
+        examinePass: getExamineDiastep({
+          id: 'examinePass',
+          title: '审核通过',
+          tip: '恭喜您！您的审核结果显示为：通过！',
+          link: '进入店铺',
+          iconClass: 'pass',
+          linkCall: 'window.location=\'http://baidu.com\''
+        }),
+        examineFail: getExamineDiastep({
+          id: 'examineFail',
+          title: '审核不通过',
+          tip: '您的身份证已到期，请补办身份证后重新上传照片！',
+          link: '继续提交申请',
+          iconClass: 'fail',
+          linkCall: 'window.location=\'http://baidu.com\''
+        }),
+        examining: getExamineDiastep({
+          id: 'examining',
+          title: '正在审核',
+          tip: '您好！您的申请正在审核中，请耐心等待！',
+          link: '确定',
+          iconClass: 'warning',
+          linkCall: 'window.location=\'http://baidu.com\''
+        }),
+        roleSelect1: function () {
+          layer.open({
+            type: 1,
+            title: false, //不显示标题栏,
+            skin: 'pocDialog',//
+            closeBtn: true,
+            area: ['420px', '300px'],
+            shade: [0.6, '#323232'],
+            shadeClose: true,//点击遮罩层关闭
+            id: 'roleSelect_notCEO', //设定一个id，防止重复弹出
+            btn: ['取消', '确定'],
+            btnAlign: 'c',
+            moveType: 1,//拖拽模式，0或者1
+            content: '<div><span class="examineIcon icon iconfont icon-fail"></span><p class="tipBig red bold">目前您不是小CEO角色，请联系管理员赋权</p></div>'
+          });
+        },
+        roleSelect2: function () {
+          layer.open({
+            type: 1,
+            title: false, //不显示标题栏,
+            skin: 'pocDialog',//
+            closeBtn: true,
+            area: ['420px', '300px'],
+            shade: [0.6, '#323232'],
+            shadeClose: true,//点击遮罩层关闭
+            id: 'roleSelect_submit', //设定一个id，防止重复弹出
+            btn: ['取消', '确定'],
+            yes: function (index, layero) {
+              // do something
+              layer.close(index);
+            },
+            btnAlign: 'c',
+            moveType: 1,//拖拽模式，0或者1
+            content: '<div><span class="examineIcon icon iconfont icon-pass"></span><p class="tipBig bold">您的角色申请已提交，稍后请查看审核结果！</p></div>'
+          });
+        },
+        logistics: function () {
+          layer.open({
+            type: 1,
+            title: '物流详情',
+            skin: 'pocDialog hasTitle',//
+            closeBtn: true,
+            area: '800px',
+            shade: [0.6, '#323232'],
+            shadeClose: true,//点击遮罩层关闭
+            id: 'logistics', //设定一个id，防止重复弹出
+            moveType: 1,//拖拽模式，0或者1
+            content: '<div class="logistics-wrap"><ul>' + listInfo(datalist) + '</ul></div>'
+          });
+        }
+      };
+
+      $('#diastepDemo .layui-btn').on('click', function () {
+        var othis = $(this), method = othis.data('method');
+        active[method] ? active[method].call(this, othis) : '';
+      });
+      $('body').on('click', '.sort-li', function () {
+        var down = '<i class="layui-icon up-icon">&#xe61a;</i>',
+          up = '<i class="layui-icon down-icon">&#xe619;</i>';
+        if ($(this).hasClass('active')) {
+          if ($(this).hasClass('down')) {
+            $(this).find('i').remove();
+            $(this).removeClass('down').addClass('up').find('a').append(up);
+          } else {
+            $(this).find('i').remove();
+            $(this).removeClass('up').addClass('down').find('a').append(down);
+          }
+        } else {
+          $(this).addClass('active').siblings().removeClass('active');
+        }
+
+
+      })
+
+    })
+  </script>

@@ -1,0 +1,97 @@
+.top-tab-ul {
+    margin-bottom: .3rem;
+}
+
+.top-tab-ul li {
+    margin: 0 .16rem;
+    float: left;
+}
+
+.top-tab-ul li a {
+    color: #000;
+    font-size: .36rem;
+    line-height: .69rem;
+    border-bottom: .03rem solid #fff;
+    display: block
+}
+
+.top-tab-ul li.active a {
+    border-bottom: .03rem solid #fa7a07;
+}
+
+.colletion-wrapper {
+    top: .8rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0
+}
+
+.netSlidebox {
+    overflow: hidden;
+}
+
+.btnbox {
+    height: 1.46rem;
+}
+
+.box-center div {
+    text-align: center;
+}
+
+.box-center div:nth-child(1) {
+    margin-left: 1.6rem;
+    margin-right: .3rem;
+}
+
+.box-center {
+    margin-top: .4rem;
+}
+
+.mycollect .product-dec {
+    margin-top: .1rem
+}
+
+.mycollect .box-col3-2 img {
+    width: 1.8rem;
+    height: .8rem;
+    margin-left: 0.3rem;
+}
+
+.mycollect-img {
+    margin-right: .2rem
+}
+
+.mycollect .box-center {
+    margin-top: 0;
+}
+
+.btn-model {
+    margin-top: .6rem;
+}
+
+.btn-model span {
+    height: .33rem;
+    line-height: .33rem;
+    padding: 0 .18rem;
+    color: #fff;
+    font-size: .24rem;
+    display: inline-block;
+    border-radius: .08rem
+}
+
+.mycollect .icon-more {
+    margin-top: .5rem;
+}
+
+.mycollect-img img {
+    width: 1.8rem;
+    height: .9rem;
+}
+
+.order-model .mycollect-icon {
+    width: 1.2rem;
+    height: .2rem;
+    margin-left: .3rem;
+    margin-bottom: .1rem;
+}

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>订单确认</title>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <!-- <link rel="stylesheet" href="../static/common/iconfont/iconfont.css"> -->
+
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_668017_iwvbbeg6nywdbo6r.css">
+    <link rel="stylesheet" href="../static//third/weui/lib/weui.min.css">
+    <link rel="stylesheet" href="../static/third/weui/css/jquery-weui.min.css">
+    <link rel="stylesheet" href="../static/common/css/swiper-3.2.5.min.css">
+    <link rel="stylesheet" href="../static/common/css/animate.min.css">
+    <link rel="stylesheet" href="../static/common/css/public.css">
+    <link rel="stylesheet" href="../static/common/css/common.css">
+    <link rel="stylesheet" href="../static/common/css/myOrder.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-button is-left">
+            <a href="javascript:history.go(-1);" class="router-link-active">
+                <button class="mint-button mint-button--default mint-button--normal">
+                    <span class="mint-button-icon">
+                        <i class="icon iconfont icon-fanhui color-black"></i>
+                    </span>
+                    <label class="mint-button-text"></label>
+                </button>
+            </a>
+        </div>
+        <h1 class="header-title">订单评价</h1>
+        <div class="header-button is-right">
+            <a href="javascript:;" class="comt-a"></a>
+        </div>
+    </header>
+    <div class="order-sure-wrapper">
+        <div class="order-sure-one">
+            <a href="addressList.html" class="people-ads-wrap box-flex">
+                <i class="icon iconfont icon-location"></i>
+                <div class="flex p-ads-wrap">
+                    <div class="box-flex">
+                        <p class="p-ads-name flex">收货人：嘟嘟</p>
+                        <p class="p-ads-tel">186****0321</p>
+                    </div>
+                    <p class="p-ads-info">
+                        收货地址：
+                        <em>北京市海淀区西四环到西五环之间 中关村街道 北四环西路56号 辉煌时代大厦9层</em>
+                    </p>
+                </div>
+                <i class="icon iconfont icon-more"></i>
+            </a>
+        </div>
+        <div class="order-sure-two box-flex">
+            <div class="os-img-wrap">
+                <img src="../static/common/images/img_01.png" />
+            </div>
+            <div class="flex os-info-wrap">
+                <h4>佳能750D单反套机数码高清相机中高端触屏翻屏相机</h4>
+                <p class="oth-p">75D 新款</p>
+                <div class="box-flex price-num-wrap">
+                    <p class="flex">
+                        <em class="y-em">¥ 4999.98</em>
+                        <em class="x-em"> 5368.38 </em>
+                    </p>
+                    <span>&times;1</span>
+                </div>
+            </div>
+        </div>
+        <div class="order-sure-three">
+            <div class="order-sure-three_01">
+                <div class="os-list-wrap box-flex">
+                    <p class="os-label-p">入网当月资费</p>
+                    <div class="flex">
+                        <div class="box-flex">
+                            <div class="flex os-list-r">全月套餐</div>
+                            <i class="icon iconfont icon-more color-black"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="wn-p-wrap">
+                    <p>合约计划：16619737654 北京 北京</p>
+                    <p>月费：99元</p>
+                    <p>合约期：无预存话费</p>
+                </div>
+            </div>
+            <div class="os-list-wrap box-flex">
+                <p class="os-label-p">机主姓名</p>
+                <div class="flex">
+                    <input type="text" class="os-list-r input-03" placeholder="请输入机主姓名" />
+                </div>
+            </div>
+            <div class="os-list-wrap box-flex">
+                <p class="os-label-p">身份证号</p>
+                <div class="flex">
+                    <input type="text" class="os-list-r input-03" placeholder="请输入身份证号" />
+                </div>
+            </div>
+            <div class="os-list-wrap box-flex agreen-wrap">
+                <i class="icon iconfont icon-duoxuankuang2"></i>
+                <p class="flex">
+                    我已阅读并同意
+                    <a href="javascript:;">《中国联通约为客户入网服务协议》</a>
+                </p>
+            </div>
+            <div class="os-list-wrap box-flex">
+                <p class="os-label-p">配送方式</p>
+                <div class="flex">
+                    <div class="box-flex" id="selectChooseBtn">
+                        <div class="flex os-list-r">快递免邮</div>
+                        <i class="icon iconfont icon-more color-black"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="os-list-wrap box-flex">
+                <p class="os-label-p">买家留言</p>
+                <div class="flex">
+                    <input type="text" class="os-list-r input-03" placeholder="请输入留言信息" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="order-sure-footer box-flex">
+        <div class="flex">
+            <p>合计金额 :
+                <em> ¥4999.98</em>
+            </p>
+        </div>
+        <a href="javascirpt:;" class="os-footer-btn">提交订单</a>
+    </div>
+
+    <!-- 邮寄方式 -->
+    <div class="popup-diy-wrap" id="registerType">
+        <span class="span-mask"></span>
+        <div class="popup-bottom animated-05">
+            <div class="popup-title-wrap">
+                <h3>邮寄类型</h3>
+            </div>
+            <div class="popup-body-wrap">
+                <div class="register-select-wrap">
+                    <div class="weui_cells weui_cells_form weui_cells_form_diy" id="selectChoose">
+                        <div class="weui-cell active">
+                            <div class="weui-cell__bd">
+                                <p>快递免邮</p>
+                            </div>
+                            <div class="weui-cell__ft">
+                                <span class="eys-icon">
+                                <i class="icon iconfont icon-duihao"></i>
+                            </span>
+                            </div>
+                        </div>
+                        <div class="weui-cell">
+                            <div class="weui-cell__bd">
+                                <p>快递10元</p>
+                            </div>
+                            <div class="weui-cell__ft">
+                                <span class="eys-icon">
+                                <i class="icon iconfont icon-duihao"></i>
+                            </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../static/third/weui/lib/jquery-2.1.4.js"></script>
+<script src="../static/third/weui/js/jquery-weui.js"></script>
+<script src="../static/third/weui/js/swiper.js"></script>
+<script src="../static/busi/orderSure.js"></script>
+
+
+</html

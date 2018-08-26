@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>活动管理</title>
+    <link rel="stylesheet" href="../../static/third/layui/css/layui.css">
+    <link rel="stylesheet" href="../../static/common/font/iconfont.css">
+    <link rel="stylesheet" href="../../static/common/css/common.css">
+    <link rel="stylesheet" href="../../static/common/css/page.css">
+    <link rel="stylesheet" href="../../static/common/css/table.css">
+</head>
+
+<body class="layui-layout-body">
+    <div class="layui-layout layui-layout-admin">
+        <div class="layui-header">
+            <i class="iconfont icon-logo"></i>
+            <div class="logo-text">
+                <div class="logo-text-CHI">中国联通新零售运营平台</div>
+                <div class="logo-text-ENG">CHINA UNICOM NEW RETAIL OPERATION</div>
+            </div>
+            <ul class="layui-nav layui-layout-right">
+                <li class="head-search">
+                    <div class="form_search">
+                        <i class="iconfont icon-search"></i>
+                        <input type="text" class="layui-input" placeholder="智能搜索" />
+                    </div>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">
+                        <img src="http://t.cn/RCzsdCq" class="layui-nav-img"> 贤心
+                    </a>
+                    <dl class="layui-nav-child">
+                        <dd>
+                            <a href="">基本资料</a>
+                        </dd>
+                        <dd>
+                            <a href="">安全设置</a>
+                        </dd>
+                    </dl>
+                </li>
+                <div class="header-icon">
+                    <i class="iconfont icon-message"></i>
+                    <div class="header-number">89</div>
+                </div>
+                <div class="header-icon">
+                    <i class="iconfont icon-book"></i>
+                    <div class="header-number">999+</div>
+                </div>
+                <!-- <li class="layui-nav-item"><a href="">退了</a></li> -->
+            </ul>
+        </div>
+
+        <div class="layui-side layui-bg-black">
+            <div class="layui-side-scroll">
+                <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+                <ul class="layui-nav layui-nav-tree" lay-filter="test">
+                    <li class="layui-nav-item">
+                        <a class="" href="javascript:;">
+                            <i class="iconfont icon-home"></i>首页</a>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;">
+                            <i class="iconfont icon-channelQuery"></i>渠道查询</a>
+                        <dl class="layui-nav-child">
+                            <dd>
+                                <a href="javascript:;">渠道商品查询</a>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="">
+                            <i class="iconfont icon-store"></i>店铺管理</a>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="">
+                            <i class="iconfont icon-orderQuery"></i>订单查询</a>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="">
+                            <i class="iconfont icon-stock"></i>库存查询</a>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="">
+                            <i class="iconfont icon-commissions"></i>佣金查询</a>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="">
+                            <i class="iconfont icon-maintain"></i>佣金任务维护</a>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="">
+                            <i class="iconfont icon-test"></i>清算测试</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="layui-body">
+            <!-- 内容主体区域 -->
+            <div class="layui-fluid  orderQueryWrap">
+                <div class="layui-breadcrumb">
+                    <i class="bread-icon layui-icon">&#xe623;</i>
+                    <a>
+                        <cite>活动管理</cite>
+                    </a>
+                    </span>
+                </div>
+                <div class="block-wrapper search-wrapper">
+                    <div class="layui-form">
+                        <div class="layui-row layui-col-space15">
+                            <div class="layui-col-sm3">
+                                <div class="layui-form-item layui-form-item_vertical">
+                                    <label class="layui-form-label">
+                    <em class="star">*</em>适用门店</label>
+                                    <div class="layui-input-block layui-input-other">
+                                        <select name="interest" lay-filter="aihao">
+                      <option value=" ">全部</option>
+                      <option value="0">未完成</option>
+                      <option value="1">已完成</option>
+                    </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="layui-col-sm3">
+                                <div class="layui-form-item layui-form-item_vertical">
+                                    <label class="layui-form-label">
+                    <em class="star">*</em>活动状态</label>
+                                    <div class="layui-input-block layui-input-other">
+                                        <select name="interest" lay-filter="aihao">
+                      <option value=" ">全部</option>
+                      <option value="0">未完成</option>
+                      <option value="1">已完成</option>
+                    </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="layui-col-sm3">
+                                <div class="layui-form-item layui-form-item_vertical">
+                                    <label class="layui-form-label">
+                    <em class="star">*</em>适用类型</label>
+                                    <div class="layui-input-block layui-input-other">
+                                        <select name="interest" lay-filter="aihao">
+                      <option value=" ">全部</option>
+                      <option value="0">未完成</option>
+                      <option value="1">已完成</option>
+                    </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="layui-col-sm3">
+                                <div class="layui-form-item layui-form-item_vertical">
+                                    <label class="layui-form-label">
+                    <em class="star">*</em>活动名称</label>
+                                    <div class="layui-input-block layui-input-other">
+                                        <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入活动名称" class="layui-input">
+                                        <p class="from-tips"></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="layui-col-sm3">
+                                <div class="layui-form-item layui-form-item_vertical">
+                                    <label class="layui-form-label">
+                    <em class="star">*</em>生效时间</label>
+                                    <div class="layui-input-block layui-input-other" style="position: relative">
+                                        <div class="layui-date-wrap">
+                                            <div class="layui-date-wrap_item layui-date-wrap_itemStar">
+                                                <input type="text" class="layui-input layui-input-icon" id="start1" placeholder="开始时间">
+                                                <i class="layui-icon layui-icon-other" style="top: 0">&#xe637;</i>
+                                            </div>
+                                            <div class="layui-date-wrap_itemCent">至</div>
+                                            <div class="layui-date-wrap_item layui-date-wrap_itemEnd">
+                                                <input type="text" class="layui-input layui-input-icon" id="end1" placeholder="结束时间">
+                                                <i class="layui-icon layui-icon-other" style="top: 0">&#xe637;</i>
+                                            </div>
+                                        </div>
+                                        <p class="from-tips errow-tips"></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="layui-col-sm3">
+                                <div class="layui-form-item layui-form-item_vertical">
+                                    <label class="layui-form-label">
+                    <em class="star">*</em>失效时间</label>
+                                    <div class="layui-input-block layui-input-other" style="position: relative">
+                                        <div class="layui-date-wrap">
+                                            <div class="layui-date-wrap_item layui-date-wrap_itemStar">
+                                                <input type="text" class="layui-input layui-input-icon" id="start2" placeholder="开始时间">
+                                                <i class="layui-icon layui-icon-other" style="top: 0">&#xe637;</i>
+                                            </div>
+                                            <div class="layui-date-wrap_itemCent">至</div>
+                                            <div class="layui-date-wrap_item layui-date-wrap_itemEnd">
+                                                <input type="text" class="layui-input layui-input-icon" id="end2" placeholder="结束时间">
+                                                <i class="layui-icon layui-icon-other" style="top: 0">&#xe637;</i>
+                                            </div>
+                                        </div>
+                                        <p class="from-tips errow-tips"></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="layui-col-sm6">
+                                <div class="layui-form-item layui-form-item_vertical">
+                                    <label class="layui-form-label"></label>
+                                    <div class="layui-input-block layui-input-other">
+                                        <div class="search-btn-wrapper">
+                                            <button class="layui-btn layui-btn-back">重置</button>
+                                            <button class="layui-btn layui-btn-sure">筛选</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="block-wrapper result-wrapper layui-form">
+                    <div class="table-complex">
+                        <table class="layui-hide" id="table"></table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../static/third/layui/layui.js"></script>
+    <script id="activeCode" type="text/html">
+        <a class="layui-link-normal">{{d.activeCode}}</a>
+    </script>
+    <script id="timeRange" type="text/html">
+        <p>起：{{d.startTime}}</p>
+        <p>止：{{d.endTime}}</p>
+    </script>
+    <script id="set" type="text/html">
+        <div class="table-link-wrap">
+            <a class="layui-link layui-link-normal">推广</a>
+            <a class="layui-link layui-link-normal">查看</a>
+        </div>
+    </script>
+    <script>
+        layui.config({
+            base: '../../static/busi/' //你存放新模块的目录，注意，不是layui的模块目录
+        }).use('activeManage'); //加载入口
+    </script>
+</body>
+
+</html>

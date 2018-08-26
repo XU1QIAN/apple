@@ -1,0 +1,47 @@
+{
+  "code": 0,
+  "msg": "",
+  "count": 30,
+  "data": [
+    {
+      "goodsName": "九阳榨汁机原汁机WZ-2019",
+      "storeMame": "南马路营业厅店铺",
+      "sale": "93828",
+      "clerk":"张晓明",
+      "shopowner":"张晓明",
+      "totalMoney": "58331329.00"
+    },
+    {
+      "goodsName": "iPhone X-128G 苹果手机",
+      "storeMame": "南马路营业厅店铺",
+      "sale": "93810",
+      "clerk":"张晓明",
+      "shopowner":"张晓明",
+      "totalMoney": "58331329.00"
+    },
+    {
+      "goodsName": "华为mate10-128G手机",
+      "storeMame": "南马路营业厅店铺",
+      "sale": "83810",
+      "clerk":"张晓明",
+      "shopowner":"张晓明",
+      "totalMoney": "58331329.00"
+    },
+    {
+      "goodsName": "小米体感智能秤WZ-100",
+      "storeMame": "南马路营业厅店铺",
+      "sale": "73810",
+      "clerk":"张晓明",
+      "shopowner":"张晓明",
+      "totalMoney": "58331329.00"
+    },
+    {
+      "goodsName": "RAPOO雷柏光电红外无线鼠标",
+      "storeMame": "南马路营业厅店铺",
+      "sale": "53810",
+      "clerk":"张晓明",
+      "shopowner":"张晓明",
+      "totalMoney": "58331329.00"
+    }
+  ]
+}

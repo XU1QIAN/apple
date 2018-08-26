@@ -1,0 +1,71 @@
+html {
+    height: 100%;
+}  
+
+body {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}  
+
+/* 地图模式 */
+#map {
+    top: 0.9rem;
+    height: 100%;
+}
+
+.icon-location {
+    font-size: .4rem;
+}
+
+.footer {
+    background: none;
+    margin-bottom: 15px;
+    width: 90%;
+    left: 5%;
+}
+
+.footer .btn01 {
+    width: 100%;
+}
+
+/* 列表模式 */
+.store-list {
+    margin-top: 0.9rem;
+    background-color: #fff;
+}
+
+.weui-media-box_text h4 span {
+    font-size: .28rem;
+    color: #999;
+    float: right;
+}
+
+.weui-media-box__desc {
+    font-size: .3rem;
+    color: #333;
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 8px;
+}
+
+.go-there {
+    color: #fa7a07;
+    border: 1px solid #fa7a07;
+    border-radius: 15px;
+    padding: 5px 10px;
+    display: inline-block;
+    margin-top: 10px;
+    font-size: .28rem;
+}
+
+.weui-media-box_text {
+    border-bottom: 10px solid #f1f2f5;
+}
+
+.weui-media-box_text:last-child {
+    border-bottom: none;
+}
+
+.weui-media-box {
+    padding-bottom: 10px;
+}

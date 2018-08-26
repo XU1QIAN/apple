@@ -1,0 +1,47 @@
+html {
+    background-color: #f1f2f5;
+}
+
+.check-invoice {
+    margin-top: 0.9rem;
+    background-color: #fff;
+    font-size: 0.3rem;
+    padding: 0 15px;
+}
+
+.invoice-info {
+    padding: 15px 0; 
+    border-bottom: 1px solid #eeeeee;
+}
+
+.invoice-info:last-child {
+    border-bottom: none;
+}
+
+.each-info {
+    height: 36px;
+    line-height: 36px;
+}
+
+.each-info a {
+    border: 1px solid #c7c7c7; 
+    border-radius: 4px;
+    padding: 3px 5px;
+    color: #333;
+    margin-left: 5px;
+}
+
+.each-info a:first-child {
+    margin-left: 15px;
+}
+
+/* 发票 */
+.invoice-detail {
+    margin-top: 0.9rem;
+    padding: 0 10px 20px 10px;
+}
+
+.invoice-detail img {
+    margin-top: 15px;
+    width: 100%;
+}

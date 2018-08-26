@@ -1,0 +1,24 @@
+{
+    "respCode":"200",
+    "operDesc":"响应成功",
+    "data": [
+        {
+            "imgSrc": "../static/common/images/img_11.png",
+			"serviceName": "华为电脑清灰服务",
+	  		"price": "99.98",
+            "originalPrice": "168.38",
+            "amount": 1
+        }, {
+            "imgSrc": "../static/common/images/img_11.png",
+            "serviceName": "华为电脑系统重装服务",
+            "price": "48.57",
+            "originalPrice": "95.00",
+            "amount": 2
+        }, {
+            "imgSrc": "../static/common/images/img_11.png",
+            "serviceName": "华为电脑键盘清灰服务",
+            "price": "122.00",
+            "amount": 1
+        }
+    ]
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>商品详情</title>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <link rel="stylesheet" href="../static/common/iconfont/iconfont.css">
+    <link rel="stylesheet" href="../static//third/weui/lib/weui.min.css">
+    <link rel="stylesheet" href="../static/third/weui/css/jquery-weui.min.css">
+    <link rel="stylesheet" href="../static/common/css/swiper-3.2.5.min.css">
+    <link rel="stylesheet" href="../static/common/css/public.css">
+    <link rel="stylesheet" href="../static/common/css/common.css">
+    <link rel="stylesheet" href="../static/common/css/productDetail.css">
+</head>
+
+<body ontouchstart>
+    <div>
+
+        <!-- 参数详情 -->
+        <div class="model box ">
+            <div class="title-Row ">
+                <span class="text ">参数详情</span>
+                <i class="icon iconfont icon-moreunfold arrow-down fr "></i>
+            </div>
+            <div class="parabox ">
+                <div class="weui-cells weui-cells_form " id="protab01">
+                    <div class="weui-cell ">
+						<input v-model="change">
+						<input v-model="change1">
+                        <button @click="edit">提交{{change}}</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../static/third/weui/lib/jquery-2.1.4.js "></script>
+<script src="../static/third/weui/js/swiper.js "></script>
+<script src="../static/third/vue.min.js"></script>
+<script src="../static/third/axios.min.js"></script>
+<script src="../static/common/js/main.js"></script>
+<script src="../static/busi/test1.js "></script>
+<script>
+    var mySwiper = new Swiper('.swiper-container', {
+        speed: 400,
+        spaceBetween: 100,
+        autoplay: 2000,
+        loop: true,
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+    });
+</script>
+
+</html>

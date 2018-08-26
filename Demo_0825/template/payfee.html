@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="IE=edge, chrome=1">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+        <title>充值缴费</title>
+        <meta content="yes" name="apple-mobile-web-app-capable">
+        <meta content="yes" name="apple-touch-fullscreen">
+        <link rel="stylesheet" href="../static/third/weui/lib/weui.min.css">
+        <link rel="stylesheet" href="../static/third/weui/css/jquery-weui.min.css">
+        <link rel="stylesheet" href="../static/common/css/public.css">
+        <link rel="stylesheet" href="../static/common/css/common.css">
+        <link rel="stylesheet" href="../static/common/iconfont/iconfont.css">
+        <link rel="stylesheet" href="../static/third/weui/lib/weui.css">
+        <link rel="stylesheet" href="../static/third/weui/css/jquery-weui.css">
+        <link rel="stylesheet" href="../static/common/css/payfee.css">
+    </head>
+</head>
+
+<body ontouchstart >
+<header class="header">
+    <div class="header-button is-left">
+        <a href="javascript:history.go(-1);" class="router-link-active">
+            <button class="mint-button mint-button--default mint-button--normal">
+                  <span class="mint-button-icon">
+                      <i class="icon iconfont icon-fanhui color-black"></i>
+
+                  </span>
+                <label class="mint-button-text"></label>
+            </button>
+        </a>
+    </div>
+    <h1 class="header-title">充值缴费</h1>
+    <div class="header-button is-right"></div>
+</header>
+
+<div id="payfee" v-cloak>
+<div class="input-payfee-wrapper" >
+
+    <div class="input-payfee">
+        <div class="box-flex">
+            <div class="flex">
+                <input type="text" placeholder="请输入手机号码" v-model="phone" v-on:blur="blur()"  maxlength="13"/>
+                <p class="belongto" v-modle="area">{{area}}</p>
+            </div>
+            <i class="icon iconfont icon-touxiang-copy book"></i>
+        </div>
+    </div>
+    <!--选框-->
+    <div class="box-flex price-pkg-wrap">
+        <div class="item" v-for="price in prices">
+            <button class="price" v-on:click="choose($event)" v-bind:value="price.price"><p>{{price.price | filter}}元</p>
+                <p>售价：{{price.price}}元</p></button>
+        </div>
+    </div>
+</div>
+<!-- footer -->
+<div class="footer ">
+
+    <div class="count">
+        <span>合计金额：</span><span id="count" v-model="count">{{count}}</span>
+    </div>
+    <div class="submit">
+        <p class="btn01" v-on:click="submit()">去结算</p>
+    </div>
+</div>
+</div>
+
+</body>
+<script src="../static/third/weui/lib/jquery-2.1.4.js"></script>
+<script src="../static/third/weui/lib/fastclick.js"></script>
+<script src="../static/third/vue.min.js"></script>
+<script src="../static/third/axios.min.js"></script>
+<script src="../static/busi/payfee.js"></script>
+
+</html>

@@ -1,0 +1,477 @@
+a {
+    color: #303030;
+}
+
+body {
+    background: #f1f2f5;
+    position: relative;
+    height: 100%;
+}
+
+.top-bar {
+    position: fixed;
+    top: .9rem;
+    height: auto;
+    width: 100%;
+    color: #303030;
+    background: #fff;
+}
+
+.top-tab-ul {
+    padding: 0 .24rem;
+    box-sizing: border-box;
+    border-bottom: .2rem solid #f1f2f5;
+    text-align: center;
+}
+
+.top-tab-ul li a {
+    line-height: .77rem;
+    border-bottom: .03rem solid #fff;
+    text-align: center;
+    font-size: .24rem;
+    display: inline-block;
+    margin: 0 auto;
+    padding: 0 .1rem;
+}
+
+.top-tab-ul li.active a {
+    border-bottom-color: #fa7a07;
+}
+
+.top-tab-ul li.active a {
+    color: #fa7a07;
+}
+
+.myorder-wrapper {
+    color: #303030;
+    position: absolute;
+    background: #f1f2f5;
+    top: 2rem;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.myorder-wrapper .swiper-slide {
+    min-height: 1rem;
+}
+
+.my-order-item {
+    background: #fff;
+    margin-bottom: .2rem;
+}
+
+.my-order-item-header {
+    padding: 0 .24rem;
+    height: .65rem;
+    line-height: .65rem;
+    color: #3e3e3e;
+}
+
+.my-order-item-header i {
+    color: #666;
+}
+
+.my-order-item-header i:first-child {
+    font-size: .38rem;
+}
+
+.my-order-item-header i:last-child {
+    font-size: .26rem;
+}
+
+.my-order-item-header p {
+    padding: 0 .12rem;
+    font-size: .2rem;
+}
+
+.my-order-item-header .state-span {
+    color: #fa7a07;
+    font-size: .2rem;
+}
+
+.my-order-item-body {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.store-list-item {
+    padding: .1rem .24rem;
+    background: #fafafa;
+    margin-bottom: .12rem;
+    font-size: .24rem;
+    line-height: .34rem;
+}
+
+.store-list-item .pro-img-wrap {
+    width: 1.42rem;
+    height: 1.42rem;
+    margin-right: .24rem;
+}
+
+.store-list-item .price-wrap {
+    text-align: right;
+    margin-left: .24rem;
+}
+
+.store-list-item .prcie-m {
+    margin-bottom: .34rem;
+}
+
+.store-list-item .price-wrap em {
+    display: block;
+}
+
+.em-cn {
+    line-height: .34rem;
+    border: 1px solid #d61821;
+    color: #d61821;
+    padding: 0 .1rem;
+    display: inline-block;
+    margin-right: .12rem;
+    border-radius: .05rem;
+}
+
+.y-price {
+    color: #999999;
+    text-decoration: line-through;
+}
+
+.store-list-item .pro-name-p,
+.os-info-wrap h4 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    margin-bottom: .08rem;
+}
+
+.cunt-p {
+    text-align: right;
+    line-height: .5rem;
+    font-size: .24rem;
+    padding-right: .24rem;
+}
+
+.cunt-p em {
+    font-size: .2rem;
+}
+
+.my-order-item-footer {
+    text-align: right;
+    padding: .2rem .4rem .2rem .04rem;
+}
+
+.my-order-item-footer a {
+    position: relative;
+    font-size: .24rem;
+    height: .5rem;
+    line-height: .5rem;
+    border-radius: .5rem;
+    padding: 0 .05rem;
+    display: inline-block;
+    margin-left: .04rem;
+    min-width: 1.2rem;
+    text-align: center;
+}
+
+.my-order-item-footer a.yl-a {
+    border: 1px solid #c7c7c7;
+    color: #000000;
+}
+
+.my-order-item-footer a.gl-a {
+    border: 1px solid #fa7a07;
+    color: #fa7a07;
+}
+
+.my-order-item-footer .yl-a i {
+    position: absolute;
+    height: .28rem;
+    width: .28rem;
+    display: block;
+    line-height: .28rem;
+    font-size: .2rem;
+    border-radius: .28rem;
+    text-align: center;
+    right: -.1rem;
+    top: -.12rem;
+    background: #fa7a07;
+    color: #fff;
+}
+
+
+/*订单评价页面*/
+
+.order-comt-wrap,
+.order-sure-wrapper {
+    position: absolute;
+    top: .9rem;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.order-sure-wrapper {
+    bottom: 1rem;
+}
+
+.pro-comt-item {
+    background: #fff;
+    margin-bottom: .2rem;
+}
+
+.pro-comt-item-star {
+    padding: .12rem .2rem;
+    border-bottom: 1px solid #f0f0f0;
+    align-items: center
+}
+
+.pro-img-samll {
+    width: .7rem;
+    height: .7rem;
+    border: 1px solid #f0f0f0;
+    margin-right: .35rem;
+    position: relative
+}
+
+.pro-img-samll img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    display: inline-block;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.star-comt-wrap i {
+    font-size: .4rem;
+    padding: 0 .06rem;
+    line-height: .6rem;
+}
+
+.textare-wrap {
+    padding: .1rem .2rem;
+    font-size: .24rem;
+    line-height: .32rem;
+}
+
+.textare-wrap .textare-02 {
+    width: 100%;
+}
+
+.star-wrap {
+    padding: 0 .2rem .1rem;
+    background: #fff;
+}
+
+.store-star-cmt_item {
+    align-items: center;
+    margin-bottom: .1rem;
+}
+
+.store-star-cmt_item p,
+.store-star-cmt_item span {
+    line-height: .6rem;
+}
+
+.store-star-cmt_item i {
+    font-size: .36rem;
+}
+
+.store-star-cmt_item p {
+    font-size: .24rem;
+}
+
+.store-star-cmt_item span {
+    color: #b8b8b8;
+    font-size: .2rem;
+    padding-left: .3rem;
+}
+
+.header-button>a.comt-a,
+.icon-mn_xingxing_fill {
+    color: #fa7a07;
+}
+
+
+/* 订单确认 */
+
+.people-ads-wrap {
+    align-items: center;
+    padding: .24rem .24rem .34rem;
+    background: #fff url(../images/xin-bg.png) repeat-x bottom left/1rem auto;
+    margin-bottom: .2rem;
+}
+
+.p-ads-wrap {
+    padding: 0 .24rem;
+}
+
+.p-ads-name,
+.p-ads-tel {
+    margin-bottom: .15rem;
+    font-size: .3rem;
+    font-weight: bold;
+}
+
+.p-ads-info {
+    font-size: .26rem;
+    line-height: .4rem;
+}
+
+.order-sure-two {
+    background: #fff;
+    padding: .24rem;
+    margin-bottom: .2rem;
+}
+
+.os-img-wrap {
+    width: 1.6rem;
+    height: 1.6rem;
+    border: 1px solid #f0f0f0;
+    position: relative;
+}
+
+.os-img-wrap img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: block;
+    margin: auto
+}
+
+.os-info-wrap {
+    padding: 0 .2rem;
+    font-size: .24rem;
+}
+
+.os-info-wrap h4 {
+    line-height: .36rem;
+}
+
+.oth-p {
+    font-size: .22rem;
+    color: #b8b8b8;
+    margin-bottom: .2rem;
+}
+
+.price-num-wrap .y-em {
+    color: #fa7a07;
+}
+
+.price-num-wrap .x-em {
+    color: #b8b8b8;
+    text-decoration: line-through;
+    margin-right: .8rem;
+}
+
+.order-sure-three {
+    padding: 0 .24rem;
+    background: #fff;
+    font-size: .28rem;
+    margin-bottom: .2rem;
+}
+
+.os-list-wrap {
+    height: .6rem;
+    padding: .2rem .1rem;
+    line-height: .6rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.os-list-r {
+    text-align: right;
+    width: 100%;
+    min-height: .6rem;
+}
+
+.wn-p-wrap {
+    padding: .24rem .1rem;
+    line-height: .44rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.agreen-wrap {
+    align-items: center;
+}
+
+.agreen-wrap p {
+    font-size: .2rem;
+}
+
+.agreen-wrap i {
+    color: #b8b8b8;
+    margin-right: .1rem;
+    font-size: .42rem;
+}
+
+.agreen-wrap.active i {
+    color: #fa7a07;
+}
+
+.agreen-wrap a {
+    color: #1c7efb;
+    text-decoration: underline;
+}
+
+.order-sure-footer {
+    align-items: center;
+    background: #fff;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 1rem;
+    font-size: .3rem;
+}
+
+.order-sure-footer .os-footer-btn {
+    width: 2.5rem;
+    height: 1rem;
+    display: block;
+    color: #fff;
+    line-height: 1rem;
+    text-align: center;
+    background-image: -moz-linear-gradient( 180deg, rgb(250, 122, 7) 0%, rgb(250, 179, 7) 100%);
+    background-image: -webkit-linear-gradient( 180deg, rgb(250, 122, 7) 0%, rgb(250, 179, 7) 100%);
+    background-image: -ms-linear-gradient( 180deg, rgb(250, 122, 7) 0%, rgb(250, 179, 7) 100%);
+    margin-left: .24rem;
+}
+
+.order-sure-footer p {
+    text-align: right;
+}
+
+.order-sure-footer p em {
+    color: #fa7a07;
+}
+
+.register-select-wrap {
+    margin: 0 .25rem;
+}
+
+.register-select-wrap .icon-duihao {
+    color: #fff;
+}
+
+.register-select-wrap .weui-cell.active .icon-duihao {
+    color: #fa7a07
+}

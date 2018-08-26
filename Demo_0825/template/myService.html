@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>我的服务</title>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <link rel="stylesheet" href="../static/common/iconfont/iconfont.css">
+    <link rel="stylesheet" href="../static/third/weui/lib/weui.min.css">
+    <link rel="stylesheet" href="../static/third/weui/css/jquery-weui.min.css">
+    <link rel="stylesheet" href="../static/common/css/swiper-3.2.5.min.css">
+    <link rel="stylesheet" href="../static/common/css/public.css">
+    <link rel="stylesheet" href="../static/common/css/common.css">
+    <link rel="stylesheet" href="../static/common/css/myService.css">
+</head>
+
+<body ontouchstart>
+    <header class="header">
+        <div class="header-button is-left">
+            <a href="javascript:history.go(-1);" class="router-link-active">
+                <button class="mint-button mint-button--default mint-button--normal">
+                    <span class="mint-button-icon">
+                        <i class="icon iconfont icon-fanhui color-black "></i>
+                    </span> 
+                    <label class="mint-button-text"></label>
+                </button>
+            </a>
+        </div>
+        <h1 class="header-title">我的服务</h1>
+        <div class="header-button is-right"><a href="serviceRecord.html">历史记录</a></div>
+    </header>
+
+    <!-- 服务列表 -->
+    <div class="service-list" id="myService" v-cloak>
+        <div class="service" v-for="service in serviceList">
+            <i class="iconfont icon-weixuanzhongyuanquan w-radio"></i>
+            <div class="service-detail">
+                <div class="service-img">
+                    <img :src="service.imgSrc" />
+                </div>
+                <div class="service-info">
+                    <div class="service-name">
+                        <div>{{service.serviceName}}</div>
+                    </div>
+                    <div class="priceAndNum">
+                        <div class="price-area">¥ {{service.price}}<span class="original-price gray">{{service.originalPrice}}</span></div>
+                        <div class="num-area">x{{service.amount}}</div>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    
+    <!-- footer -->
+    <div class="footer bg-gray">
+        <a href="serviceApply.html" class="weui-btn btn01">申请服务</a>
+    </div>
+</body>
+<script src="../static/third/weui/lib/jquery-2.1.4.js"></script>
+<script src="../static/third/weui/js/swiper.js"></script>
+<script src="../static/third/vue.min.js"></script>
+<script src="../static/third/axios.min.js"></script>
+<script src="../static/common/js/main.js"></script>
+<script src="../static/busi/myService.js"></script>
+</html>
+
+
+

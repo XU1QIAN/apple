@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>我的</title>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <link rel="stylesheet" href="../static/common/iconfont/iconfont.css">
+    <link rel="stylesheet" href="../static/third/weui/lib/weui.min.css">
+    <link rel="stylesheet" href="../static/third/weui/css/jquery-weui.min.css">
+    <link rel="stylesheet" href="../static/common/css/public.css">
+    <link rel="stylesheet" href="../static/common/css/common.css">
+    <link rel="stylesheet" href="../static/common/css/myselfFunList.css">
+    <link rel="stylesheet" href="../static/common/css/mySetting.css">
+
+</head>
+
+<body ontouchstart>
+    <header class="header">
+        <div class="header-button is-left">
+            <a href="javascript:history.go(-1);" class="router-link-active">
+                <button class="mint-button mint-button--default mint-button--normal">
+                  <span class="mint-button-icon">
+                      <i class="icon iconfont icon-fanhui color-black"></i>
+
+                  </span>
+                <label class="mint-button-text"></label>
+            </button>
+            </a>
+        </div>
+        <h1 class="header-title">设置</h1>
+        <div class="header-button is-right"></div>
+    </header>
+
+    <div id="mySetting" class="myselfBody">
+        <div class="">
+            <div class=" weui-cells bg-myself mt0" style="margin-top:0px" >
+
+                <img class="user_bg" src="../static/common/images/bg-myself.png">
+                <img class="user_img" src="../static/common/images/bg-01.png">
+                <span id="name">张小霞<i class="icon iconfont icon-bj myRwrite"></i></span>
+                <!--<span id="name">{{user_name}}<i class="icon iconfont icon-bj myRwrite"></i></span>-->
+
+            </div>
+        </div>
+        <div class="model mybox box">
+            <div class="weui-cells mt0">
+                <a class="weui-cell weui-cell_access" :href="my_order.link">
+                    <div class="weui-cell__bd">
+
+                        <p class="item"><i class="icon iconfont icon-location shoucang"></i>{{address_manage.title}}</p>
+                    </div>
+                    <div class="radius">{{orders}}</div>
+                    <div class="weui-cell__ft">
+                    </div>
+                </a>
+                <a class="weui-cell weui-cell_access" :href="order_return.link">
+                    <div class="weui-cell__bd">
+                        <p class="item"> <i class="icon iconfont icon-web-icon-  wodedingdan"></i>{{ticket_manage.title}}</p>
+                    </div>
+                    <div class="radius">{{returns}}</div>
+                    <div class="weui-cell__ft">
+                    </div>
+                </a>
+                <a class="weui-cell weui-cell_access" :href="my_collection.link">
+                    <div class="weui-cell__bd">
+                        <p class="item"><i class="icon iconfont icon-shuaxin1 tuihuoyugao"></i>{{account_binding.title}}</p>
+                    </div>
+                    <div class="radius">{{collections}}</div>
+                    <div class="weui-cell__ft">
+                    </div>
+                </a>
+                <a class="weui-cell weui-cell_access" :href="my_collection.link">
+                    <div class="weui-cell__bd">
+                        <p class="item"><i class="icon iconfont icon-xiugaimima1 green"></i>{{change_password.title}}</p>
+                    </div>
+                    <div class="radius">2</div>
+                    <!--<div class="radius">{{orders}}</div>-->
+                    <div class="weui-cell__ft">
+                    </div>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</body>
+<script src="../static/third/weui/lib/jquery-2.1.4.js"></script>
+<script src="../static/third/vue.min.js"></script>
+<script src="../static/third/axios.min.js"></script>
+<script src="../static/busi/mySetting.js"></script>
+
+
+
+</html>

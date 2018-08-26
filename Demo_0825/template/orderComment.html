@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>订单评价</title>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_668017_r15fwia5fmyrpb9.css">
+    <link rel="stylesheet" href="../static//third/weui/lib/weui.min.css">
+    <link rel="stylesheet" href="../static/third/weui/css/jquery-weui.min.css">
+    <link rel="stylesheet" href="../static/common/css/swiper-3.2.5.min.css">
+    <link rel="stylesheet" href="../static/common/css/public.css">
+    <link rel="stylesheet" href="../static/common/css/common.css">
+    <link rel="stylesheet" href="../static/common/css/myOrder.css">
+</head>
+
+<body>
+    <div id="orderComment" v-cloak>
+        <header class="header">
+            <div class="header-button is-left">
+                <a href="javascript:history.go(-1);" class="router-link-active">
+                    <button class="mint-button mint-button--default mint-button--normal">
+                        <span class="mint-button-icon">
+                            <i class="icon iconfont icon-fanhui color-black"></i>
+                        </span>
+                        <label class="mint-button-text"></label>
+                    </button>
+                </a>
+            </div>
+            <h1 class="header-title">订单评价</h1>
+            <div class="header-button is-right">
+                <a class="comt-a" @click="publish">发布</a>
+            </div>
+        </header>
+        <div class="order-comt-wrap">
+            <ul class="pro-comt-list">
+                <li class="pro-comt-item" v-for="product in productList">
+                    <div class="box-flex pro-comt-item-star">
+                        <div class="pro-img-samll">
+                            <img :src="product.imgUrl" />
+                        </div>
+                        <div class="flex star-comt-wrap">
+                            <i class="icon iconfont icon-mn_xingxing" @click="product.star=1"></i>
+                            <i class="icon iconfont icon-mn_xingxing" @click="product.star=2"></i>
+                            <i class="icon iconfont icon-mn_xingxing" @click="product.star=3"></i>
+                            <i class="icon iconfont icon-mn_xingxing" @click="product.star=4"></i>
+                            <i class="icon iconfont icon-mn_xingxing" @click="product.star=5"></i>
+                        </div>
+                    </div>
+                    <div class="textare-wrap">
+                        <textarea class="textare-02" placeholder="亲对我们的商品还满意吗？说说它的优点和不足吧…" rows="5" v-model="product.comment"></textarea>
+                    </div>
+                </li>
+            </ul>
+            <div class="star-wrap">
+                <div class="my-order-item-header box-flex">
+                    <div class="flex">
+                        <div href="javascript:;" class="box-flex">
+                            <i class="icon iconfont icon-dianpu color-black"></i>
+                            <p>店铺评分</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="">
+                    <ul class="store-star-cmt">
+                        <li class="store-star-cmt_item box-flex">
+                            <p class="label-p">描述相符：</p>
+                            <div class="star-comt-wrap">
+                                <i class="icon iconfont icon-mn_xingxing" @click="descriptionStar=1"></i>
+                                <i class="icon iconfont icon-mn_xingxing" @click="descriptionStar=2"></i>
+                                <i class="icon iconfont icon-mn_xingxing" @click="descriptionStar=3"></i>
+                                <i class="icon iconfont icon-mn_xingxing" @click="descriptionStar=4"></i>
+                                <i class="icon iconfont icon-mn_xingxing" @click="descriptionStar=5"></i>
+                            </div>
+                            <span class="cmt-span"></span>
+                        </li>
+                        <li class="store-star-cmt_item box-flex">
+                            <p class="label-p">物流服务：</p>
+                            <div class="star-comt-wrap">
+                                <i class="icon iconfont icon-mn_xingxing" @click="logisticsStar=1"></i>
+                                <i class="icon iconfont icon-mn_xingxing" @click="logisticsStar=2"></i>
+                                <i class="icon iconfont icon-mn_xingxing" @click="logisticsStar=3"></i>
+                                <i class="icon iconfont icon-mn_xingxing" @click="logisticsStar=4"></i>
+                                <i class="icon iconfont icon-mn_xingxing" @click="logisticsStar=5"></i>
+                            </div>
+                            <span class="cmt-span"></span>
+                        </li>
+                        <li class="store-star-cmt_item box-flex">
+                            <p class="label-p">服务态度：</p>
+                            <div class="star-comt-wrap">
+                                <i class="icon iconfont icon-mn_xingxing" @click="serviceStar=1"></i>
+                                <i class="icon iconfont icon-mn_xingxing" @click="serviceStar=2"></i>
+                                <i class="icon iconfont icon-mn_xingxing" @click="serviceStar=3"></i>
+                                <i class="icon iconfont icon-mn_xingxing" @click="serviceStar=4"></i>
+                                <i class="icon iconfont icon-mn_xingxing" @click="serviceStar=5"></i>
+                            </div>
+                            <span class="cmt-span"></span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../static/third/weui/lib/jquery-2.1.4.js"></script>
+<script src="../static/third/weui/js/jquery-weui.js"></script>
+<script src="../static/third/weui/js/swiper.js"></script>
+<script src="../static/third/vue.min.js"></script>
+<script src="../static/third/axios.min.js"></script>
+<script src="../static/common/js/main.js"></script>
+<script src="../static/busi/orderComment.js"></script>
+
+</html>

@@ -1,0 +1,82 @@
+{
+    "respCode":"200",
+    "operDesc":"响应成功",
+    "data": {
+        "validList": [
+            {
+                "shopName": "华为官方旗舰店",
+                "productList": [
+                    {
+                        "productId": "001",
+                        "modelId": "0001",
+                        "imgUrl": "../static/common/images/img_06.png",
+                        "productName": "佳能750D单反套机数码高清相机中高端触屏翻屏相机",
+                        "model": "75D 新款",
+                        "tip": "满减",
+                        "promotion": "满5000减400",
+                        "price": "4999.98",
+                        "originalPrice": "5368.38",
+                        "count": "1"
+                    }, {
+                        "productId": "002",
+                        "modelId": "",
+                        "imgUrl": "../static/common/images/img_05.png",
+                        "productName": "苏泊尔榨汁机杯家用全自动果蔬多功能迷你学生小型破壁机",
+                        "model": "",
+                        "tip": "促销",
+                        "promotion": "限时促销",
+                        "price": "238.57",
+                        "originalPrice": "335.00",
+                        "count": "2"
+                    }, {
+                        "productId": "003",
+                        "modelId": "",
+                        "imgUrl": "../static/common/images/img_09.png",
+                        "productName": "VR眼镜手机专用一体机4d苹果眼睛头戴式游戏机头盔",
+                        "model": "",
+                        "tip": "",
+                        "promotion": "",
+                        "price": "4988.00",
+                        "originalPrice": "",
+                        "count": "1"
+                    }
+                ]
+            }, {
+                "shopName": "华为官方旗舰店",
+                "productList": [
+                    {
+                        "productId": "004",
+                        "imgUrl": "../static/common/images/img_10.png",
+                        "productName": "飞利浦电吹风机HP8203家用大功率恒温负离子冷热干发机",
+                        "model": "大号 负离子型",
+                        "price": "238.57",
+                        "originalPrice": "335.00",
+                        "count": "1"
+                    }
+                ]
+            }
+        ],
+        "invalidList": [
+            {
+                "productId": "004",
+                "imgUrl": "../static/common/images/img_10.png",
+                "productName": "飞利浦电吹风机HP8203家用大功率恒温负离子冷热干发机",
+                "model": "大号 负离子型",
+                "price": "238.57",
+                "originalPrice": "335.00",
+                "count": "1"
+            }, {
+                "productId": "002",
+                "modelId": "",
+                "imgUrl": "../static/common/images/img_05.png",
+                "productName": "苏泊尔榨汁机杯家用全自动果蔬多功能迷你学生小型破壁机",
+                "model": "",
+                "tip": "促销",
+                "promotion": "限时促销",
+                "price": "238.57",
+                "originalPrice": "335.00",
+                "count": "2"
+            }
+        ]
+    }
+}

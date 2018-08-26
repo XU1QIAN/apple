@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>全部商品</title>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <link rel="stylesheet" href="../static/common/iconfont/iconfont.css">
+    <link rel="stylesheet" href="../static//third/weui/lib/weui.min.css">
+    <link rel="stylesheet" href="../static/third/weui/css/jquery-weui.min.css">
+    <link rel="stylesheet" href="../static/common/css/swiper-3.2.5.min.css">
+    <link rel="stylesheet" href="../static/common/css/public.css">
+    <link rel="stylesheet" href="../static/common/css/common.css">
+    <link rel="stylesheet" href="../static/common/css/product.css">
+</head>
+
+<body ontouchstart>
+    <div class="serchbox plr200 box-flex">
+        <div class="weui-search-bar flex4" id="searchBar">
+            <form class="weui-search-bar__form">
+                <div class="weui-search-bar__box">
+                    <i class="weui-icon-search"></i>
+                    <input type="search" class="weui-search-bar__input" id="searchInput" placeholder="" required="">
+                    <a href="javascript:" class="weui-icon-clear" id="searchClear"></a>
+                </div>
+                <label class="weui-search-bar__label" id="searchText">
+                    <i class="weui-icon-search"></i>
+                    <span>搜索</span>
+                </label>
+            </form>
+            <a href="javascript:" class="weui-search-bar__cancel-btn" id="searchCancel">取消</a>
+        </div>
+        <div class="serch-i">
+            <i class="icon iconfont icon-gengduo2 arrow-down fr" id="productPop"></i>
+        </div>
+    </div>
+    <!-- 滑动盒子 -->
+    <div class="netSlidebox">
+        <!-- 顶部栏目  全部/热销/推荐/收藏  开始 -->
+        <div class="top-bar bg-wite nettop-bar" id="topBar">
+            <div class="top-bar-mian">
+                <ul class="top-tab-list01">
+                    <li class="top-tab-li active">
+                        <a href="javascript:;">全部商品</a>
+                    </li>
+                    <li class="top-tab-li ">
+                        <a href="javascript:;">手机数码</a>
+                    </li>
+                    <li class="top-tab-li">
+                        <a href="javascript:;">家用电器</a>
+                    </li>
+                    <li class="top-tab-li">
+                        <a href="javascript:;">电脑办公</a>
+                    </li>
+                    <li class="top-tab-li">
+                        <a href="javascript:;">玩具乐器</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- slide box 全部/热销/推荐/收藏 开始 -->
+        <div class="news-wrap swiper-container-horizontal top120" id="tabs-container">
+            <div class="swiper-wrapper">
+                <div class="news-main news-completely swiper-slide " style="display:block">
+                    <!-- 筛选条件  开始 -->
+                    <div class="netTab-head">
+                        <div class="netTab-col active" name="comprehensive">综合</div>
+                        <div class="netTab-col " name="sales">销量</div>
+                        <div class="netTab-col " name="screening">筛选</div>
+                        <i class="icon iconfont icon-gengduo1 iconview"></i>
+                    </div>
+                    <div class="netTab-content">
+                        <div class="netTabcn" id="comprehensive">
+                            <!-- 轮播开始 -->
+                            <!-- 轮播开始 -->
+                            <div class="swiper-container " data-space-between='10' data-pagination='.swiper-pagination' data-autoplay="1000">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="../static/common/images/banenr_02.png" /></div>
+                                    <div class="swiper-slide"><img src="../static/common/images/banenr_02.png" /></div>
+                                    <div class="swiper-slide"><img src="../static/common/images/banenr_02.png" /></div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                            <div class="goodsbox">
+                                <p>全部商品</p>
+                                <p>All goods</p>
+                            </div>
+                            <!--  列表开始 -->
+                            <div class="netListbox box">
+                                <ul>
+                                    <li onClick="javascript:window.location.href='networkDetail.html'">
+                                        <i class="hot"></i>
+                                        <div class="netlist-product01"><img src="../static/common/images/img_06.png" /></div>
+                                        <div class="pro-text-box">
+                                            <p class="pro-text">佳能750D单反套机数码高清相机中高端触屏翻屏...</p>
+                                        </div>
+
+                                        <p class="pro-price"><span>4999.98</span><span>1531人付款</span></p>
+                                    </li>
+                                    <li onClick="javascript:window.location.href='networkDetail.html'">
+                                        <i class="hot"></i>
+                                        <div class="netlist-product01"><img src="../static/common/images/img_07.png" /></div>
+                                        <div class="pro-text-box">
+                                            <p class="pro-text">佳能750D单反套机数码高清相机中高端触屏翻屏...</p>
+                                        </div>
+                                        <p class="pro-price"><span>4999.98</span><span>1531人付款</span></p>
+                                    </li>
+                                    <li onClick="javascript:window.location.href='networkDetail.html'">
+                                        <i class="hot"></i>
+                                        <div class="netlist-product01"><img src="../static/common/images/img_08.png" /></div>
+                                        <div class="pro-text-box">
+                                            <p class="pro-text">佳能750D单反套机数码高清相机中高端触屏翻屏...</p>
+                                        </div>
+                                        <p class="pro-price"><span>4999.98</span><span>1531人付款</span></p>
+                                    </li>
+                                    <li onClick="javascript:window.location.href='networkDetail.html'">
+                                        <i class="hot"></i>
+                                        <div class="netlist-product01"><img src="../static/common/images/img_09.png" /></div>
+                                        <div class="pro-text-box">
+                                            <p class="pro-text">佳能750D单反套机数码高清相机中高端触屏翻屏...</p>
+                                        </div>
+                                        <p class="pro-price"><span>4999.98</span><span>1531人付款</span></p>
+                                    </li>
+                                    <li onClick="javascript:window.location.href='networkDetail.html'">
+                                        <i class="hot"></i>
+                                        <div class="netlist-product01"><img src="../static/common/images/img_10.png" /></div>
+                                        <div class="pro-text-box">
+                                            <p class="pro-text">佳能750D单反套机数码高清相机中高端触屏翻屏...</p>
+                                        </div>
+                                        <p class="pro-price"><span>4999.98</span><span>1531人付款</span></p>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="netTabcn" id="sales">222222222</div>
+                        <div class="netTabcn" id="screening">333333333</div>
+                    </div>
+                </div>
+                <div class="news-main news-completely swiper-slide ">2
+                </div>
+                <div class="news-main news-completely swiper-slide ">3
+                </div>
+                <div class="news-main news-completely swiper-slide ">4
+                </div>
+                <div class="news-main news-completely swiper-slide ">5
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="footer-col">
+            <P> <i class="icon iconfont icon-shouye1"></i></P>
+            <p>首页</p>
+        </div>
+        <div class="footer-col">
+            <P> <i class="icon iconfont icon-shangpin"></i></P>
+            <p>全部商品</p>
+        </div>
+        <div class="footer-col orange">
+            <a href="product.html">
+                <p><i class="icon iconfont icon-shop"></i></p>
+                <p>全部商品</p>
+            </a>
+        </div>
+        <div class="footer-col">
+            <P> <i class="icon iconfont icon-gouwuche"></i></P>
+            <p>购物车</p>
+        </div>
+        <div class="footer-col">
+            <a href="myselfFunList.html">
+                <p><i class="icon iconfont icon-me"></i></p>
+                <p>我的</p>
+            </a>
+        </div>
+    </div>
+    <div class="layer"></div>
+    <div class="productPopbox">
+        <div class="product-contain">
+            <div class="product-model">
+                <div class="title-Row">
+                    <span class="text">价格区间</span>
+                    <i class="icon iconfont icon-moreunfold arrow-down fr"></i>
+                </div>
+                <div class="parabox">
+                    <div class="para-row">
+                        <input type="text" placeholder="最低价" /><span>-</span>
+                        <input type="text" placeholder="最高价" />
+                    </div>
+                    <div class="para-box02">
+                        <div>
+                            <p>3199-5199</p>
+                            <p>35%选择</p>
+                        </div>
+                        <div>
+                            <p>5199-7699</p>
+                            <p>32%选择</p>
+                        </div>
+                        <div>
+                            <p>7699-2万</p>
+                            <p>22%选择</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-model">
+                <div class="title-Row">
+                    <span class="text">品牌</span>
+                    <i class="icon iconfont icon-moreunfold arrow-down fr"></i>
+                </div>
+                <div class="parabox">
+                    <div class="flex-warp">
+                        <div>佳能</div>
+                        <div>尼康</div>
+                        <div>索尼</div>
+                        <div>奥林巴斯</div>
+                        <div>莱卡</div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-model">
+                <div class="title-Row">
+                    <span class="text">单反画幅</span>
+                    <i class="icon iconfont icon-moreunfold arrow-down fr"></i>
+                </div>
+                <div class="parabox">
+                    <div class="flex-warp">
+                        <div>全画幅</div>
+                        <div>APS-C画幅</div>
+                        <div>APS-C画幅</div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-model">
+                <div class="title-Row">
+                    <span class="text">单反画幅</span>
+                    <i class="icon iconfont icon-moreunfold arrow-down fr"></i>
+                </div>
+                <div class="parabox">
+                    <div class="flex-warp">
+                        <div>全画幅</div>
+                        <div>APS-C画幅</div>
+                        <div>APS-C画幅</div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <div class="pop-btn">
+            <div>重置</div>
+            <div id="popDone">完成</div>
+        </div>
+    </div>
+</body>
+<script src="../static/third/weui/lib/jquery-2.1.4.js"></script>
+<script src="../static/third/weui/js/swiper.js"></script>
+<script src="../static/busi/product.js"></script>
+
+<script>
+    var mySwiper = new Swiper('.swiper-container', {
+        speed: 400,
+        spaceBetween: 100,
+        autoplay: 2000,
+        loop: true,
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+    });
+
+    window.onload = function() {
+        var tabsSwiper = new Swiper('#tabs-container', {
+            initialSlide: 0,
+            speed: 500,
+            onSlideChangeStart: function(swiper) {
+                $(".top-tab-list01 li.active").removeClass('active')
+                $(".top-tab-list01 li").eq(swiper.activeIndex).addClass('active');
+            }
+        });
+        $(".top-tab-list01 li").on('touchstart mousedown', function(e) {
+            e.preventDefault()
+            $(".top-tab-list01 li.active").removeClass('active')
+            $(this).addClass('active')
+            tabsSwiper.slideTo($(this).index())
+        })
+        $(".top-tab-list01 li").click(function(e) {
+            e.preventDefault()
+        })
+    }
+</script>
+<script>
+    var mySwiper = new Swiper('.swiper-container', {
+        speed: 400,
+        spaceBetween: 100,
+        autoplay: 2000,
+        loop: true,
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+    });
+</script>
+<script src="../static/third//weui/js/jquery-weui.js"></script>
+
+</html>

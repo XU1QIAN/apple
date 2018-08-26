@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>商品详情</title>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_668017_f30gyfhhe3766r.css">
+    <link rel="stylesheet" href="../static//third/weui/lib/weui.min.css">
+    <link rel="stylesheet" href="../static/third/weui/css/jquery-weui.min.css">
+    <link rel="stylesheet" href="../static/common/css/animate.min.css">
+    <link rel="stylesheet" href="../static/common/css/public.css">
+    <link rel="stylesheet" href="../static//common//css/common.css">
+    <link rel="stylesheet" href="../static//common//css/productDetail.css">
+</head>
+
+<body>
+    <!-- 头部 -->
+    <header class="header">
+        <div class="header-button is-left">
+            <a href="#/" class="router-link-active">
+                <button class="mint-button mint-button--default mint-button--normal">
+                    <span class="mint-button-icon">
+                        <i class="icon iconfont icon-fanhui color-black"></i>
+                    </span>
+                    <label class="mint-button-text"></label>
+                </button>
+            </a>
+        </div>
+        <h1 class="header-title">亦庄文化园广场店</h1>
+        <div class="header-button is-right"></div>
+    </header>
+    <div class="" style="padding:60px 20px;">
+        <a href="javascript:;" class="weui-btn weui-btn_primary" id="test01">弹出框</a>
+    </div>
+
+    <div class="popup-diy-wrap" id="testMain">
+        <span class="span-mask"></span>
+        <div class="popup-bottom animated-05">
+            <div class="popup-title-wrap">
+                <h3>选择新号码</h3>
+            </div>
+            <div class="popup-body-wrap" style="height: 6rem;">
+                选择新号码内容
+            </div>
+            <div class="popup-footer-wrap">
+                <a href="javascript:;" class="weui-btn weui-btn_default" id="qx">取消</a>
+                <a href="javascript:;" class="weui-btn weui-btn_primary" id="qd">确定</a>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../static/third/weui/lib/jquery-2.1.4.js"></script>
+
+<script src="../static/third/weui/lib/fastclick.js"></script>
+
+<script>
+    $(function() {
+        FnBtmPopup($('#test01'), $('#testMain'), [$('#qx'), $('#qd')]);
+    });
+
+
+    function FnBtmPopup(clickBtn, popupId, closeBtn) {
+        var popubBody = popupId.find('.popup-bottom');
+        if (null != clickBtn &&
+            null != popupId) {
+            var popubMask = popupId.find('.span-mask');
+            clickBtn.click(function() {
+                popupId.show();
+                popubBody.removeClass('slideOutDown').addClass('slideInUp');
+                popubMask.click(function() {
+                    FnClose();
+                });
+            });
+        }
+        var list = [];
+        if (typeof closeBtn != 'undefined') {
+            if (closeBtn instanceof Array) {
+                for (var i = 0; i <
+                    closeBtn.length; i++) {
+                    list.push(closeBtn[i]);
+                }
+            } else if (closeBtn instanceof Object) {
+                list.push(closeBtn);
+            }
+        };
+        if (null != list && list.length > 0) {
+            list.forEach(element => {
+                element.click(function() {
+                    FnClose();
+                });
+            });
+        };
+
+        function FnClose() {
+            popubBody.removeClass('slideInUp').addClass('slideOutDown');
+            setTimeout(function() {
+                popupId.fadeOut()
+            }, 100)
+        }
+    }
+</script>
+
+
+</html>

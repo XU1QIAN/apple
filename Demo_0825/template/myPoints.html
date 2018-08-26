@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>我的积分</title>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <link rel="stylesheet" href="../static/common/iconfont/iconfont.css">
+    <link rel="stylesheet" href="../static/third/weui/lib/weui.min.css">
+    <link rel="stylesheet" href="../static/third/weui/css/jquery-weui.min.css">
+    <link rel="stylesheet" href="../static/common/css/swiper-3.2.5.min.css">
+    <link rel="stylesheet" href="../static/common/css/public.css">
+    <link rel="stylesheet" href="../static/common/css/common.css">
+    <link rel="stylesheet" href="../static/common/css/myPoints.css">
+</head>
+
+<body ontouchstart>
+    <header class="header">
+        <div class="header-button is-left">
+            <a href="javascript:history.go(-1);" class="router-link-active">
+                <button class="mint-button mint-button--default mint-button--normal">
+                    <span class="mint-button-icon">
+                        <i class="icon iconfont icon-fanhui color-black "></i>
+                    </span> 
+                    <label class="mint-button-text"></label>
+                </button>
+            </a>
+        </div>
+        <h1 class="header-title">我的积分</h1>
+        <div class="header-button is-right"></div>
+    </header>
+
+    <div class="my-points" id="myPoints" v-cloak>
+        <div class="my-info">
+            <img src="../static/common/images/icons/point_bg.png" />
+            <div class="infos">
+                <div class="my-pic">
+                    <img src="../static/common/images/bg-01.png" />
+                    <div class="vip"></div>
+                </div>
+                <div class="my-name">{{userName}}</div>
+                <div class="point-number">{{totalPoints}} 积分</div>
+            </div>
+        </div>
+        <div class="w-title">积分明细<br><span class="orange font32">detailed list</span></div>
+        <div class="weui-panel__bd">
+            <div class="weui-media-box weui-media-box_text" v-for="point in pointsList">
+                <h4 class="weui-media-box__title">{{point.pointName}}<span class="orange">{{point.pointNum}}积分</span></h4>
+                <p class="weui-media-box__desc">{{point.datetime}}</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="../static/third/weui/lib/jquery-2.1.4.js"></script>
+<script src="../static/third/weui/js/swiper.js"></script>
+<script src="../static/third/vue.min.js"></script>
+<script src="../static/third/axios.min.js"></script>
+<script src="../static/common/js/main.js"></script>
+<script src="../static/busi/myPoints.js"></script>
+
+</html>

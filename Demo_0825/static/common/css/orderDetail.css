@@ -1,0 +1,92 @@
+.contain {
+    top: .9rem;
+    position: relative;
+}
+
+.orderDone {
+    font-size: .5rem;
+    margin-right: .3rem;
+}
+
+.order-wliu {
+    display: flex;
+}
+
+.order-wliu-icon {
+    flex: .5;
+}
+
+.order-wliu-dec {
+    flex: 5
+}
+
+.order-wliu-arrow {
+    flex: 1
+}
+
+.order-wliu {
+    padding: 0 .24rem;
+}
+
+.order-wliu i {
+    margin-top: .4rem;
+}
+
+.order-wliu .icon-wuliu {
+    color: #1c7efb;
+    font-size: .32rem;
+}
+
+.order-wliu-dec p:first-child {
+    color: #1c7efb;
+    font-size: .24rem;
+    line-height: .38rem
+}
+
+.order-wliu-dec p:last-child {
+    color: #888;
+    font-size: .2rem;
+    line-height: .38rem
+}
+
+.order-address {
+    display: flex;
+}
+
+.order-address-icon {
+    flex: .5;
+}
+
+.order-address-dec {
+    flex: 5
+}
+
+.order-address {
+    padding: .24rem
+}
+
+.order-address-dec {
+    font-size: .24rem;
+    color: #3e3e3e;
+    line-height: .38rem;
+}
+
+.order-sale-title {
+    line-height: .57rem;
+    font-size: .2rem;
+    color: #3e3e3e
+}
+
+.order-sale-title .icon-dianpu {
+    font-size: .35rem;
+    margin-right: .36rem;
+}
+
+.btnbox {
+    height: 1.46rem;
+}
+
+.orderimg img {
+    width: 1.4rem;
+    margin-right: .2rem;
+}

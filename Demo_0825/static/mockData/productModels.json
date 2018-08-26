@@ -1,0 +1,35 @@
+{
+    "respCode":"200",
+    "operDesc":"响应成功",
+    "data": {
+        "productId": "001",
+        "productName": "佳能750D单反套机数码高清相机中高端触屏翻屏相机",
+        "modelList": [
+            {
+                "modelId": "0001",
+                "modelName": "EOS 77D套机(18-135mm)",
+                "imgUrl": "../static/common/images/img_01.png",
+                "price": "4999.98",
+                "checked": true
+            }, {
+                "modelId": "0002",
+                "modelName": "EOS 80D套机(18-135mm)",
+                "imgUrl": "../static/common/images/img_02.png",
+                "price": "5999.98",
+                "checked": false                
+            }, {
+                "modelId": "0003",
+                "modelName": "EOS 6D Mark II套机(24-105mm f/4L)",
+                "imgUrl": "../static/common/images/img_06.png",
+                "price": "3999.98",
+                "checked": false                
+            }, {
+                "modelId": "0004",
+                "modelName": "EOS 6D",
+                "imgUrl": "../static/common/images/index09.png",
+                "price": "6999.98",
+                "checked": false                
+            }
+        ]
+    }
+}

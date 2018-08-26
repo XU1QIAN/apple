@@ -1,0 +1,730 @@
+/* 店铺信息 */
+.show-info {
+    margin: 30px 10%;
+    min-height: 500px;
+}
+
+.show-info img {
+    width: 100px;
+    height: 100px;
+    margin-top: 30px;
+    float: left;
+}
+
+.show-info .info-right {
+    line-height: 18px;
+    margin-left: 50px;
+    float: left;
+}
+
+.show-info .title {
+    font-size: 14px;
+    color: #323232;
+}
+
+.show-info textarea {
+    width: 400px;
+    height: 80px;
+}
+/* 店铺信息结束 */
+
+/* 店面装修 */
+.decoration-tabs {
+    width: 210px;
+    height: 36px;
+    border: 1px solid #C30621;
+    border-radius: 100px;
+    margin: 15px auto;
+    background-color: #fff;
+}
+
+.decoration-tab {
+    border-radius: 100px;
+    width: 99px;
+    text-align: center;
+    line-height: 32px;
+    display: inline-block;
+    height: 32px;
+    margin: 2px;
+    cursor: pointer;
+}
+
+.decoration-tab.active {
+    color: #fff;
+    background: #C30621;
+}
+
+.main-content {
+    margin-bottom: 15px;
+}
+
+.decoration-left-tabs {
+    width: 10%;
+    float: left;
+    background-color: #f5f5f5;
+}
+
+.decoration-left-tab {
+    height: 50px;
+    cursor: pointer;
+    border-top-left-radius: 4px;
+}
+
+.decoration-left-tab .tab-text {
+    width: 50px;
+    height: 26px;
+    margin: 0 auto;
+    line-height: 26px;
+    text-align: center;
+    position: relative;
+    top: 10px;
+}
+
+.decoration-left-tab.active {
+    background-color: #fff;
+}
+
+.decoration-left-tab.active .tab-text {
+    border-bottom: 2px solid #C30621;
+    font-weight: bold;
+}
+
+.decoration-content {
+    float: left;
+    width: 90%;
+}
+
+.decoration-left {
+    width: 65%;
+    float: left;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.decoration-right {
+    width: 34%;
+    margin-left: 1%;
+    float: left;
+}
+
+.decoration-left .btn-area {
+    float: right;
+    margin-top: 10px;
+}
+
+.table-simple {
+    margin-top: 70px;
+}
+
+.layui-table .layui-btn {
+    float: left;
+    background: #FAFAFA;
+    border: 1px solid #DCDCDC;
+    border-radius: 4px;
+    height: 26px;
+    line-height: 26px;
+    margin-top: 1px;
+    width: 75px;
+}
+
+.layui-table .layui-form-item_vertical .layui-input-other {
+    padding-top: 0;
+    margin-left: 10px;
+}
+
+.layui-table .layui-input {
+    height: 26px;
+    margin-top: 1px;
+}
+
+.h5_touch {
+    width: 96%;
+    margin: 15px 2%;
+}
+
+#new-page .layui-form-item {
+    margin-bottom: 30px;
+}
+/* 店面装修结束 */
+
+/* 一键装修--选择模板 */
+.template-area {
+    position: relative;
+    width: 760px;
+    margin: 0 auto;
+}
+
+.template-area .arrow {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    margin-top: 170px;
+}
+
+.template-area .arrow .iconfont {
+    color: #e8e8e8;
+    font-size: 38px;
+}
+
+.template-area .arrow.abled .iconfont {
+    color: #E2243F;
+}
+
+.template-area .arrow.abled .iconfont:hover {
+    color: #C30621;
+}
+
+#arrow-prev {
+    left: 0;
+}
+
+#arrow-next {
+    right: 0;
+}
+
+.template-list {
+    width: 630px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    height: 370px;
+}
+
+.template-list ul {
+    margin-top: 20px;
+    overflow: hidden;
+    width: 1500px;
+    position: absolute;
+}
+
+.template-list li {
+    float: left;
+    margin-right: 72px;
+    width: 160px;
+    height: 330px;
+    text-align: center;
+}
+
+.template-list ul li.selected img {
+    border: 1px solid #e53e41;
+}
+
+.template-list img {
+    width: 160px;
+    height: 284px;
+    cursor: pointer;
+}
+
+.template-list li span {
+    font-weight: bold;
+    line-height: 32px;
+}
+
+#templateSelect .btn-area {
+    width: 100%;
+    padding-bottom: 30px;
+}
+
+#templateSelect .btn-area-in {
+    width: 200px;
+    margin: 0 auto;
+}
+
+.layui-layer-btn {
+    text-align: center!important;
+}
+/* 一键装修--选择模板结束 */
+
+/* 选择首页展示商品 */
+#homepageCommodity .text {
+    padding: 20px;
+}
+
+#elements-container {
+    margin-left: 20px;
+    min-height: 200px;
+}
+
+.draggable-element {
+    width: 70px;
+    height: 70px;
+    cursor: move;
+    padding: 5px;
+    border: 1px solid #D6D6D6;
+    margin: 0 10px 10px 0;
+    float: left;
+}
+
+.draggable-element img {
+    width: 70px;
+    height: 70px;
+}
+
+#add-product-btn {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    border: 1px solid #D6D6D6;
+    margin: 0 10px 10px 0;
+    text-align: center;
+    float: left;
+    background-color: #F3F3F3;
+}
+
+#add-product-btn .icon {
+    line-height: 80px;
+    color: #D8D8D8;
+    font-size: 30px;
+}
+
+.elements-order {
+    color: #999999;
+}
+
+.elements-order>div {
+    display: inline-block;
+    width: 80px;
+    margin: 0 10px 10px 0;
+    text-align: center;
+}
+/* 选择首页展示商品结束 */
+
+/* 素材中心 */
+#content-materialCenter .layui-upload-img {
+    width: 92px; 
+    height: 92px; 
+    margin: 0 10px 10px 0;
+}
+
+#content-materialCenter .layui-upload {
+    width: 96%;
+    margin: 0 2%;
+    top: 20px;
+    position: relative;
+}
+
+#content-materialCenter .btn-area {
+    margin: 60px 2% 30px 2%;
+}
+/* 素材中心结束 */
+
+/* 装修页面 */
+#decoration-page .block-wrapper {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+#decoration-page .h5-area {
+    width: 25%;
+    position: relative;
+    top: 35px;
+    margin-left: 2%;
+    margin-bottom: 150px;
+    float: left;
+}
+
+.module-edit {
+    position: absolute;
+    left: 20px;
+    top: 0px;
+    display: none;
+}
+
+.module-edit-title {
+    width: 500px;
+    height: 60px;
+    background: url(../../images/bubble.png) no-repeat;
+}
+
+.module-edit-content {
+    border: 1px solid #DDDDDD;
+    border-width: 0 1px 1px 1px;
+    width: 456px;
+    margin-left: 6px;
+    background-color: #fff;
+    border-radius: 0 0 6px 6px;
+    padding: 18px 18px 30px 18px;
+}
+
+.module-name {
+    font-weight: bold;
+    margin-left: 24px;
+    line-height: 60px;
+    font-size: 14px;
+    float: left;
+}
+
+.module-name .iconfont {
+    color: #FA7A07;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.module-edit .close-btn {
+    width: 20px;
+    height: 20px;
+    background: url(../../images/close.png);
+    float: right;
+    margin-right: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.image-list {
+    margin-top: 20px;
+}
+
+.module-edit .btn-area {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* 轮播模块 */
+#carousel-module .each-image {
+    width: 100%;
+    height: 60px;
+    background-color: #F5F5F5;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+#carousel-module .arrow-area {
+    width: 26px;
+    text-align: center;
+    float: left;
+    display: grid;
+}
+
+#carousel-module .arrow-area .iconfont {
+    font-size: 24px;
+    position: relative;
+    top: 3px;
+    color: #d2d2d2;
+}
+
+#carousel-module .arrow-area .iconfont.abled {
+    color: #b0b0b0;
+    cursor: pointer;
+}
+
+#carousel-module .arrow-area .iconfont.abled:hover {
+    color: #a5a5a5;
+}
+
+#carousel-module .each-image img, #carousel-module .each-image .add-image-btn {
+    width: 88px;
+    height: 58px;
+    float: left;
+    border: 1px solid #D6D6D6;
+    cursor: pointer;
+}
+
+#carousel-module .each-image .add-image-btn {
+    text-align: center;
+}
+
+#carousel-module .each-image .add-image-btn .iconfont {
+    font-size: 35px;
+    line-height: 58px;
+    color: #D8D8D8;
+    margin-right: 0;
+    cursor: pointer;
+}
+
+#carousel-module .each-image input {
+    float: left;
+    width: 300px;
+    margin: 13px 8px;
+    padding-right: 65px;
+}
+
+.icon-eye, .icon-link {
+    color: #B0B0B0;
+    font-size: 24px;
+    position: absolute;
+    cursor: pointer;
+    top: 18px;
+}
+
+.icon-eye {
+    right: 65px;
+}
+
+.icon-link {
+    right: 37px;
+}
+
+.icon-delete {
+    color: #B0B0B0;
+    font-size: 24px;
+    cursor: pointer;
+    position: relative;
+    top: 18px;
+    right: 4px;
+}
+
+#add-btn {
+    width: 100%;
+    height: 44px;
+    background-color: #F5F5F5;
+    line-height: 44px;
+    text-align: center;
+    color: #6F6F6F;
+}
+
+#add-btn.abled {
+    cursor: pointer;
+}
+
+#carousel-module .module-edit .icon-plus {
+    color: #6F6F6F;
+    margin-right: 10px;  
+    position: relative;
+    top: 1px;  
+}
+
+.change-img-btn {
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    border: 1px solid #ddd;
+    background-color: #fefefe;
+    border-radius: 3px;
+    left: 80px;
+    top: 10px;
+    display: none;
+}
+/* 轮播模块结束 */
+
+/* 单列图片模块 */
+#singleImg-module .each-image {
+    position: relative;
+    background-color: #F5F5F5;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+}
+
+#singleImg-module .each-image img {
+    width: 350px;
+}
+
+#singleImg-module .change-img-btn {
+    top: 80px;
+    left: 360px;
+}
+
+#singleImg-module .layui-form-label {
+    width: 40px;
+    padding: 9px 0;
+}
+
+#singleImg-module .layui-input {
+    width: 405px;
+}
+
+#singleImg-module .link-area {
+    margin-top: 20px;
+    position: relative;
+}
+
+#singleImg-module .icon-eye {
+    right: 48px;
+    top: 7px;
+}
+
+#singleImg-module .icon-link {
+    right: 18px;
+    top: 7px;
+}
+/* 单列图片模块结束 */
+
+/* 宝贝排行模块 */
+#rank-module .module-edit-title {
+    width: 320px;
+    background: url(../../images/bubble2.png) no-repeat;
+}
+
+#rank-module .module-edit-content {
+    width: 278px;
+    margin-left: 4px;
+}
+
+#new-classification-btn {
+    cursor: pointer;
+    color: #4688E3;
+    height: 40px;
+    width: 100%;
+    position: relative;
+    float: left;
+    margin-top: 10px;
+}
+
+#new-classification .layui-form-item {
+    margin-bottom: 30px;
+}
+/* 宝贝排行模块结束 */
+
+/* 选择图片弹出框 */
+#imageSelect img {
+    width: 100px;
+    height: 100px;
+    margin-left: 20px;
+    cursor: pointer;
+    border: 1px solid #D6D6D6;
+    margin-bottom: 20px;
+}
+
+#imageSelect img.active {
+    border: 1px solid #C30621;
+}
+/* 选择图片弹出框结束 */
+
+/* 模拟模块，后期删除 */
+.page-module.active {
+    color: #C30621;
+}
+/* 模拟模块，后期删除节结束 */
+
+/* 装修页面结束 */
+
+/* 商品分类 */
+
+/* 选择链接弹出框 */
+#link-select {
+    padding: 20px;
+}
+
+#link-select .layui-tab .layui-input-block {
+    margin-left: 0;
+}
+
+#link-select .layui-form-label {
+    padding: 9px 5px;
+    width: auto;
+}
+
+#link-select .layui-input-block {
+    margin-left: 65px;
+}
+
+#link-select .layui-tab .layui-col-sm12 {
+    padding: 0 10px;
+} 
+
+#link-select .layui-tab .layui-col-sm12.checked {
+    background: #F5F5F5;
+}
+
+#link-select .layui-tab .layui-col-space15>* {
+    padding: 7.5px 0;
+}
+
+/* 店铺风格 */
+#store-style .decoration-left {
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+.color-schemes {
+    margin-top: 40px;
+}
+
+#store-style .w-label {
+    font-size: 16px;
+    width: 150px;
+    text-align: right;
+    float: left;
+    line-height: 28px;
+}
+
+.color-scheme {
+    margin-left: 10px;
+    padding: 3px;
+    border: 1px solid #fff;
+    float: left;
+    cursor: pointer;
+}
+
+.color-scheme.active {
+    border: 1px solid #C30621;
+}
+
+.color-scheme>div {
+    width: 20px;
+    height: 20px;
+    float: left;
+}
+
+.style-examples {
+    margin-top: 40px;
+}
+
+.style-examples img {
+    width: 18%;
+    margin-right: 5%;
+}
+
+.style1_1 {
+    background-color: #E12E22;
+}
+
+.style1_2 {
+    background-color: #FA4450;
+}
+
+.style1_3 {
+    background-color: #FA7A08;
+}
+
+.style2_1 {
+    background-color: #3E3E3E;
+}
+
+.style2_2 {
+    background-color: #E12E22;
+}
+
+.style2_3 {
+    background-color: #E1E1E1;
+}
+
+.style3_1 {
+    background-color: #F21A61;
+}
+
+.style3_2 {
+    background-color: #F79B16;
+}
+
+.style3_3 {
+    background-color: #E1E1E1;
+}
+
+.style4_1 {
+    background-color: #7F29F3;
+}
+
+.style4_2 {
+    background-color: #FC9D19;
+}
+
+.style4_3 {
+    background-color: #F0F0F0;
+}
+
+.style5_1 {
+    background-color: #36AAEB;
+}
+
+.style5_2 {
+    background-color: #FCD019;
+}
+
+.style5_3 {
+    background-color: #F0F0F0;
+}

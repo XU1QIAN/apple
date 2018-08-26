@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>发票信息</title>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <link rel="stylesheet" href="../static/common/iconfont/iconfont.css">
+    <link rel="stylesheet" href="../static/third/weui/lib/weui.min.css">
+    <link rel="stylesheet" href="../static/third/weui/css/jquery-weui.min.css">
+    <link rel="stylesheet" href="../static/common/css/swiper-3.2.5.min.css">
+    <link rel="stylesheet" href="../static/common/css/animate.min.css">
+    <link rel="stylesheet" href="../static/common/css/public.css">
+    <link rel="stylesheet" href="../static/common/css/common.css">
+    <link rel="stylesheet" href="../static/common/css/ticketManage.css">
+</head>
+
+<body>
+<header class="header">
+    <div class="header-button is-left">
+        <a href="javascript:history.go(-1);" class="router-link-active">
+            <button class="mint-button mint-button--default mint-button--normal">
+                    <span class="mint-button-icon">
+                        <i class="icon iconfont icon-fanhui color-black"></i>
+                    </span>
+                <label class="mint-button-text"></label>
+            </button>
+        </a>
+    </div>
+    <h1 class="header-title">发票信息</h1>
+    <div class="header-button is-right"></div>
+</header>
+<div class="address-wrapper">
+    <div class="address-list-wrap">
+        <ul class="address-list_ul" id="ticketList" v-cloak>
+            <li class="address-list-item" v-for="(ticket, index) in ticketList" :key="index">
+                <div class="ads-item_top">
+                    <p>发票抬头：{{ticket.header}} </p>
+                    <p>纳税人识别号：{{ticket.no}}</p>
+                    <p>注册地址：{{ticket.address}}</p>
+                    <p>注册电话：{{ticket.tel}}</p>
+                </div>
+                <div class="box-flex ads-item_bottom">
+                    <div class="flex">
+                        <div class="box-flex default-ads">
+                            <i class="icon iconfont icon-weixuanzhongyuanquan" v-if="!ticket.isDefault"></i>
+                            <i class="icon iconfont icon-wancheng" v-if="ticket.isDefault"></i>
+                            <em>设为默认</em>
+                        </div>
+                    </div>
+                    <div class="edit-btn">
+                        <a :href="'ticketEdit.html?id='+ticket.invoiceId" class="box-flex">
+                            <i class="icon iconfont icon-bianji"></i>
+                            <em class="flex">编辑</em>
+                        </a>
+                    </div>
+                    <div class="del-btn">
+                        <a :href="'#?id='+ticket.invoiceId" class="box-flex">
+                            <i class="icon iconfont icon-shanchu"></i>
+                            <em class="flex">删除</em>
+                        </a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="footer-wrap">
+    <div class="add-ads">
+        <a href="ticketAdd.html" class="weui-btn weui-btn_primary">新增发票信息</a>
+    </div>
+</div>
+
+
+</body>
+<script src="../static/third/weui/lib/jquery-2.1.4.js"></script>
+<script src="../static/third/weui/js/jquery-weui.js"></script>
+<script src="../static/third/vue.min.js"></script>
+<script src="../static/third/axios.min.js"></script>
+<script src="../static/common/js/main.js"></script>
+<script src="../static/third/weui/js/swiper.js"></script>
+<script src="../static/busi/ticketManage.js"></script>
+
+
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>在售商品</title>
+    <link rel="stylesheet" href="../../static/third/layui/css/layui.css">
+    <link rel="stylesheet" href="../../static/common/font/iconfont.css">
+    <link rel="stylesheet" href="../../static/common/css/common.css">
+    <link rel="stylesheet" href="../../static/common/css/page.css">
+    <link rel="stylesheet" href="../../static/common/css/table.css">
+</head>
+
+
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+    <div class="layui-header">
+        <i class="iconfont icon-logo"></i>
+        <div class="logo-text">
+            <div class="logo-text-CHI">中国联通新零售运营平台</div>
+            <div class="logo-text-ENG">CHINA UNICOM NEW RETAIL OPERATION</div>
+        </div>
+        <ul class="layui-nav layui-layout-right">
+            <li class="head-search">
+                <div class="form_search">
+                    <i class="iconfont icon-search"></i>
+                    <input type="text" class="layui-input" placeholder="智能搜索"/>
+                </div>
+            </li>
+            <li class="layui-nav-item">
+                <a href="javascript:;">
+                    <img src="http://t.cn/RCzsdCq" class="layui-nav-img"> 贤心
+                </a>
+                <dl class="layui-nav-child">
+                    <dd>
+                        <a href="">基本资料</a>
+                    </dd>
+                    <dd>
+                        <a href="">安全设置</a>
+                    </dd>
+                </dl>
+            </li>
+            <div class="header-icon">
+                <i class="iconfont icon-message"></i>
+                <div class="header-number">89</div>
+            </div>
+            <div class="header-icon">
+                <i class="iconfont icon-book"></i>
+                <div class="header-number">999+</div>
+            </div>
+            <!-- <li class="layui-nav-item"><a href="">退了</a></li> -->
+        </ul>
+    </div>
+
+    <div class="layui-side layui-bg-black">
+        <div class="layui-side-scroll">
+            <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+            <ul class="layui-nav layui-nav-tree" lay-filter="test">
+                <li class="layui-nav-item">
+                    <a class="" href="javascript:;">
+                        <i class="iconfont icon-home"></i>首页</a>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">
+                        <i class="iconfont icon-channelQuery"></i>渠道查询</a>
+                    <dl class="layui-nav-child">
+                        <dd>
+                            <a href="javascript:;">渠道商品查询</a>
+                        </dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="">
+                        <i class="iconfont icon-store"></i>店铺管理</a>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="">
+                        <i class="iconfont icon-orderQuery"></i>订单查询</a>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="">
+                        <i class="iconfont icon-stock"></i>库存查询</a>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="">
+                        <i class="iconfont icon-commissions"></i>佣金查询</a>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="">
+                        <i class="iconfont icon-maintain"></i>佣金任务维护</a>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="">
+                        <i class="iconfont icon-test"></i>清算测试</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="layui-body">
+        <!-- 内容主体区域 -->
+        <div class="layui-fluid  orderQueryWrap">
+            <div class="layui-breadcrumb">
+                <i class="bread-icon layui-icon">&#xe623;</i>
+                <a>
+                    <cite>在售商品</cite>
+                </a>
+                </span>
+            </div>
+            <div class="block-wrapper search-wrapper">
+                <form class="layui-form">
+                    <div class="layui-row layui-col-space15">
+
+                        <div class="layui-col-sm4">
+                            <div class="layui-form-item layui-form-item_vertical">
+                                <label class="layui-form-label">
+                                    <em class="star">*</em>名称</label>
+                                <div class="layui-input-block layui-input-other">
+                                    <input type="text" name="title" lay-verify="title" autocomplete="off"
+                                           placeholder="请输入商品名称" class="layui-input">
+                                    <p class="from-tips"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-col-sm4">
+                            <div class="layui-form-item layui-form-item_vertical">
+                                <label class="layui-form-label">
+                                    <em class="star">*</em>商品编码</label>
+                                <div class="layui-input-block layui-input-other">
+                                    <input type="text" name="title" lay-verify="title" autocomplete="off"
+                                           placeholder="请输入商品编码" class="layui-input">
+                                    <p class="from-tips"></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-col-sm4">
+                            <div class="layui-form-item layui-form-item_vertical">
+                                <label class="layui-form-label">
+                                    <em class="star">*</em>品牌</label>
+                                <div class="layui-input-block layui-input-other">
+                                    <select name="interest" lay-filter="aihao">
+                                        <option value=" ">全部</option>
+                                        <option value="0">未完成</option>
+                                        <option value="1">已完成</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-row layui-col-space15">
+                        <div class="layui-col-sm4">
+                            <div class="layui-form-item layui-form-item_vertical">
+                                <label class="layui-form-label">
+                                    <em class="star">*</em>分类</label>
+                                <div class="layui-input-block layui-input-other">
+                                    <select name="provid" id="provid" lay-filter="provid">
+                                        <option value="">请选择一级分类</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-col-sm4">
+                            <div class="layui-form-item layui-form-item_vertical">
+                                <!--     <label class="layui-form-label">
+                                          <em class="star">*</em>分类</label>-->
+                                <div class="layui-input-block layui-input-other">
+                                    <select name="cityid" id="cityid" lay-filter="cityid">
+                                        <option value="">请选择二级分类</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="layui-col-sm4">
+                            <div class="layui-form-item layui-form-item_vertical">
+                                <!--                   <label class="layui-form-label">
+                                                       <em class="star">*</em>分类</label>-->
+                                <div class="layui-input-block layui-input-other">
+                                    <select name="areaid" id="areaid" lay-filter="areaid">
+                                        <option value="">请选择三级分类</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="layui-col-sm12">
+                            <div class="layui-form-item layui-form-item_vertical">
+                                <label class="layui-form-label"></label>
+
+                                <div class="layui-input-block layui-input-other">
+                                    <div class="search-btn-wrapper">
+                                        <button class="layui-btn layui-btn-back">重置</button>
+                                        <button class="layui-btn layui-btn-sure">筛选</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+
+            <div class="block-wrapper commiss-bottom">
+                <div class="bw-content layui-form bw-content-w">
+                    <div class="bw-content-table">
+                        <div class="export-wrapper block-wrapper-lightYellow">
+                            <div class="layui-row">
+                                <div class="layui-col-sm7 export-wrapper-left">
+                                    <h4 class="sort-title">排序</h4>
+                                    <ul class="sort-ul">
+                                        <li class="sort-li down">
+                                            <a href="javascript:;">
+                                                <span>销量</span>
+                                                <i class="layui-icon">&#xe61a;</i>
+                                            </a>
+                                        </li>
+                                        <li class="sort-li down">
+                                            <a href="javascript:;">
+                                                <span>库存</span>
+                                                <i class="layui-icon">&#xe61a;</i>
+                                            </a>
+                                        </li>
+                                        <li class="sort-li down">
+                                            <a href="javascript:;">
+                                                <span>价格</span>
+                                                <i class="layui-icon">&#xe61a;</i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="layui-col-sm5 export-wrapper-right">
+                                        <span>满足条件商品共计
+                                            <em class="red">2</em>种，合计
+                                            <em class="red">12</em>件
+                                        </span>
+                                    <button class="layui-btn layui-btn-back">导出数据</button>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="block-wrapper result-wrapper layui-form">
+                            <div class="table-simple">
+                                <table class="layui-hide" id="test" lay-filter="grid"></table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--<script type="text/html" id="detail">
+    <div class="table-detail-wrap">
+        <span>已完成</span>
+        <a class="layui-link layui-link-normal" href="./orderDetail.html" lay-event="detail">查看详情</a>
+    </div>
+</script>-->
+<script type="text/html" id="set">
+    <a class="layui-link-normal" lay-event="detail">查看详情</a>
+    <a class="layui-link-normal" lay-event="now" data-method="undercarriage">立即下架</a>
+    <a class="layui-link-normal" lay-event="order" data-method="undercarriageorder">预约下架</a>
+</script>
+
+<script src="../../static/third/layui/layui.js"></script>
+<script src="../../static/busi/select.js"></script>
+<script type="text/javascript">
+    var defaults = {
+        s1: 'provid',
+        s2: 'cityid',
+        s3: 'areaid',
+        v1: null,
+        v2: null,
+        v3: null
+    };
+
+</script>
+
+<script>
+
+
+    layui.config({
+        base: '../../static/busi/' //你存放新模块的目录，注意，不是layui的模块目录
+    }).use('productsOnSaling'); //加载入口
+</script>
+</body>
+
+</html>

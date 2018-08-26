@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="IE=edge, chrome=1">
+        <meta name="viewport"
+              content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+        <title>订单结算</title>
+        <meta content="yes" name="apple-mobile-web-app-capable">
+        <meta content="yes" name="apple-touch-fullscreen">
+        <link rel="stylesheet" href="../static/third/weui/lib/weui.min.css">
+        <link rel="stylesheet" href="../static/third/weui/css/jquery-weui.min.css">
+        <link rel="stylesheet" href="../static/common/css/public.css">
+        <link rel="stylesheet" href="../static/common/css/common.css">
+        <link rel="stylesheet" href="../static/common/iconfont/iconfont.css">
+        <link rel="stylesheet" href="../static/third/weui/lib/weui.css">
+        <link rel="stylesheet" href="../static/common/css/orderBalanceSubmit.css">
+    </head>
+</head>
+
+<body ontouchstart>
+<div id="main-page" class="page-content">
+    <header class="header">
+        <div class="header-button is-left">
+            <!--页面跳转-->
+            <a href="javascript:history.go(-1);" class="router-link-active">
+                <button class="mint-button mint-button--default mint-button--normal">
+                    <span class="mint-button-icon">
+                        <i class="icon iconfont icon-fanhui color-black"></i>
+                    </span>
+                    <label class="mint-button-text"></label>
+                </button>
+            </a>
+        </div>
+        <h1 class="header-title">订单结算</h1>
+        <div class="header-button is-right"></div>
+    </header>
+    <div id="orderBalanceSubmit" v-cloak>
+        <div class="input-payfee-wrapper">
+            <div class="user-area">
+                <i class="icon iconfont icon-location"></i>
+                <div class="user-info">
+                    <div class="user-nameNumber">
+                        <div class="user-name">联系人：{{cust_info.name}}</div>
+                        <div class="user-number">{{cust_info.phone}}</div>
+                    </div>
+                    <div class="user-address">地址：{{cust_info.address}}</div>
+                </div>
+                <a href="addressManage.html">
+                <i class="icon iconfont icon-more" ></i>
+                </a>
+            </div>
+            <div class="border"></div>
+
+            <div class="model box">
+                <div class="order-model box-col3" v-for="product in products">
+                    <div class="box-col3-1">
+                        <img :src="product.image_src"/>
+                    </div>
+                    <div class="box-col3-4">
+                        <p class="product-name">{{product.product_name}}</p>
+                        <p class="product-desc">{{product.product_desc}}</p>
+                        <p class="">
+                            <span class="price-01">¥ {{product.new_price}}</span>
+                            <span class="price-02"> ¥ {{product.old_price}}</span>
+                            <span class="num-01">x {{product.num}}</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="model box">
+                <div class="delivery-method">
+                    <span>配送方式</span> 
+                    <div class="delivery-method-right" id="delivery-method" v-on:click="chooseDeliveryMethod()">
+                        <span><span id="deliveryMethod" class="ml20">物流</span><br /><i class="icon iconfont icon-clock"></i><span id="delivery-time">今天 8:00 ~ 10:00</span></span>
+                        <i class="icon iconfont icon-more"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="model box">
+                <div class="box-flex bottom-line01">
+                    <div class="flex">
+                        <span class="ticket-title">发票</span>
+                    </div>
+                    <div class="flex3">
+                        <input class="weui-switch" type="checkbox" id="showTicket" name="showTicket"
+                            v-on:click="swicth($event)"/>
+                    </div>
+                </div>
+                <div class="box-flex bottom-line02 show">
+                    <div class="flex">
+                        <span class="ticket-title">开票种类</span>
+                    </div>
+                    <div class="flex3">
+                        <i class="iconfont icon-weixuanzhongyuanquan w-radio icon-wancheng"  v-on:click="chooseTicketKind($event)" value="0"></i>
+                        <span for="x11" class="ticket-content">普通发票</span>
+                        <i class="iconfont icon-weixuanzhongyuanquan w-radio " v-on:click="chooseTicketKind($event)" value="1"></i>
+                        <span for="x12" class="ticket-content">增值税专用发票</span>
+                    </div>
+                </div>
+                <div class="box-flex bottom-line02 show" id="ticketHead">
+                    <div class="flex">
+                        <span class="ticket-title">发票抬头</span>
+                    </div>
+                    <div class="flex3">
+                        <i class="iconfont icon-weixuanzhongyuanquan k-radio icon-wancheng" v-on:click="chooseTicketHead($event)" value="0"></i>
+
+                        <span for="x11" class="ticket-content">个人</span>
+                        <i class="iconfont icon-weixuanzhongyuanquan k-radio " v-on:click="chooseTicketHead($event)" value="1"></i>
+                        <span for="x12" class="ticket-content">单位</span>
+                    </div>
+                </div>
+                <!--普通发票-->
+                <div id="ordinary">
+                    <div class="box-flex bottom-line03 show ">
+                        <div class="flex">
+                            <span class="ticket-title">收票人信息</span>
+                        </div>
+                        <div class="flex3">
+                            <p class="ticket-content">收票人手机：{{cust_info.phone}}</p>
+                            <div class="mail">
+                                <span class=" mail">收票人邮箱：</span>
+                                <input class=" mail-in" placeholder="用于接收电子发票，可选填">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-flex bottom-line02 show">
+                        <div class="flex">
+                            <span class="ticket-title">发票内容</span>
+                        </div>
+                        <div class="flex3 content-01">
+                            <p>发票内容选项已根据税法调整，具体请以展示为准</p>
+                        </div>
+                    </div>
+                    <div class="box-flex show">
+                        <div class="flex2">
+                            <div class="btn02 button-fr wancheng" v-on:click="chooseTicketContent($event)">商品明细</div>
+                        </div>
+                        <div class="flex2 content-01">
+                            <div class="btn02 button-fl " v-on:click="chooseTicketContent($event)">商品类别</div>
+                        </div>
+                    </div>
+                    <div class="content-02 show">
+                        <p>
+                            发票内容那个将显示详细商品名称与价格信息
+                        </p>
+                    </div>
+                </div>
+
+                <!--增值发票信息-->
+                <div id="spec">
+                    <div class="box-flex bottom-line03 show">
+                        <div class="flex">
+                            <span class="ticket-title">收票人信息</span>
+                        </div>
+                        <div class="flex3">
+                            <p class="ticket-content">收票人姓名：{{ticket_reciver.name}}</p>
+                            <p class="ticket-content">收票人手机：{{ticket_reciver.phone}}</p>
+                            <p class="ticket-content">所在地区：{{ticket_reciver.area}}</p>
+                            <p class="ticket-content">详细地址：{{ticket_reciver.address}}</p>
+                        </div>
+                    </div>
+                    <div class="box-flex bottom-line03 show">
+                        <div class="flex">
+                            <span class="ticket-title">发票内容</span>
+                        </div>
+                        <div class="flex3 content-03">
+                            <p>（增值税发票内容只支持明细）</p>
+                            <div class="btn02 button-fl wancheng">商品明细</div>
+                        </div>
+                    </div>
+                    <div class="box-flex bottom-line03 show">
+                        <div class="flex">
+                            <span class="ticket-title">增票资质</span>
+                        </div>
+                        <div class="flex3 ">
+                            <p class="ticket-content">单位名称：{{aptitude.company_name}}</p>
+                            <p class="ticket-content">纳税人识别号：{{aptitude.seqId}}</p>
+                            <p class="ticket-content">注册地址：{{aptitude.address}}</p>
+                            <p class="ticket-content">注册电话：{{aptitude.phone}}</p>
+                            <p class="ticket-content">开户银行：{{aptitude.bank}}</p>
+                            <p class="ticket-content">银行账户：{{aptitude.account}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--选择时间 start-->
+            <div class="model box">
+                <div class="servie-time">
+                    <span>服务时间</span>
+                    <div class="servie-time-right" id="servie-time" v-on:click="chooseServiceTime($event)"><span class="datetime">今天 14:00～16:00</span><i
+                            class="icon iconfont icon-more"></i></div>
+                </div>
+            </div>
+            <!-- footer -->
+            <div class="footer ">
+                <div class="count">
+                    <span>合计金额：</span><span>￥{{total}}</span>
+                </div>
+                <div class="submit">
+                    <p class="btn01" v-on:click="submit($event)">提交订单</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="delivery-select-area" class="page-content" style="display:none;">
+    <header class="header">
+        <div class="header-button is-left">
+            <!--页面跳转-->
+            <a class="router-link-active" v-on:click="goBack()">
+                <button class="mint-button mint-button--default mint-button--normal">
+                    <span class="mint-button-icon">
+                        <i class="icon iconfont icon-fanhui color-black"></i>
+                    </span>
+                    <label class="mint-button-text"></label>
+                </button>
+            </a>
+        </div>
+        <h1 class="header-title">选择配送方式</h1>
+        <div class="header-button is-right"></div>
+    </header>
+    <div class="input-payfee-wrapper">
+        <div class="w-title">
+            <i class="iconfont icon-wuliu"></i>
+            <span>配送方式</span>
+        </div>
+        <div class="delivery-methods">
+            <div class="delivery-method" :class="{selected: method=='物流'}" v-on:click="deliveryMethodSelect($event)" method="物流">物流</div>
+            <div class="delivery-method" :class="{selected: method=='门店配送'}" v-on:click="deliveryMethodSelect($event)" method="门店配送">门店配送</div>
+            <div class="delivery-method" :class="{selected: method=='自提'}" v-on:click="deliveryMethodSelect($event)" method="自提">自提</div>
+        </div>
+        <div class="delivery-detail mt40" :class="{selected: method=='物流' || method=='门店配送'}" v-on:click="chooseDeliveryTime($event)" v-show="method=='物流' || method=='门店配送'">
+            <div class="fl">送货时间<br /><span class="datetime">今天 14:00～16:00</span></div>
+            <div class="fr" id="delevery-time-edit">修改时间<i class="iconfont icon-more"></i></div>
+        </div>
+        <div class="delivery-detail mt40" :class="{selected: method=='自提'}" v-show="method=='自提'">
+            <div>自提地址：北京市海淀区中关村大街11号中关村E世界B区3层3139</div>
+            <div>自提时间：<span class="datetime">8:00 - 20:00</span></div>
+        </div>
+    </div>
+</div>
+<div class="popup-diy-wrap" id="time-select-area">
+    <span class="span-mask"></span>
+    <div class="popup-bottom animated-05" id="time-select">
+        <div class="day-area">
+            <div v-on:click="chooseDay($event)" v-for="day in date_info.days" :day="day.id" :value="day.value" :class="day.default? 'w-day active':'w-day' ">{{day.value}}</div>
+        </div>
+        <div class="time-area" v-for="(day,index) in date_info.days" :day="day.id" :style="index!=0? 'display:none':''">
+            <div v-on:click="chooseTime($event)"  v-for="time in day.times"  :value="time.period" :class="time.default? 'w-time active':'w-time' ">{{time.period}}<span>{{time.desc}}</span></div>
+        </div>
+    </div>
+</div>
+
+</body>
+<script src="../static/third/weui/lib/jquery-2.1.4.js"></script>
+<script src="../static/third/weui/lib/fastclick.js"></script>
+<script src="../static/common/js/common.js"></script>
+<script src="../static/third/vue.min.js"></script>
+<script src="../static/third/axios.min.js"></script>
+<script src="../static/busi/orderBalanceSubmit.js"></script>
+</html>

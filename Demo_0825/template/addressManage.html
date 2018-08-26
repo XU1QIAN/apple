@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>地址管理</title>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <link rel="stylesheet" href="../static/common/iconfont/iconfont.css">
+    <link rel="stylesheet" href="../static/third/weui/lib/weui.min.css">
+    <link rel="stylesheet" href="../static/third/weui/css/jquery-weui.min.css">
+    <link rel="stylesheet" href="../static/common/css/swiper-3.2.5.min.css">
+    <link rel="stylesheet" href="../static/common/css/animate.min.css">
+    <link rel="stylesheet" href="../static/common/css/public.css">
+    <link rel="stylesheet" href="../static/common/css/common.css">
+    <link rel="stylesheet" href="../static/common/css/address.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-button is-left">
+            <a href="javascript:history.go(-1);" class="router-link-active">
+                <button class="mint-button mint-button--default mint-button--normal">
+                    <span class="mint-button-icon">
+                        <i class="icon iconfont icon-fanhui color-black"></i>
+                    </span>
+                    <label class="mint-button-text"></label>
+                </button>
+            </a>
+        </div>
+        <h1 class="header-title">管理收货地址</h1>
+        <div class="header-button is-right"></div>
+    </header>
+    <div class="address-wrapper v-cloak" id="app">
+        <div class="address-list-wrap">
+            <ul class="address-list_ul">
+                <li class="address-list-item" v-for="(addr,index) in addressList" :key="index">
+                    <div class="ads-item_top">
+                        <div class="box-flex u-info">
+                            <p class="flex">{{addr.name}}</p>
+                            <p class="txtagin-right">{{addr.phone}}</p>
+                        </div>
+                        <p class="ads-info">{{addr.address}}</p>
+                    </div>
+                    <div class="box-flex ads-item_bottom">
+                        <div class="flex">
+                            <div class="box-flex default-ads">
+                                <i class="icon iconfont icon-weixuanzhongyuanquan" ></i>
+                                <em>设为默认地址</em>
+                            </div>
+                        </div>
+                        <div class="edit-btn">
+                            <a href="addressAddEdit.html" class="box-flex">
+                                <i class="icon iconfont icon-bianji"></i>
+                                <em class="flex">编辑</em>
+                            </a>
+                        </div>
+                        <div class="del-btn">
+                            <a href="javascript:;" class="box-flex">
+                                <i class="icon iconfont icon-shanchu"></i>
+                                <em class="flex">删除</em>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+               <!-- <li class="address-list-item">
+                    <div class="ads-item_top">
+                        <div class="box-flex u-info">
+                            <p class="flex">李先生2</p>
+                            <p class="txtagin-right">18803223203</p>
+                        </div>
+                        <p class="ads-info">北京市海淀区西四环到西五环之间中关村街道 北四环西路56号 辉煌时代大厦9层</p>
+                    </div>
+                    <div class="box-flex ads-item_bottom">
+                        <div class="flex">
+                            <div class="box-flex default-ads">
+                                <i class="icon iconfont icon-weixuanzhongyuanquan"></i>
+                                <em>设为默认地址</em>
+                            </div>
+                        </div>
+                        <div class="edit-btn">
+                            <a href="addressAddEdit.html" class="box-flex">
+                                <i class="icon iconfont icon-bianji"></i>
+                                <em class="flex">编辑</em>
+                            </a>
+                        </div>
+                        <div class="del-btn">
+                            <a href="javascript:;" class="box-flex">
+                                <i class="icon iconfont icon-shanchu"></i>
+                                <em class="flex">删除</em>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="address-list-item">
+                    <div class="ads-item_top">
+                        <div class="box-flex u-info">
+                            <p class="flex">李先生3</p>
+                            <p class="txtagin-right">18803223203</p>
+                        </div>
+                        <p class="ads-info">北京市海淀区西四环到西五环之间中关村街道 北四环西路56号 辉煌时代大厦9层</p>
+                    </div>
+                    <div class="box-flex ads-item_bottom">
+                        <div class="flex">
+                            <div class="box-flex default-ads">
+                                <i class="icon iconfont icon-weixuanzhongyuanquan"></i>
+                                <em>设为默认地址</em>
+                            </div>
+                        </div>
+                        <div class="edit-btn">
+                            <a href="addressAddEdit.html" class="box-flex">
+                                <i class="icon iconfont icon-bianji"></i>
+                                <em class="flex">编辑</em>
+                            </a>
+                        </div>
+                        <div class="del-btn">
+                            <a href="javascript:;" class="box-flex">
+                                <i class="icon iconfont icon-shanchu"></i>
+                                <em class="flex">删除</em>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="address-list-item">
+                    <div class="ads-item_top">
+                        <div class="box-flex u-info">
+                            <p class="flex">李先生4</p>
+                            <p class="txtagin-right">18803223203</p>
+                        </div>
+                        <p class="ads-info">北京市海淀区西四环到西五环之间中关村街道 北四环西路56号 辉煌时代大厦9层</p>
+                    </div>
+                    <div class="box-flex ads-item_bottom">
+                        <div class="flex">
+                            <div class="box-flex default-ads">
+                                <i class="icon iconfont icon-weixuanzhongyuanquan"></i>
+                                <em>设为默认地址</em>
+                            </div>
+                        </div>
+                        <div class="edit-btn">
+                            <a href="addressAddEdit.html" class="box-flex">
+                                <i class="icon iconfont icon-bianji"></i>
+                                <em class="flex">编辑</em>
+                            </a>
+                        </div>
+                        <div class="del-btn">
+                            <a href="javascript:;" class="box-flex">
+                                <i class="icon iconfont icon-shanchu"></i>
+                                <em class="flex">删除</em>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="address-list-item">
+                    <div class="ads-item_top">
+                        <div class="box-flex u-info">
+                            <p class="flex">李先生</p>
+                            <p class="txtagin-right">18803223203</p>
+                        </div>
+                        <p class="ads-info">北京市海淀区西四环到西五环之间中关村街道 北四环西路56号 辉煌时代大厦9层</p>
+                    </div>
+                    <div class="box-flex ads-item_bottom">
+                        <div class="flex">
+                            <div class="box-flex default-ads">
+                                <i class="icon iconfont icon-weixuanzhongyuanquan"></i>
+                                <em>设为默认地址</em>
+                            </div>
+                        </div>
+                        <div class="edit-btn">
+                            <a href="addressAddEdit.html" class="box-flex">
+                                <i class="icon iconfont icon-bianji"></i>
+                                <em class="flex">编辑</em>
+                            </a>
+                        </div>
+                        <div class="del-btn">
+                            <a href="javascript:;" class="box-flex">
+                                <i class="icon iconfont icon-shanchu"></i>
+                                <em class="flex">删除</em>
+                            </a>
+                        </div>
+                    </div>
+                </li>-->
+            </ul>
+        </div>
+    </div>
+
+    <div class="footer-wrap">
+        <div class="add-ads">
+            <a href="javascript:;" class="weui-btn weui-btn_primary">添加新地址</a>
+        </div>
+    </div>
+
+
+</body>
+<script src="../static/third/weui/lib/jquery-2.1.4.js"></script>
+<script src="../static/third/weui/js/jquery-weui.js"></script>
+<script src="../static/third/weui/js/swiper.js"></script>
+<script src="../static/third/vue.min.js"></script>
+<!--
+<script src="../static/third/axios.min.js"></script>
+-->
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<!--
+<script src="../static/common/js/main.js"></script>
+-->
+<script src="../static/third/vue.min.js"></script>
+<script src="../static/busi/addressManage.js"></script>
+
+
+
+
+
+</html>

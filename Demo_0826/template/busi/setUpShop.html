@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>创建店铺</title>
+    <link rel="stylesheet" href="../../static/third/layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../../static/common/font/iconfont.css">
+    <link rel="stylesheet" href="../../static/common/css/common.css">
+    <link rel="stylesheet" href="../../static/common/css/table.css">
+    <link rel="stylesheet" href="../../static/common/css/page.css">
+ 
+    <!-- <link rel="stylesheet" href="../../static/common/css/setUpShop.css"> -->
+    <!-- 让IE8/9支持媒体查询，从而兼容栅格 -->
+    <!--[if lt IE 9]>
+  <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js"></script>
+  <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body class="layui-layout-body">
+    <div class="layui-layout layui-layout-admin ">
+        <div class="layui-header">
+            <i class="iconfont icon-logo"></i>
+            <div class="logo-text">
+                <div class="logo-text-CHI">中国联通新零售运营平台</div>
+                <div class="logo-text-ENG">CHINA UNICOM NEW RETAIL OPERATION</div>
+            </div>
+        </div>
+
+        <div class="layui-body setUpShop">
+            <div class="setUpShopWrap">
+                <div class="setUpShopWrap-left block-wrapper">
+                    <div class="bw-title">个人信息</div>
+                    <div class="bw-content"></div>
+                </div>
+                <div class="setUpShopWrap-right">
+                    <div class="block-wrapper setUpShopWrap-step">
+                        <ul class="clearfix step-wrap">
+                            <li class="fl step-li step-active">
+                                <div class="step-li-head">
+                                    <i class="step-li-line"></i>
+                                    <span class="step-icon">
+                                        <i>1</i>
+                                    </span>
+                                </div>
+                                <p class="step-title">选择店铺类型</p>
+                            </li>
+                            <li class="fl step-li">
+                                <div class="step-li-head">
+                                    <i class="step-li-line"></i>
+                                    <span class="step-icon">
+                                        <i>2</i>
+                                    </span>
+                                </div>
+                                <p class="step-title">阅读开店须知</p>
+                            </li>
+                            <li class="fl step-li">
+                                <div class="step-li-head">
+                                    <i class="step-li-line"></i>
+                                    <span class="step-icon">
+                                        <i>3</i>
+                                    </span>
+                                </div>
+                                <p class="step-title">个人信息确认</p>
+                            </li>
+                            <li class="fl step-li">
+                                <div class="step-li-head step-li-head_last">
+                                    <i class="step-li-line"></i>
+                                    <span class="step-icon">
+                                        <i>4</i>
+                                    </span>
+                                </div>
+                                <p class="step-title">完成</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="block-wrapper setUpShopWrap-main">
+                        <div id="setUpShopWrap-chooseShop" class="setUpShopWrap-doWrap" style="display: block">
+                            <div class="layui-form chooseShop">
+
+                                <div class="layui-form-item layui-form-item_vertical">
+                                    <label class="layui-form-label">选择店铺类型</label>
+                                    <div class="layui-input-block layui-input-other">
+                                        <input type="radio" name="shopType" value="0" title="渠道级店铺">
+                                        <input type="radio" name="shopType" value="1" title="微店级店铺" checked>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item layui-form-item_vertical">
+                                    <label class="layui-form-label">
+                                        <em class="star">*</em>选择挂靠渠道</label>
+                                    <!-- <select name="channel" lay-search>
+                                            <option value="0">天津</option>
+                                            <option value="1">天津红桥</option>
+                                        </select>
+                                        <div class="have-search">
+                                            <button class="layui-btn layui-btn-back">搜索</button>
+                                        </div> -->
+                                    <div class="layui-input-block layui-input-other">
+                                        <input type="text" class="layui-input layui-input-icon" id="" placeholder="挂靠渠道">
+                                        <a href="javascript:;" class="layui-icon layui-icon-other" id="queryChannel">&#xe615;</a>
+                                        <p class="from-tips errow-tips"></p>
+                                    </div>
+                                    <p class="from-tips errow-tips"></p>
+                                </div>
+                                <div class="layui-form-item layui-form-item_vertical">
+                                    <label class="layui-form-label">是否交纳保证金</label>
+                                    <div class="layui-input-block layui-input-other">
+                                        <input type="radio" name="bond" value="1" title="是">
+                                        <input type="radio" name="bond" value="0" title="否" checked>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item">
+                                    <button class="layui-btn layui-btn-sure" lay-submit="" lay-filter="chooseShop">创建店铺</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="setUpShopWrap-notes" class="setUpShopWrap-doWrap">
+                            <div class="setUpShopWrap-doWrap-notes">
+                                <p class="setUpShopWrap-doWrap-title">开店须知</p>
+                                <ul class="setUpShopWrap-doWrap-notes">
+                                    <li class="setUpShopWrap-doWrap-notesItem">
+                                        <p class="setUpShopWrap-doWrap-notesTitle">
+                                            1、我在新零售平台已经开了个店了，我用别人的身份证再开一个店可以吗？
+                                        </p>
+                                        <p class="setUpShopWrap-doWrap-notesText">
+                                            答：不可以。未经行零售平台同意，将本人新零售账号提供给他人作开店使用，否则由此导致相关争议、诉讼及因店铺经营中的违法违规行为导致一切人身、财产权益损害，均由本人自行承担全部民事、行政及刑事责任。
+                                        </p>
+                                    </li>
+                                    <li class="setUpShopWrap-doWrap-notesItem">
+                                        <p class="setUpShopWrap-doWrap-notesTitle">
+                                            2、我可以把店铺转租给其他人吗?
+                                        </p>
+                                        <p class="setUpShopWrap-doWrap-notesText">
+                                            答：不可以。未经新零售平台同意，将本人新零售账号提供给他人作开店使用，否则由此导致相关争议、诉讼及因店铺经营中的违法违规行为导致一切人身、财产权益损害，均由本人自行承担全部民事、行政及刑事责任。
+                                        </p>
+                                    </li>
+                                    <li class="setUpShopWrap-doWrap-notesItem">
+                                        <p class="setUpShopWrap-doWrap-notesTitle">
+                                            3、我可以开多个新零售店吗?
+                                        </p>
+                                        <p class="setUpShopWrap-doWrap-notesText">
+                                            答：不可以。一张身份证（一张营业执照）只能开一个新零售店铺。开店后请保持营业执照存续状态，不得注销；如若发现营业执照被注销、吊销，新零售将会对店铺做出永久关闭的处置。
+                                        </p>
+                                    </li>
+                                    <li class="setUpShopWrap-doWrap-notesItem">
+                                        <p class="setUpShopWrap-doWrap-notesTitle">
+                                            4、我已经开过新零售店，现在想要注销原来的店铺重新开店，可以吗?
+                                        </p>
+                                        <p class="setUpShopWrap-doWrap-notesText">
+                                            答：不可以，新零售暂时不提供注销店铺的服务。用户一但成功开店就无法再用身份证（营业执照）另开一家新零售店铺。
+                                        </p>
+                                    </li>
+                                </ul>
+                                <div class="layui-btn-container">
+                                    <button class="layui-btn layui-btn-back stepTo" data-to="0">上一步</button>
+                                    <button class="layui-btn layui-btn-sure stepTo" data-to="2">我已了解，继续开店</button>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <div id="setUpShopWrap-userInfo" class="setUpShopWrap-doWrap">
+                            <div class="layui-form userInfo">
+                                <div class="layui-form-item layui-form-item_vertical layui-form-item_require">
+                                    <label class="layui-form-label">
+                                        <em class="star">*</em>姓名</label>
+                                    <div class="layui-input-block layui-input-other">
+                                        <input type="text" name="name" required lay-verify="required" lay-verType="tips" placeholder="请输入姓名" autocomplete="off" class="layui-input"
+                                            value="test" />
+                                        <!-- <p class="from-tips errow-tips">请输入姓名</p> -->
+                                    </div>
+                                </div>
+                                <div class="layui-form-item layui-form-item_vertical">
+                                    <div class="layui-form-item layui-form-item_vertical layui-form-item_require">
+                                        <label class="layui-form-label">
+                                            <em class="star">*</em>性别</label>
+                                        <div class="layui-input-block layui-input-other">
+                                            <input type="radio" name="sex" value="男" title="男">
+                                            <input type="radio" name="sex" value="女" title="女" checked>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item layui-form-item_vertical layui-form-item_require">
+                                    <label class="layui-form-label">
+                                        <em class="star">*</em>工号</label>
+                                    <div class="layui-input-block layui-input-other">
+                                        <input type="text" name="gonghao" required lay-verify="required" autocomplete="off" placeholder="请输入工号" class="layui-input"
+                                            value="TJHU67540">
+                                        <!-- <p class="from-tips errow-tips">请输入工号</p> -->
+                                    </div>
+                                </div>
+                                <div class="layui-form-item layui-form-item_vertical layui-form-item_require">
+                                    <label class="layui-form-label">
+                                        <em class="star">*</em>手机号码</label>
+                                    <div class="layui-input-block layui-input-other">
+                                        <input type="text" name="phone" required lay-verify="required|phone" autocomplete="off" placeholder="请输入手机号码" class="layui-input"
+                                            value="15620003452">
+                                        <!-- <p class="from-tips errow-tips">请输入手机号码</p> -->
+                                    </div>
+                                </div>
+                                <div class="layui-form-item layui-form-item_vertical layui-form-item_require">
+                                    <label class="layui-form-label">
+                                        <em class="star">*</em>身份证号</label>
+                                    <div class="layui-input-block layui-input-other">
+                                        <input type="text" name="identity" required lay-verify="required|identity" autocomplete="off" placeholder="请输入身份证号" class="layui-input"
+                                            value="120023198512062435">
+                                        <!-- <p class="from-tips errow-tips">请输入身份证号</p> -->
+                                    </div>
+                                </div>
+
+                                <div class="layui-form-item">
+                                    <button class="layui-btn layui-btn-back stepTo" data-to="1">上一步</button>
+                                    <button class="layui-btn layui-btn-sure" lay-submit="" lay-filter="userInfo">下一步</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="setUpShopWrap-tip" class="setUpShopWrap-doWrap">
+                            <div class="setUpShopWrap-doWrap-tip">
+                                <span class="icon iconfont icon-pass"></span>
+                                <p class="tipBig bold">提交完成</p>
+                                <p class="tipSmall">您的个人信息已提交系统，2小时左右后请查看审核结果</p>
+                                <button class="layui-btn layui-btn-back">完成</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layui-footer">
+            Copyright©-2018 中国联通 版权所有
+            <br /> 中华人民共和国增值电信业务经营许可证 经营许可证编号：A2.B1.B2-20090003
+        </div>
+        <div id="channelWrap" class="layui-fluid" style="display: none;">
+            <div class="block-wrapper search-wrapper">
+                <div class="layui-form">
+                  <div class="layui-row layui-col-space15">
+      
+                    <div class="layui-col-sm3">
+                      <div class="layui-form-item layui-form-item_vertical">
+                        <label class="layui-form-label">
+                          <em class="star">*</em>入渠道编码</label>
+                        <div class="layui-input-block layui-input-other">
+                          <input type="text" name="title" lay-verify="title" autocomplete="off" placeholder="请输入渠道编码" class="layui-input">
+                          <p class="from-tips"></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="layui-col-sm9">
+                      <div class="layui-form-item layui-form-item_vertical">
+                        <label class="layui-form-label"></label>
+                        <div class="layui-input-block layui-input-other">
+                          <div class="search-btn-wrapper">
+                            <button class="layui-btn layui-btn-back">重置</button>
+                            <button class="layui-btn layui-btn-sure">筛选</button>
+                          </div>
+                        </div>
+                      </div>
+      
+                    </div>
+      
+                  </div>
+                </div>
+              </div>
+      
+              <div class="block-wrapper result-wrapper layui-form">
+                <div class="table-simple">
+                  <table class="layui-hide" id="channerTable"></table>
+                </div>
+              </div>
+        </div>
+    </div>
+    <script src="../../static/third/layui/layui.js"></script>
+    <script>
+        layui.config({
+            base: '../../static/busi/' //你存放新模块的目录，注意，不是layui的模块目录
+        }).use('setUpShop'); //加载入口
+
+    </script>
+</body>
+
+</html>

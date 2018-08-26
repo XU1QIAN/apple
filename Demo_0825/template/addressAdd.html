@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>新增收货地址</title>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <link rel="stylesheet" href="../static/common/iconfont/iconfont.css">
+    <link rel="stylesheet" href="../static/third//weui/lib/weui.css">
+    <link rel="stylesheet" href="../static/third/weui/css/jquery-weui.min.css">
+    <link rel="stylesheet" href="../static/common/css/public.css">
+    <link rel="stylesheet" href="../static/common/css/common.css">
+    <link rel="stylesheet" href="../static/common/css/address.css">
+</head>
+
+
+
+<body>
+    <header class="header">
+        <div class="header-button is-left">
+            <a href="javascript:history.go(-1);" class="router-link-active">
+                <button class="mint-button mint-button--default mint-button--normal">
+                    <span class="mint-button-icon">
+                        <i class="icon iconfont icon-fanhui color-black"></i>
+                    </span>
+                <label class="mint-button-text"></label>
+            </button>
+            </a>
+        </div>
+        <h1 class="header-title">新增收货地址</h1>
+        <div class="header-button is-right">
+        </div>
+    </header>
+    <div class="address-wrapper adress-wrap-diy">
+        <ul class="edit-ads-wrap">
+            <li class="box-flex">
+                <p class="">收货人</p>
+                <div class="flex">
+                    <input type="text" class="input-01" placeholder="请输入收货人姓名" />
+                </div>
+            </li>
+            <li class="box-flex">
+                <p class="">联系电话</p>
+                <div class="flex">
+                    <input type="text" class="input-01" placeholder="请输入联系电话" />
+                </div>
+            </li>
+            <li class="box-flex">
+                <p class="">所在地区</p>
+                <div class="flex areaLabel" id="areaLabel">
+                    <input type="text" class="input-01" placeholder="请输入所在地区" name="Addr" id="Addr" />
+                </div>
+                <i class="icon iconfont icon-more color-black"></i>
+            </li>
+            <li class="box-flex">
+                <p class="">详细地址</p>
+                <div class="flex">
+                    <textarea class="textarea-01" placeholder="请输入详细地址信息， 如道路、门牌号、小区、楼栋号、单元室等" rows="3"></textarea>
+                </div>
+            </li>
+            <li class="box-flex">
+                <p class="flex">设为默认地址</p>
+                <div class="show-on-btn">
+                    <!-- <label>
+                    <input class="mui-switch mui-switch-anim" type="checkbox">
+                </label> -->
+                    <div id="div1" class="open1">
+                        <div id="div2" class="open2"></div>
+                    </div>
+                </div>
+            </li>
+
+        </ul>
+        <div class="save-btn-wrap">
+            <a href="javascript:;" class="weui-btn weui-btn_primary">保存</a>
+        </div>
+    </div>
+
+    <!-- 选择地址弹出层 -->
+    <div id="addressSelectWrapper">
+        <div id="addressSelect">
+            <div class="tip">
+                <h3>所在地区</h3>
+                <button type="button" id="cancel"></button>
+            </div>
+            <div id="address">
+                <ul class="selected-address">
+                    <li class="lastarea" id="lastprovince">请选择</li>
+                    <li class="lastarea" id="lastcity" style="display: none;">请选择</li>
+                    <li class="lastarea" id="lastarea" style="display: none;">请选择</li>
+                    <li class="lastarea" id="lasttown" style="display: none;">请选择</li>
+                </ul>
+                <div class="address-content">
+                    <ul id="province"></ul>
+                    <ul id="city" style="display: none;"></ul>
+                    <ul id="area" style="display: none;"></ul>
+                    <ul id="town" style="display: none;"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script src="../static/third/weui/lib/jquery-2.1.4.js"></script>
+<script src="../static/third/weui/js/jquery-weui.js"></script>
+<script src="../static/third/weui/js/swiper.js"></script>
+<script src="../static/busi/city.js"></script>
+<script src="../static/busi/addressAddEdit.js"></script>
+<script>
+    window.onload = function() {
+        var div2 = document.getElementById("div2");
+        var div1 = document.getElementById("div1");
+        div2.onclick = function() {
+            div1.className = (div1.className == "close1") ? "open1" : "close1";
+            div2.className = (div2.className == "close2") ? "open2" : "close2";
+        }
+    }
+</script>
+
+</html>

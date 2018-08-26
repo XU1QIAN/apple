@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>新增发票信息</title>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <link rel="stylesheet" href="../static/common/iconfont/iconfont.css">
+    <link rel="stylesheet" href="../static/third//weui/lib/weui.css">
+    <link rel="stylesheet" href="../static/third/weui/css/jquery-weui.min.css">
+    <link rel="stylesheet" href="../static/common/css/public.css">
+    <link rel="stylesheet" href="../static/common/css/common.css">
+    <link rel="stylesheet" href="../static/common/css/ticketManage.css">
+</head>
+
+<body>
+<header class="header">
+    <div class="header-button is-left">
+        <a href="javascript:history.go(-1);" class="router-link-active">
+            <button class="mint-button mint-button--default mint-button--normal">
+                    <span class="mint-button-icon">
+                        <i class="icon iconfont icon-fanhui color-black"></i>
+                    </span>
+                <label class="mint-button-text"></label>
+            </button>
+        </a>
+    </div>
+    <h1 class="header-title">新增发票信息</h1>
+    <div class="header-button is-right"></div>
+</header>
+<div class="address-wrapper adress-wrap-diy" id="ticket">
+    <ul class="edit-ads-wrap">
+        <li class="box-flex">
+            <p class="">发票抬头</p>
+            <div class="flex">
+                <input type="text" class="input-01" placeholder="请输入发票抬头" v-model="header" />
+            </div>
+        </li>
+        <li class="box-flex">
+            <p class="">纳税人识别号</p>
+            <div class="flex">
+                <input type="text" class="input-01" placeholder="请输入纳税人识别号" v-model="no" />
+            </div>
+        </li>
+
+        <li class="box-flex">
+            <p class="">注册地址</p>
+            <div class="flex">
+                <input type="text" class="input-01" placeholder="请输入注册地址" v-model="address" />
+            </div>
+        </li>
+        <li class="box-flex">
+            <p class="">注册电话</p>
+            <div class="flex">
+                <input type="text" class="input-01" placeholder="请输入注册电话" v-model="tel" />
+            </div>
+        </li>
+        <li class="box-flex">
+            <p class="">开户银行</p>
+            <div class="flex">
+                <input type="text" class="input-01" placeholder="请输入开户银行" v-model="bank" />
+            </div>
+        </li>
+        <li class="box-flex">
+            <p class="">银行账号</p>
+            <div class="flex">
+                <input type="text" class="input-01" placeholder="请输入银行账号" v-model="bankAccount" />
+            </div>
+        </li>
+
+    </ul>
+    <div class="save-btn-wrap">
+        <a class="weui-btn weui-btn_primary" @click="add">保存</a>
+    </div>
+</div>
+
+</body>
+<script src="../static/third/weui/lib/jquery-2.1.4.js"></script>
+<script src="../static/third/weui/js/jquery-weui.js"></script>
+<script src="../static/third/weui/js/swiper.js"></script>
+<script src="../static/third/vue.min.js"></script>
+<script src="../static/third/axios.min.js"></script>
+<script src="../static/common/js/main.js"></script>
+<script src="../static/busi/ticketAdd.js"></script>
+
+</html>

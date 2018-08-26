@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>订单详情</title>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <link rel="stylesheet" href="../static/common/iconfont/iconfont.css">
+    <link rel="stylesheet" href="../static//third/weui/lib/weui.min.css">
+    <link rel="stylesheet" href="../static/third/weui/css/jquery-weui.min.css">
+    <link rel="stylesheet" href="../static/common/css/swiper-3.2.5.min.css">
+    <link rel="stylesheet" href="../static/common/css/public.css">
+    <link rel="stylesheet" href="../static/common/css/common.css">
+    <link rel="stylesheet" href="../static/common/css/orderDetail.css">
+</head>
+
+<body ontouchstart>
+    <header class="header">
+        <div class="header-button is-left">
+            <a href="javascript:history.go(-1);" class="router-link-active">
+                <button class="mint-button mint-button--default mint-button--normal">
+                  <span class="mint-button-icon">
+                      <i class="icon iconfont icon-fanhui color-black "></i>
+                  </span> 
+                  <label class="mint-button-text"></label>
+                </button>
+            </a>
+        </div>
+        <h1 class="header-title">订单详情</h1>
+        <div class="header-button is-right"></div>
+    </header>
+    <div class="contain" id="orderDetail">
+        <div class="order-box model"><i class="icon iconfont icon-dingdanwancheng orderDone"></i>{{list.orderStatus}}</div>
+        <div class="order-wliu product-model">
+            <div class="order-wliu-icon"><i class="icon iconfont icon-wuliu color-black "></i></div>
+            <div class="order-wliu-dec">
+                <p>{{list.ordertype}}</p>
+                <p>{{list.orderTime}}</p>
+            </div>
+            <div class="order-wliu-arrow"> <i class="icon iconfont icon-more arrow-down fr"></i></div>
+        </div>
+        <div class="order-address order-wliu model ">
+            <div class="order-address-icon">
+                <i class="icon iconfont icon-shouhuodizhi "></i>
+            </div>
+            <div class="order-address-dec">
+                <div class="order-address-name">
+                    <span>收货人：{{list.orderUser}}</span>
+                    <span class="fr">{{list.orderNumber}}</span>
+                </div>
+                <div class="order-address-dec">收货地址：{{list.orderAdress}}</div>
+            </div>
+        </div>
+        <div class="order-box-sales " id="store">
+            <div class="order-sale-title box"><i class="icon iconfont icon-dianpu "></i>{{storelist.store}}}<i class="icon iconfont icon-more "></i></div>
+            <div class="model box">
+                <div class="order-model " v-for="(item, index) in storelist.storeList" :key="index">
+                    <div class="order-model box-col3">
+                        <div class="box-col3-1">
+                            <img src="../static/common/images/order_01.png" />
+                        </div>
+                        <div class="box-col3-4">
+                            <p class="product-name">{{item.name}}</p>
+                            <p class="product-dec">{{item.productdec}}</p>
+                        </div>
+                        <div class="box-col3-1">
+                            <p class="product-price-cut">{{item.PriceCut}}</p>
+                            <p class="product-price-though">{{item.price}}</p>
+                            <p class="product-num fr">x {{item.num}}</p>
+                        </div>
+                    </div>
+                    <div class="btnbox">
+                        <div class="btn02 fr mt40 ">申请售后</div>
+                    </div>
+                </div>
+
+                <div class="row-dec">
+                    <span class="row-dec-left">运费：</span>
+                    <span class="row-dec-right">{{order.fill}}</span>
+                </div>
+                <div class="row-dec">
+                    <span class="row-dec-left"></span>
+                    <span class="row-dec-right">全国包邮</span>
+                </div>
+                <div class="row-dec">
+                    <span class="row-dec-left">满减优惠：</span>
+                    <span class="row-dec-right">{{order.cutMoney}}</span>
+                </div>
+                <div class="row-dec">
+                    <span class="row-dec-left">实付款（含邮费）：</span>
+                    <span class="row-dec-right price">{{order.realMoney}}</span>
+                </div>
+            </div>
+            <div class="model box">
+                <div class="order-model ">
+                    <div class="order-model box-col2">
+                        <div class="box-col2-5">
+                            <p class="product-text">发票类型：{{order.invoiceType}}</p>
+                            <p class="product-text">发票抬头：{{order.invoiceName}}</p>
+                            <p class="product-text">纳税人识别号：{{order.invoiceNumber}}</p>
+                        </div>
+                        <div class="box-col2-1">
+                            <span class="btn03 fr">复制</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="model box">
+                <div class="order-model ">
+                    <div class="order-model box-col2">
+                        <div class="box-col2-5">
+                            <p class="product-text">发票类型：{{order.invoiceType}}</p>
+                            <p class="product-text">发票抬头：{{order.invoiceName}}</p>
+                            <p class="product-text">纳税人识别号：{{order.invoiceNumber}}</p>
+                        </div>
+                        <div class="box-col2-1">
+                            <span class="btn03 fr">下载发票</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="model box clearfix">
+                <div class="btn02 fr">评价晒单</div>
+                <div class="btn02 fr  mr40">再次购买</div>
+            </div>
+        </div>
+    </div>
+    <script src="../static/third/weui/lib/jquery-2.1.4.js "></script>
+    <script src="../static/third/weui/js/jquery-weui.js "></script>
+    <script src="../static/third/weui/js/swiper.js "></script>
+    <script src="../static/third/vue.min.js"></script>
+    <script src="../static/third/axios.min.js"></script>
+    <script src="../static/common/js/main.js"></script>
+    <script src="../static/busi/orderDetail.js "></script>
+</body>

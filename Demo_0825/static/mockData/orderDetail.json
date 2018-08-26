@@ -1,0 +1,38 @@
+{
+    "respCode": "200",
+    "operDesc": "响应成功",
+    "orderStatus": "交易成功",
+    "ordertype": "[北京市]快递已在海淀区签收，签收本人，感谢 您使用顺丰快递，期待再次为您服务！",
+    "orderTime": "2018-05-08 16:48:00",
+    "orderUser": "嘟嘟",
+    "orderNumber": "186264380",
+    "orderAdress": "北京市海淀区西北旺东街10号院东区19号楼 1层101",
+    "fill": "￥0.00",
+    "cutMoney": "全国包邮",
+    "realMoney": "-￥300.00",
+    "invoiceType": "电子普通发票",
+    "invoiceName": "亚信科技（中国）有限公司",
+    "invoiceNumber": "911101086000426500",
+    "data": {
+        "shop": [{
+            "store": "华为官方旗舰店",
+            "storeList": [{
+                    "name": "Huawei/华为 P20 Pro 全面屏正品 ",
+                    "productdec": "颜色：渐变樱粉金 存储容量：128G",
+                    "PriceCut": "¥ 4988.00",
+                    "price": "￥5300",
+                    "num": "1",
+                    "img": "../static/common/images/collect_05.png "
+                },
+                {
+                    "name": "Huawei/华为 P20 Pro 全面屏正品 ",
+                    "productdec": "颜色：渐变樱粉金 存储容量：128G",
+                    "PriceCut": "¥ 4988.00",
+                    "price": "￥5300",
+                    "num": "1",
+                    "img": "../static/common/images/collect_05.png "
+                }
+            ]
+        }]
+    }
+}

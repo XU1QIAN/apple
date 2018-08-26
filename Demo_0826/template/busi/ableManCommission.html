@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>能人佣金</title>
+    <link rel="stylesheet" href="../../static/third/layui/css/layui.css">
+    <link rel="stylesheet" href="../../static/common/font/iconfont.css">
+    <link rel="stylesheet" href="../../static/common/css/common.css">
+    <link rel="stylesheet" href="../../static/common/css/table.css">
+    <link rel="stylesheet" href="../../static/common/css/page.css">
+
+</head>
+
+<body class="layui-layout-body">
+    <div class="layui-layout layui-layout-admin">
+        <div class="layui-header">
+            <i class="iconfont icon-logo"></i>
+            <div class="logo-text">
+                <div class="logo-text-CHI">中国联通新零售运营平台</div>
+                <div class="logo-text-ENG">CHINA UNICOM NEW RETAIL OPERATION</div>
+            </div>
+            <ul class="layui-nav layui-layout-right">
+                <li class="head-search">
+                    <div>
+                        <i class="iconfont icon-search"></i>
+                        <input type="text" class="layui-input" placeholder="智能搜索" />
+                    </div>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">
+                        <img src="http://t.cn/RCzsdCq" class="layui-nav-img"> 贤心
+                    </a>
+                    <dl class="layui-nav-child">
+                        <dd>
+                            <a href="">基本资料</a>
+                        </dd>
+                        <dd>
+                            <a href="">安全设置</a>
+                        </dd>
+                    </dl>
+                </li>
+                <i class="iconfont icon-message"></i>
+                <i class="iconfont icon-book"></i>
+                <!-- <li class="layui-nav-item"><a href="">退了</a></li> -->
+            </ul>
+        </div>
+
+        <div class="layui-side layui-bg-black">
+            <div class="layui-side-scroll">
+                <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+                <ul class="layui-nav layui-nav-tree" lay-filter="test">
+                    <li class="layui-nav-item layui-nav-itemed">
+                        <a class="" href="javascript:;">
+                            <i class="iconfont icon-home"></i>首页</a>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="javascript:;">
+                            <i class="iconfont icon-channelQuery"></i>渠道查询</a>
+                        <dl class="layui-nav-child">
+                            <dd>
+                                <a href="javascript:;">渠道商品查询</a>
+                            </dd>
+                        </dl>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="">
+                            <i class="iconfont icon-store"></i>店铺管理</a>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="">
+                            <i class="iconfont icon-orderQuery"></i>订单查询</a>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="">
+                            <i class="iconfont icon-stock"></i>库存查询</a>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="">
+                            <i class="iconfont icon-commissions"></i>佣金查询</a>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="">
+                            <i class="iconfont icon-maintain"></i>佣金任务维护</a>
+                    </li>
+                    <li class="layui-nav-item">
+                        <a href="">
+                            <i class="iconfont icon-test"></i>清算测试</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="layui-body">
+            <!-- 内容主体区域 -->
+
+
+            <div class="layui-fluid">
+                <div class="layui-breadcrumb">
+                    <i class="bread-icon layui-icon">&#xe623;</i>
+                    <a href="commissionQuery.html">佣金查询</a>
+                    <a>
+                        <cite>能人佣金</cite>
+                    </a>
+                </div>
+                <div class="block-wrapper commiss-top">
+                    <div class="bw-title">
+                        <div class="layui-row layui-col-space15">
+                            <div class="layui-col-sm9">张晓明的手机城</div>
+                            <div class="layui-col-sm3 choose-date">
+                                <div class="layui-form-item">
+                                    <!-- 日期时间选择-->
+                                    <label class="layui-form-label">结算周期：</label>
+                                    <div class="layui-input-block layui-input-other">
+                                        <input type="text" class="layui-input layui-input-icon" id="datetime" placeholder="请选择结算周期">
+                                        <i class="layui-icon layui-icon-other">&#xe637;</i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bw-content">
+                        <div class="commiss-info clearfix">
+                            <p>佣金总额：
+                                <em class="bold">￥35,789</em>
+                                <a href="javascript:;">?</a>
+                            </p>
+                            <p>CEO所得佣金：
+                                <em>￥12,008</em>
+                            </p>
+                            <p>店铺所得佣金：
+                                <em>￥23,781</em>
+                            </p>
+                            <p>能人所得佣金：
+                                <em>￥3,781</em>
+                            </p>
+                            <p>订单总量：
+                                <em>44</em>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="block-wrapper commiss-bottom">
+                    <div class="bw-title">
+                        <div class="layui-row layui-col-space15">
+                            <div class="layui-col-sm9">店铺佣金明细</div>
+                        </div>
+                    </div>
+                    <div class="bw-content layui-form bw-content-w">
+                        <div class="bw-content-table">
+                            <div class="export-wrapper block-wrapper-lightYellow">
+                                <div class="layui-row">
+                                    <div class="layui-col-sm7 export-wrapper-left">
+                                        <h4 class="sort-title">排序</h4>
+                                        <ul class="sort-ul">
+                                            <li class="sort-li down">
+                                                <a href="javascript:;">
+                                                    <span>销售额</span>
+                                                    <i class="layui-icon">&#xe61a;</i>
+                                                </a>
+                                            </li>
+                                            <li class="sort-li down">
+                                                <a href="javascript:;">
+                                                    <span>佣金</span>
+                                                    <i class="layui-icon">&#xe61a;</i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="layui-col-sm5 export-wrapper-right">
+                                        <span>满足条件商品共计
+                                            <em class="red">2</em>种，合计
+                                            <em class="red">12</em>件
+                                        </span>
+                                        <button class="layui-btn layui-btn-back">导出数据</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="block-wrapper result-wrapper layui-form">
+                                <div class="table-simple">
+                                    <table class="layui-hide" id="test"></table>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+
+        </div>
+
+        <!-- <div class="layui-footer">
+    底部固定区域
+    © layui.com - 底部固定区域
+  </div> -->
+    </div>
+    <script type="text/html" id="storeName">
+        <a class="layui-link-normal" href="javascript:;">{{ d.id }}</a>
+    </script>
+    <script type="text/html" id="set">
+        <a class="layui-link-normal" lay-event="detail">查看详情</a>
+    </script>
+    <script src="../../static/third/layui/layui.js"></script>
+    <script>
+        layui.config({
+            base: '../../static/busi/' //你存放新模块的目录，注意，不是layui的模块目录
+        }).use('ableManCommission'); //加载入口
+    </script>
+</body>
+
+</html>

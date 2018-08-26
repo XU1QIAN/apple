@@ -1,0 +1,23 @@
+{
+    "respCode": "200",
+    "operDesc": "响应成功",
+    "data": [{
+        "name": "Huawei/华为 P20 Pro 全面屏正品 手机Huawei/华为 P20 Pro 全面屏正品 手机Huawei/华为 P20 Pro 全面屏正品 手机",
+        "realPrice": "¥ 4988.00",
+        "productDec": "750D",
+        "price": "¥ 6288.00",
+        "img": "../static/common/images/collect_05.png "
+    }, {
+        "name": "Huawei/华为 P20 Pro 全面屏正品 手机Huawei/华为 P20 Pro 全面屏正品 手机Huawei/华为 P20 Pro 全面屏正品 手机",
+        "realPrice": "¥ 4988.00",
+        "productDec": "750D",
+        "price": "¥ 6288.00",
+        "img": "../static/common/images/collect_05.png "
+    }, {
+        "name": "Huawei/华为 P20 Pro 全面屏正品 手机Huawei/华为 P20 Pro 全面屏正品 手机Huawei/华为 P20 Pro 全面屏正品 手机",
+        "realPrice": "¥ 4988.00",
+        "productDec": "750D",
+        "price": "¥ 6288.00",
+        "img": "../static/common/images/collect_05.png "
+    }]
+}

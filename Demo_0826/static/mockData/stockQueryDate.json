@@ -1,0 +1,46 @@
+{
+  "code": 0,
+  "msg": "",
+  "count": 3000000,
+  "data": [
+    {
+      "id": "10001",
+      "proName": "Kindle 电子书阅读",
+      "brand": "a",
+      "category": "",
+      "proCode": "4567898",
+      "costPrice": "200",
+      "stock": "30",
+      "total": "4000"
+    },
+    {
+      "id": "10001",
+      "proName": "Kindle 电子书阅读",
+      "brand": "a",
+      "category": "",
+      "proCode": "4567898",
+      "costPrice": "600",
+      "stock": "210",
+      "total": "5300"
+    },{
+      "id": "10001",
+      "proName": "Kindle 电子书阅读",
+      "brand": "a",
+      "category": "",
+      "proCode": "4567898",
+      "costPrice": "900",
+      "stock": "410",
+      "total": "5040"
+    }
+    ,{
+      "id": "10001",
+      "proName": "Kindle 电子书阅读",
+      "brand": "a",
+      "category": "",
+      "proCode": "4567898",
+      "costPrice": "300",
+      "stock": "1022",
+      "total": "100"
+    }
+  ]
+}

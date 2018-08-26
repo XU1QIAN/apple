@@ -1,0 +1,43 @@
+{
+  "respCode":"200",
+  "operDesc":"响应成功",
+  "data":
+    {
+      "cust_info":{
+        "cust_name":"张先生",
+        "phone":"188****3203",
+        "address":"北京市海淀区西四环到西五环之间 中关村街道 北四环西路56号 辉煌时代大厦9层"
+      },
+      "products":[{
+        "image_src":"../static/common/images/img_06.png",
+        "product_name":"佳能 750D 单反套机数码高清相机中高端触屏翻屏相机",
+        "product_desc":"750D 新款",
+        "old_price":5363.38,
+        "new_price":4999.98,
+        "num":"1"
+      },
+        {
+          "image_src":"../static/common/images/img_06.png",
+          "product_name":"佳能 750D 单反套机数码高清相机中高端触屏翻屏相机",
+          "product_desc":"750D 新款",
+          "old_price":5363.38,
+          "new_price":4999.98,
+          "num":"1"
+        }
+      ],
+      "ticket_reciver":{
+        "name":"张先生",
+        "phone":"188****3203",
+        "area":"海淀区",
+        "address":"中关村街道 北四环西路56号 辉煌时代大厦9层"
+      },
+      "aptitude":{
+        "company_name":"亚信科技（中国）有限公司",
+        "seqId":"911101086000426500",
+        "address":"北京市海淀区北四环西路5号",
+        "phone":"010-82166688",
+        "bank":"中国建设银行股份有限公司中关村分行",
+        "account":"12313123213123"
+      }
+    }
+}

@@ -1,0 +1,39 @@
+{
+    "code": 0,
+    "msg": "",
+    "count": 30,
+    "data": [{
+            "activeCode": "135346",
+            "saleType": "退货",
+            "ordercode": "4560212478578",
+            "goods": "美的电饭煲MD-45127",
+            "orderPrice": "¥399",
+            "returnPrice": "¥399",
+            "usertel": "15620001234",
+            "applyTime": "2018-01-03 10:15:28",
+            "state": "未处理"
+        },
+        {
+            "activeCode": "135522226",
+            "saleType": "退货",
+            "ordercode": "4560212478578",
+            "goods": "美的电饭煲MD-45127",
+            "orderPrice": "¥399",
+            "returnPrice": "¥399",
+            "usertel": "15620001234",
+            "applyTime": "2018-01-03 10:15:28",
+            "state": "未处理"
+        },
+        {
+            "activeCode": "13956316",
+            "saleType": "退货",
+            "ordercode": "4560212478578",
+            "goods": "美的电饭煲MD-45127",
+            "orderPrice": "¥399",
+            "returnPrice": "¥399",
+            "usertel": "15620001234",
+            "applyTime": "2018-01-03 10:15:28",
+            "state": "未处理"
+        }
+    ]
+}

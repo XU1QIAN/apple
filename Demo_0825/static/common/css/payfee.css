@@ -1,0 +1,102 @@
+.book
+{
+    color: #fa7a07;
+   font-size: 0.6rem;
+
+
+}
+.input-payfee-wrapper{
+    position: absolute;
+    top: .9rem;
+    right: 0;
+    left: 0;
+    bottom: .96rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.input-payfee{
+    padding: .25rem .5rem .2rem;
+    border-bottom: 1px solid #f0f0f0;
+    margin-bottom: .2rem;
+}
+
+.input-payfee input
+{
+    height: .9rem;
+    line-height: .9rem;
+    font-size: 0.6rem;
+    width: 100%;
+}
+.price-pkg-wrap{
+    flex-wrap: wrap;
+    margin: 0 .12rem;
+}
+.price-pkg-wrap>div{
+   width: 33.333%;
+    padding:.12rem;
+    box-sizing: border-box;
+}
+.price,.price-ck
+{
+    color: #fa7a07;
+    border-color:  #fa7a07;
+    background-color: white;
+    border: 1px solid #fa7a07;
+    border-radius: 0.2rem;
+
+    height: 1.34rem;
+    width:100%;
+    display: block;
+}
+.price-ck
+{  color: white;
+    background-color:#fa7a07;
+
+
+}
+.price-ck :first-child
+{
+    font-size: 0.36rem;
+}
+.price-ck :last-child
+{
+    font-size: 0.24rem;
+}
+
+
+.price :first-child
+{
+    font-size: 0.36rem;
+}
+.price :last-child
+{
+    font-size: 0.24rem;
+}
+.belongto
+{
+    font-size: 0.24rem;
+    color: #8b8b8b;
+    line-height: 0.3rem;
+    margin-top: 0rem;
+}
+.footer .count {
+    flex: 3;
+    color: #939393;
+    font-size: .3rem;
+    text-align: right;
+    margin-right: 0.2rem;
+}
+
+.footer .count :first-child {
+    background: white;
+    color: #0D0D0D;
+
+}
+.footer .count :last-child {
+    background: white;
+    color: #fa7a07;
+}
+
+.footer .submit {
+    flex: 1
+}

@@ -1,0 +1,30 @@
+{
+    "respCode": "200",
+    "operDesc": "响应成功",
+    "data": [{
+        "ordernum": "1234",
+        "orderstate": "退货",
+        "name": "Huawei/华为 P20 Pro 全面屏正品 ",
+        "productdec": "颜色：渐变樱粉金 存储容量：128G",
+        "Price": "¥ 4988.00",
+        "time": "05-09 15:30",
+        "num": "1",
+        "img": "../static/common/images/collect_05.png ",
+        "step01": "待用户确认 ",
+        "step011": "您的服务单1234567890财务已退款，请您注意查收！",
+        "step02": "待用户确认  ",
+        "step022": "下一阶段：退单完成"
+    }, {
+        "ordernum": "888880",
+        "orderstate": "退货",
+        "name": "Huawei/华为 P20 Pro 全面屏正品 ",
+        "productdec": "颜色：渐变樱粉金 存储容量：128G",
+        "Price": "¥ 4988.00",
+        "time": "05-09 15:30",
+        "img": "../static/common/images/collect_05.png ",
+        "step01": "待用户确认 ",
+        "step011": "您的服务单1234567890财务已退款，请您注意查收！",
+        "step02": "待用户确认  ",
+        "step022": "下一阶段：退单完成"
+    }]
+}

@@ -1,0 +1,16 @@
+{
+    "respCode":"200",
+    "operDesc":"响应成功",
+    "data": {
+        "storeId": "01",
+        "productList": [
+            {
+                "productId": "001",
+                "imgUrl": "../static/common/images/img_01.png"
+            }, {
+                "productId": "002",
+                "imgUrl": "../static/common/images/img_02.png"
+            }
+        ]
+    }
+}

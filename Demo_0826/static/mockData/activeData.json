@@ -1,0 +1,57 @@
+{
+  "code": 0,
+  "msg": "",
+  "count": 30,
+  "data": [
+    {
+      "activeCode": "TJHQY14252",
+      "activeName": "春节大促满减",
+      "activeType": "直减-满额立减",
+      "channel":"线上",
+      "store":"南马路店",
+      "status": "未开始",
+      "startTime": "2018-2-14   11:50:00",
+      "endTime": "2018-3-14   11:50:00"
+    },
+    {
+      "activeCode": "TJHQY14252",
+      "activeName": "春节大促满减",
+      "activeType": "直减-满额立减",
+      "channel":"线上",
+      "store":"南马路店",
+      "status": "未开始",
+      "startTime": "2018-2-14   11:50:00",
+      "endTime": "2018-3-14   11:50:00"
+    },
+    {
+      "activeCode": "TJHQY14252",
+      "activeName": "春节大促满减",
+      "activeType": "直减-满额立减",
+      "channel":"线上",
+      "store":"南马路店",
+      "status": "未开始",
+      "startTime": "2018-2-14   11:50:00",
+      "endTime": "2018-3-14   11:50:00"
+    },
+    {
+      "activeCode": "TJHQY14252",
+      "activeName": "春节大促满减",
+      "activeType": "直减-满额立减",
+      "channel":"线上",
+      "store":"南马路店",
+      "status": "未开始",
+      "startTime": "2018-2-14   11:50:00",
+      "endTime": "2018-3-14   11:50:00"
+    },
+    {
+      "activeCode": "TJHQY14252",
+      "activeName": "春节大促满减",
+      "activeType": "直减-满额立减",
+      "channel":"线上",
+      "store":"南马路店",
+      "status": "未开始",
+      "startTime": "2018-2-14   11:50:00",
+      "endTime": "2018-3-14   11:50:00"
+    }
+  ]
+}

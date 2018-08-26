@@ -1,0 +1,15 @@
+.mybox {
+    padding-top: 0px
+}
+
+.myselfBody {
+    top: .9rem;
+    position: absolute;
+}
+
+.myRwrite {
+    font-size: .5rem;
+    color: #fff;
+    margin-left: .1rem;
+    margin-bottom: .1rem;
+}

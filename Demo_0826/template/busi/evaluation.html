@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>商品评价模块</title>
+    <link rel="stylesheet" href="../../static/third/layui/css/layui.css">
+    <link rel="stylesheet" href="../../static/common/font/iconfont.css">
+    <link rel="stylesheet" href="../../static/common/css/common.css">
+    <link rel="stylesheet" href="../../static/common/css/commodityDetail.css">
+
+</head>
+
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+    <div class="layui-header">
+        <i class="iconfont icon-logo"></i>
+        <div class="logo-text">
+            <div class="logo-text-CHI">中国联通新零售运营平台</div>
+            <div class="logo-text-ENG">CHINA UNICOM NEW RETAIL OPERATION</div>
+        </div>
+        <ul class="layui-nav layui-layout-right">
+            <li class="head-search">
+                <div>
+                    <i class="iconfont icon-search"></i>
+                    <input type="text" class="layui-input" placeholder="智能搜索" />
+                </div>
+            </li>
+            <li class="layui-nav-item">
+                <a href="javascript:;">
+                    <img src="http://t.cn/RCzsdCq" class="layui-nav-img"> 贤心
+                </a>
+                <dl class="layui-nav-child">
+                    <dd>
+                        <a href="">基本资料</a>
+                    </dd>
+                    <dd>
+                        <a href="">安全设置</a>
+                    </dd>
+                </dl>
+            </li>
+            <i class="iconfont icon-message"></i>
+            <i class="iconfont icon-book"></i>
+            <!-- <li class="layui-nav-item"><a href="">退了</a></li> -->
+        </ul>
+    </div>
+
+    <div class="layui-side layui-bg-black">
+        <div class="layui-side-scroll">
+            <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+            <ul class="layui-nav layui-nav-tree">
+                <li class="layui-nav-item">
+                    <a class="" href="javascript:;">
+                        <i class="iconfont icon-home"></i>首页</a>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="javascript:;">
+                        <i class="iconfont icon-channelQuery"></i>渠道查询</a>
+                    <dl class="layui-nav-child">
+                        <dd>
+                            <a href="javascript:;">渠道商品查询</a>
+                        </dd>
+                    </dl>
+                </li>
+                <li class="layui-nav-item layui-nav-itemed">
+                    <a href="">
+                        <i class="iconfont icon-store"></i>店铺管理</a>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="">
+                        <i class="iconfont icon-orderQuery"></i>订单查询</a>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="">
+                        <i class="iconfont icon-stock"></i>库存查询</a>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="">
+                        <i class="iconfont icon-commissions"></i>佣金查询</a>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="">
+                        <i class="iconfont icon-maintain"></i>佣金任务维护</a>
+                </li>
+                <li class="layui-nav-item">
+                    <a href="">
+                        <i class="iconfont icon-test"></i>清算测试</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="layui-body">
+        <div class="block-wrapper">
+            <div class="layui-tab layui-tab-brief" lay-filter="">
+                <ul class="layui-tab-title">
+                    <li>规格参数</li>
+                    <li class="layui-this">买家评价（200+）</li>
+                </ul>
+                <div class="layui-tab-content">
+                    <div class="layui-tab-item">规格参数的内容待完成。。。。。</div>
+                    <div class="layui-tab-item layui-show">
+                        <div class="evaluation-types">
+                            <div class="evaluation-type active">好评(162)</div>
+                            <div class="evaluation-type">中评(15)</div>
+                            <div class="evaluation-type">差评(共5条，新增1条)</div>
+                            <div class="evaluation-type">追评(0)</div>
+                        </div>
+                        <div>
+                            <div>
+                                <div class="evaluation-each">
+                                    <div class="evaluation-buyer">
+                                        <div class="evaluation-buyer-in">
+                                            <img src="http://t.cn/RCzsdCq" class="evaluation-buyer-img" />
+                                            <div class="evaluation-buyer-name">规**数</div>
+                                            <div class="evaluation-buyer-level">1级会员</div>
+                                        </div>
+                                    </div>
+                                    <div class="evaluation-part">
+                                        <div class="evaluation-commodity">表系列：【4G版 esim卡】WATCH 2 Pro 钛银灰</div>
+                                        <div>第一次购买因为相信华为众多的好评，也相信国产会越来越好。用了一下才评论感觉很好。赞支持国产。过些时间使用体验再追加</div>
+                                    </div>
+                                    <div class="evaluation-processes">
+                                        <div class="evaluation-process">查看订单</div>
+                                        <div class="evaluation-process">设为优质点评</div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="evaluation-each">
+                                    <div class="evaluation-buyer">
+                                        <div class="evaluation-buyer-in">
+                                            <img src="http://t.cn/RCzsdCq" class="evaluation-buyer-img" />
+                                            <div class="evaluation-buyer-name">c**k</div>
+                                            <div class="evaluation-buyer-level">4级会员</div>
+                                        </div>
+                                    </div>
+                                    <div class="evaluation-part">
+                                        <div class="evaluation-commodity">表系列：【4G版 esim卡】WATCH 2 Pro 钛银灰</div>
+                                        <div>外观和配置：作为上一代华为watch的用户，一开箱就感觉到了这次新产品的不同：高通骁龙四核处理器，内置768M RAM和4GB存储空间，Android Wear 2.0操作系统等等配置上的升级是肯定的，但是最大的亮点是它在这个智能手表同质化的时代，用运动风带来一股清流，双表冠设计，加入陶瓷表圈，表圈上印有时间刻度，搭配带有运动元素的表盘，主打运动的新一代产品，我想肯定会捕获很多年轻用户躁动的心！</div>
+                                        <div class="evaluation-images">
+                                            <img src="../../static/images/commodity/01.jpg" />
+                                            <img src="../../static/images/commodity/02.jpg" />
+                                            <img src="../../static/images/commodity/03.jpg" />
+                                        </div>
+                                    </div>
+                                    <div class="evaluation-processes">
+                                        <div class="evaluation-process">查看订单</div>
+                                        <div class="evaluation-process">设为优质点评</div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="evaluation-each">
+                                    <div class="evaluation-buyer">
+                                        <div class="evaluation-buyer-in">
+                                            <img src="http://t.cn/RCzsdCq" class="evaluation-buyer-img" />
+                                            <div class="evaluation-buyer-name">规**数</div>
+                                            <div class="evaluation-buyer-level">1级会员</div>
+                                        </div>
+                                    </div>
+                                    <div class="evaluation-part">
+                                        <div class="evaluation-commodity">表系列：【4G版 esim卡】WATCH 2 Pro 钛银灰</div>
+                                        <div>第一次购买因为相信华为众多的好评，也相信国产会越来越好。用了一下才评论感觉很好。赞支持国产。过些时间使用体验再追加</div>
+                                    </div>
+                                    <div class="evaluation-processes">
+                                        <div class="evaluation-process">查看订单</div>
+                                        <div class="evaluation-process">设为优质点评</div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="evaluation-each">
+                                    <div class="evaluation-buyer">
+                                        <div class="evaluation-buyer-in">
+                                            <img src="http://t.cn/RCzsdCq" class="evaluation-buyer-img" />
+                                            <div class="evaluation-buyer-name">c**k</div>
+                                            <div class="evaluation-buyer-level">4级会员</div>
+                                        </div>
+                                    </div>
+                                    <div class="evaluation-part">
+                                        <div class="evaluation-commodity">表系列：【4G版 esim卡】WATCH 2 Pro 钛银灰</div>
+                                        <div class="evaluation-images">
+                                            <img src="../../static/images/commodity/01.jpg" />
+                                            <img src="../../static/images/commodity/02.jpg" />
+                                            <img src="../../static/images/commodity/03.jpg" />
+                                        </div>
+                                    </div>
+                                    <div class="evaluation-processes">
+                                        <div class="evaluation-process">查看订单</div>
+                                        <div class="evaluation-process">设为优质点评</div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                                <div class="evaluation-each">
+                                    <div class="evaluation-buyer">
+                                        <div class="evaluation-buyer-in">
+                                            <img src="http://t.cn/RCzsdCq" class="evaluation-buyer-img" />
+                                            <div class="evaluation-buyer-name">规**数</div>
+                                            <div class="evaluation-buyer-level">1级会员</div>
+                                        </div>
+                                    </div>
+                                    <div class="evaluation-part">
+                                        <div class="evaluation-commodity">表系列：【4G版 esim卡】WATCH 2 Pro 钛银灰</div>
+                                        <div>第一次购买因为相信华为众多的好评，也相信国产会越来越好。用了一下才评论感觉很好。赞支持国产。过些时间使用体验再追加</div>
+                                    </div>
+                                    <div class="evaluation-processes">
+                                        <div class="evaluation-process">查看订单</div>
+                                        <div class="evaluation-process">设为优质点评</div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                </div>
+                            </div>
+                            <div class="page-wrap" id="page"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../../static/third/layui/layui.js"></script>
+<script>
+    layui.config({
+        base: '../../static/busi/' //你存放新模块的目录，注意，不是layui的模块目录
+    }).use('evaluation'); //加载入口
+</script>
+</body>
+
+</html>

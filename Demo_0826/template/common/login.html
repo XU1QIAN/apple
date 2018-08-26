@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>登录</title>
+  <link rel="stylesheet" href="../../static/third/layui/css/layui.css">
+  <link rel="stylesheet" href="../../static/common/font/iconfont.css">
+  <link rel="stylesheet" href="../../static/common/css/common.css">
+  <link rel="stylesheet" href="../../static/common/css/login.css">
+
+</head>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+  <div class="layui-header">
+    <i class="iconfont icon-logo"></i>
+    <div class="logo-text">
+      <div class="logo-text-CHI">中国联通新零售运营平台</div>
+      <div class="logo-text-ENG">CHINA UNICOM NEW RETAIL OPERATION</div>
+    </div>
+  </div>
+  
+  <div class="layui-body layui-body2">
+    <div class="wrapper">
+      <div class="page-content">
+        <div class="login-area">
+          <div id="QRcode"></div>
+          <div class="bold font18">用户登录</div>
+          <div class="layui-form mt20">
+            <div class="layui-row layui-col-space15">
+              <div class="layui-col-sm12 wechat-login">
+                <div class="layui-form-item layui-form-item_vertical">
+                  <div class="layui-input-block layui-input-other">
+                    <div class="icon">
+                      <i class="iconfont icon-personal"></i>
+                    </div>
+                    <input type="text" placeholder="手机号码" class="layui-input">
+                  </div>
+                </div>
+              </div>
+              <div class="layui-col-sm6 jobNo-login">
+                <div class="layui-form-item layui-form-item_vertical">
+                  <div class="layui-input-block layui-input-other">
+                    <div class="icon">
+                      <i class="iconfont icon-personal"></i>
+                    </div>
+                    <input type="text" placeholder="工号" class="layui-input">
+                  </div>
+                </div>
+              </div>
+              <div class="layui-col-sm6 jobNo-login">
+                <div class="layui-form-item layui-form-item_vertical">
+                  <div class="layui-input-block layui-input-other">
+                    <select name="interest" lay-filter="">
+                      <option>选择省份</option>
+                      <option value="0">江苏</option>
+                      <option value="1">浙江</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="layui-col-sm12">
+                <div class="layui-form-item layui-form-item_vertical">
+                  <div class="layui-input-block layui-input-other">
+                    <div class="icon">
+                      <i class="iconfont icon-mima"></i>
+                    </div>
+                    <input type="text" placeholder="请输入您的密码" class="layui-input">
+                  </div>
+                </div>
+              </div>
+              <div class="layui-col-sm6">
+                <div class="layui-form-item layui-form-item_vertical">
+                  <div class="layui-input-block layui-input-other">
+                    <input type="checkbox" lay-skin="primary" title="记住密码">
+                  </div>
+                </div>
+              </div>
+              <div class="layui-col-sm6">
+                <div class="layui-form-item layui-form-item_vertical">
+                  <div class="layui-input-block layui-input-other" id="forget-password">忘记密码</div>
+                </div>
+              </div>
+              <div class="layui-col-sm12">
+                <button class="layui-btn layui-btn-sure">登录</button>
+              </div>
+            </div>
+          </div>
+          <div class="way-select">
+            <a class="login-way" id="wechat">
+              <i class="iconfont icon-weixin"></i>
+              <span>微信</span>
+            </a>
+            <a class="login-way" id="jobNo">
+              <i class="iconfont icon-logo mr5"></i>
+              <span>工号</span>
+            </a>
+            <a id="other-way">
+              <span>其他登录方式&gt;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="layui-footer">
+    Copyright©-2018  中国联通  版权所有<br />
+    中华人民共和国增值电信业务经营许可证 经营许可证编号：A2.B1.B2-20090003 
+  </div>
+</div>
+<script src="../../static/third/layui/layui.js"></script>
+<script>
+layui.config({
+    base: '../../static/busi/' //你存放新模块的目录，注意，不是layui的模块目录
+}).use('login'); //加载入口
+</script>
+</body>
+</html>

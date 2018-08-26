@@ -1,0 +1,24 @@
+{
+    "respCode":"200",
+    "operDesc":"响应成功",
+    "data":
+    {
+        "date_info":{
+            "days":[
+              {"default":true,"id":"1","value":"今天","times":[
+                {"period":"8:00 ~ 10:00","desc":"免费安装","default":true},
+                {"period":"10:00 ~ 12:00","desc":"免费安装","default":false},
+                {"period":"12:00 ~ 14:00","desc":"免费安装","default":false},
+                {"period":"14:00 ~ 16:00","desc":"免费安装","default":false}
+              ]},
+              {"default":false,"id":"2","value":"明天","times":[
+                {"period":"10:00 ~ 12:00","desc":"免费安装","default":true},
+                {"period":"12:00 ~ 14:00","desc":"免费安装","default":false},
+                {"period":"14:00 ~ 16:00","desc":"免费安装","default":false},
+                {"period":"16:00 ~ 18:00","desc":"免费安装","default":false}
+              ]}
+            ],
+            "pickupTime": "8:00 - 20:00"
+        }
+    }
+  }

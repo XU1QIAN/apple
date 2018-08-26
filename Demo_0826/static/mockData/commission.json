@@ -1,0 +1,59 @@
+{
+  "code": 0,
+  "msg": "",
+  "count": 3000000,
+  "data": [
+    {
+      "id": "10001",
+      "storeName": "张晓明的手机商城",
+      "storeType": "微店级店铺",
+      "channel": "南京路营业厅",
+      "dianzhang": "张晓明",
+      "xse": "5,090",
+      "dpyj": "5,090",
+      "nryj": "5,090",
+      "jszq": "2018-03"
+    },
+    {
+      "id": "10001",
+      "storeName": "张晓明的手机商城",
+      "storeType": "微店级店铺",
+      "channel": "南京路营业厅",
+      "dianzhang": "张晓明",
+      "xse": "5,090",
+      "dpyj": "5,090",
+      "nryj": "5,090",
+      "jszq": "2018-03"
+    },{
+      "id": "10001",
+      "storeName": "张晓明的手机商城",
+      "storeType": "微店级店铺",
+      "channel": "南京路营业厅",
+      "dianzhang": "张晓明",
+      "xse": "5,090",
+      "dpyj": "5,090",
+      "nryj": "5,090",
+      "jszq": "2018-03"
+    },{
+      "id": "10001",
+      "storeName": "张晓明的手机商城",
+      "storeType": "微店级店铺",
+      "channel": "南京路营业厅",
+      "dianzhang": "张晓明",
+      "xse": "5,090",
+      "dpyj": "5,090",
+      "nryj": "5,090",
+      "jszq": "2018-03"
+    },{
+      "id": "10001",
+      "storeName": "张晓明的手机商城",
+      "storeType": "微店级店铺",
+      "channel": "南京路营业厅",
+      "dianzhang": "张晓明",
+      "xse": "5,090",
+      "dpyj": "5,090",
+      "nryj": "5,090",
+      "jszq": "2018-03"
+    }
+  ]
+}

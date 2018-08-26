@@ -1,0 +1,42 @@
+{
+  "code": 0,
+  "msg": "",
+  "count": 3000000,
+  "data": [
+    {
+      "productInfo": "10001",
+      "specification": "Kindle 电子书阅读",
+      "brand": "a",
+      "quantity": "555",
+      "price": "4567898",
+      "date": "200",
+      "store": "30"
+    },
+    {
+      "productInfo": "10001",
+      "specification": "Kindle 电子书阅读",
+      "brand": "a",
+      "quantity": "1231",
+      "price": "4567898",
+      "date": "600",
+      "store": "210"
+    },{
+      "productInfo": "10001",
+      "specification": "Kindle 电子书阅读",
+      "brand": "a",
+      "quantity": "1231",
+      "price": "4567898",
+      "date": "900",
+      "store": "410"
+    }
+  ,{
+      "productInfo": "10001",
+      "specification": "Kindle 电子书阅读",
+      "brand": "a",
+      "quantity": "321",
+      "price": "4567898",
+      "date": "300",
+      "store": "1022"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+    "respCode": "200",
+    "operDesc": "响应成功",
+    "data": {
+        "address": "北京市大兴区",
+        "hostname": "123456",
+        "identifyNum": "320621199905500",
+        "telNum": "123331"
+
+    }
+}

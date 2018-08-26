@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <title>选择挂靠微店成功</title>
+  <link rel="stylesheet" href="../../../static/third/layui/css/layui.css">
+  <link rel="stylesheet" href="../../../static/common/font/iconfont.css">
+  <link rel="stylesheet" href="../../../static/common/css/common.css">
+  <link rel="stylesheet" href="../../../static/common/css/register.css">
+
+</head>
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+  <div class="layui-header">
+    <i class="iconfont icon-logo"></i>
+    <div class="logo-text">
+      <div class="logo-text-CHI">中国联通新零售运营平台</div>
+      <div class="logo-text-ENG">CHINA UNICOM NEW RETAIL OPERATION</div>
+    </div>
+  </div>
+  
+  <div class="layui-body layui-body2">
+    <div class="wrapper">
+      <div class="page-content">
+          <div  class="layui-layer-content">
+            <div class="pocDialog">
+              <span class="examineIcon icon iconfont icon-pass"></span>
+              <p class="tipBig bold">提交完成</p>
+              <p class="gray mt15 mb10">您的个人信息已提交系统，2小时左右后请查看审核结果！</p>
+              <div class="btn-area mt20">
+                <a href="javascript:history.go(-1);" class="layui-btn layui-btn-back">上一步</a>
+                <button class="layui-btn layui-btn-sure" onclick="closewin();">完成</button>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="layui-footer">
+    Copyright©-2018  中国联通  版权所有<br />
+    中华人民共和国增值电信业务经营许可证 经营许可证编号：A2.B1.B2-20090003 
+  </div>
+</div>
+</body>
+<script type="text/javascript">
+function closewin(){
+    if (navigator.userAgent.indexOf("Firefox") != -1 || navigator.userAgent.indexOf("Chrome") !=-1) {
+        window.location.href="about:blank";
+        window.close();
+    } else {
+        window.opener = null;
+        window.open("", "_self");
+        window.close();
+    }
+}
+</script>
+</html>

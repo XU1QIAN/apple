@@ -1,0 +1,13 @@
+{
+    "respCode": "200",
+    "operDesc": "响应成功",
+    "data": [{
+        "name": "Huawei/华为 P20 Pro 全面屏正品 手机",
+        "funs": "27.3万人关注",
+        "img": "../static/common/images/collect_05.png  "
+    }, {
+        "name": "Huawei/华为 P20 Pro 全面屏正品 手机",
+        "funs": "27.3万人关注",
+        "img": "../static/common/images/collect_05.png "
+    }]
+}

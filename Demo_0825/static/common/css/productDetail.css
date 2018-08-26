@@ -1,0 +1,153 @@
+.pro-name {
+    color: #3e3e3e;
+    font-size: 0.3rem;
+    line-height: 0.45rem;
+    padding: 0 0.24rem;
+    margin-top: 0.6rem;
+}
+
+.pro-price-cut {
+    font-size: 0.36rem;
+    color: #fa7f07;
+}
+
+.pro-price {
+    margin-top: 0.3rem;
+    padding: 0 0.24rem;
+}
+
+.pro-price-defult {
+    color: #b8b8a9;
+    font-size: 0.28rem;
+    margin-left: 0.2rem;
+    text-decoration: line-through
+}
+
+.pro-num {
+    color: #b8b8a9;
+    font-size: 0.28rem;
+    margin-left: 0.2rem;
+}
+
+
+/* 规格 */
+
+.g-ul {
+    display: block;
+    display: -webkit-box
+}
+
+.g-ul ul {
+    margin-top: 0.2rem
+}
+
+.g-ul ul li {
+    float: left;
+    font-size: 0.24rem;
+    color: #3e3e3e;
+    padding: 0 0.2rem;
+    line-height: 0.46rem;
+    margin-bottom: 0.2rem
+}
+
+.comment-row {
+    display: flex
+}
+
+.comment-user {
+    margin-right: .2rem;
+}
+
+.comment-user img {
+    width: .82rem;
+    height: .82rem;
+}
+
+.comment-detail {
+    flex: 5
+}
+
+.comment-row {
+    margin-top: .2rem;
+    margin-bottom: .6rem;
+}
+
+.comment-detail-user {
+    color: #939393;
+    font-size: .28rem;
+    margin-bottom: .2rem
+}
+
+.comment-detail-dec {
+    font-size: .26rem;
+    color: #3e3e3e;
+    line-height: .4rem
+}
+
+.comment-detail-ul li {
+    float: left;
+    margin-right: .2rem;
+    margin-bottom: .2rem
+}
+
+.comment-detail-ul li img {
+    width: 1.2rem;
+    height: 1.16rem;
+}
+
+.product-detail img {
+    width: 100%
+}
+
+.weui-cells {
+    display: none
+}
+
+.gUl li.active {
+    border: 1px solid #fa7a07;
+}
+
+.g-ul ul li {
+    position: relative;
+    border: 1px solid #fff;
+}
+
+.g-ul ul li i {
+    right: 0;
+    bottom: -4px;
+    position: absolute;
+    color: #fa7a07
+}
+
+.parabox .weui-cells:first-child {
+    display: block
+}
+
+.shopping .active {
+    background: #fa7a07 !important;
+    color: #fff;
+}
+
+.paratext {
+    font-size: 0.24rem;
+    color: #3e3e3e;
+}
+
+#productDetail {
+    position: relative;
+}
+
+#productDetail .icon-gouwuche {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    background: #292929;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    opacity: 0.3;
+    border-radius: 50%;
+    z-index: 99;
+    color: #fff;
+}

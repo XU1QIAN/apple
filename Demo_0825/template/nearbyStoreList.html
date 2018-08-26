@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>附近门店</title>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <link rel="stylesheet" href="../static/common/iconfont/iconfont.css">
+    <link rel="stylesheet" href="../static/third/weui/lib/weui.min.css">
+    <link rel="stylesheet" href="../static/third/weui/css/jquery-weui.min.css">
+    <link rel="stylesheet" href="../static/common/css/swiper-3.2.5.min.css">
+    <link rel="stylesheet" href="../static/common/css/public.css">
+    <link rel="stylesheet" href="../static/common/css/common.css">
+    <link rel="stylesheet" href="../static/common/css/nearbyStore.css">
+</head>
+
+<body ontouchstart>
+    <header class="header">
+        <div class="header-button is-left">
+            <a href="javascript:history.go(-1);" class="router-link-active">
+                <button class="mint-button mint-button--default mint-button--normal">
+                    <span class="mint-button-icon">
+                        <i class="icon iconfont icon-fanhui color-black "></i>
+                    </span> 
+                    <label class="mint-button-text"></label>
+                </button>
+            </a>
+        </div>
+        <h1 class="header-title">附近门店</h1>
+        <div class="header-button is-right"></div>
+    </header>
+
+    <!-- 服务列表 -->
+    <div class="store-list weui-panel__bd" id="nearbyStoreList" v-cloak>
+        <div class="weui-media-box weui-media-box_text" v-for="store in storeList">
+            <h4 class="weui-media-box__title">{{store.storeName}}<span>{{store.distance}}m</span></h4>
+            <p class="weui-media-box__desc">{{store.address}}</p>
+            <a :href="'#?id='+store.storeId" class="go-there">到这儿去</a>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div class="footer">
+        <a href="nearbyStore.html" class="weui-btn btn01">返回地图模式</a>
+    </div>
+
+</body>
+<script src="../static/third/weui/lib/jquery-2.1.4.js"></script>
+<script src="../static/third/weui/js/swiper.js"></script>
+<script src="../static/third/vue.min.js"></script>
+<script src="../static/third/axios.min.js"></script>
+<script src="../static/common/js/main.js"></script>
+<script src="../static/busi/nearbyStoreList.js"></script>
+</html>
+
+
+

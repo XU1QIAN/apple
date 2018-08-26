@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>商品分类</title>
+    <link rel="stylesheet" href="../../static/third/layui/css/layui.css">
+    <link rel="stylesheet" href="../../static/common/font/iconfont.css">
+    <link rel="stylesheet" href="../../static/common/css/common.css">
+    <link rel="stylesheet" href="../../static/common/css/table.css">
+    <link rel="stylesheet" href="../../static/common/css/store.css">
+</head>
+
+<body class="layui-layout-body">
+<div class="layui-layout layui-layout-admin">
+    <div class="layui-header">
+        <i class="iconfont icon-logo"></i>
+        <div class="logo-text">
+            <div class="logo-text-CHI">中国联通新零售运营平台</div>
+            <div class="logo-text-ENG">CHINA UNICOM NEW RETAIL OPERATION</div>
+        </div>
+        <ul class="layui-nav layui-layout-right">
+            <li class="head-search">
+                <div>
+                    <i class="iconfont icon-search"></i>
+                    <input type="text" class="layui-input" placeholder="智能搜索" />
+                </div>
+            </li>
+            <li class="layui-nav-item">
+                <a href="javascript:;">
+                    <img src="http://t.cn/RCzsdCq" class="layui-nav-img"> 贤心
+                </a>
+                <dl class="layui-nav-child">
+                    <dd>
+                        <a href="">基本资料</a>
+                    </dd>
+                    <dd>
+                        <a href="">安全设置</a>
+                    </dd>
+                </dl>
+            </li>
+            <i class="iconfont icon-message"></i>
+            <i class="iconfont icon-book"></i>
+            <!-- <li class="layui-nav-item"><a href="">退了</a></li> -->
+        </ul>
+    </div>
+
+    <div class="layui-side layui-bg-black">
+    <div class="layui-side-scroll">
+        <!-- 左侧导航区域（可配合layui已有的垂直导航） -->
+        <ul class="layui-nav layui-nav-tree"  lay-filter="test">
+            <li class="layui-nav-item"><a class="" href="javascript:;"><i class="iconfont icon-home"></i>首页</a></li>
+            <li class="layui-nav-item">
+                <a href="javascript:;"><i class="iconfont icon-sale"></i>销售</a>
+                <dl class="layui-nav-child">
+                <dd><a href="javascript:;">销售查询</a></dd>
+                </dl>
+            </li>
+            <li class="layui-nav-item"><a href=""><i class="iconfont icon-orderQuery"></i>订单</a></li>
+            <li class="layui-nav-item"><a href=""><i class="iconfont icon-store"></i>店铺</a></li>
+            <li class="layui-nav-item"><a href=""><i class="iconfont icon-commissions"></i>佣金</a></li>
+        </ul>
+    </div>
+    </div>
+
+    <div class="layui-body">
+        <div class="layui-fluid">
+            <div class="decoration-tabs">
+                <div class="decoration-tab active" id="tab-storeDecoration">店铺装修</div>
+                <div class="decoration-tab" id="tab-materialCenter">素材中心</div>
+            </div>
+            <div class="main-content" id="content-storeDecoration">
+                <div class="decoration-left-tabs" style="height:500px;">
+                    <div class="decoration-left-tab"><div class="tab-text">店铺页面</div></div>
+                    <div class="decoration-left-tab active"><div class="tab-text">商品分类</div></div>
+                    <div class="decoration-left-tab"><div class="tab-text">店铺风格</div></div>
+                </div>
+                <div class="decoration-content" id="commodity-classify">
+                    <div class="block-wrapper decoration-left">
+                        <div class="bw-content">
+                            <div class="fr mt20 mr20">
+                                <button class="layui-btn layui-btn-sure" id="new-classify-btn">新建分类</button>
+                            </div>
+                            <div class="table-simple"><table class="layui-hide" id="table-classify"></table></div>
+                        </div>
+                    </div>
+                    <div class="block-wrapper decoration-right">
+                        <div class="bw-content">
+                            <!-- <iframe src="" id="" class="h5_touch" scrolling="no" frameborder="0"></iframe> -->
+                            <img src="../../static/images/touch3.png" class="h5_touch" />
+                        </div>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 新建分类弹出框 -->
+<div id="new-classify" style="display:none">
+    <div class="mt30">
+        <div class="layui-col-sm9">
+            <div class="layui-form-item layui-form-item_require mb30">
+                <label class="layui-form-label">页面名称：</label>
+                <div class="layui-input-block layui-input-other">
+                    <input type="text" id="new-page-name" class="layui-input">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../../static/third/layui/layui.js"></script>
+<script type="text/html" id="barDemo">
+    <a class="layui-btn layui-btn-primary layui-btn-xs edit-btn">编辑</a>
+    <a class="layui-btn layui-btn-primary layui-btn-xs delete-btn">删除</a>
+</script>
+<script>
+    layui.config({
+        base: '../../static/busi/' //你存放新模块的目录，注意，不是layui的模块目录
+    }).use('commodityClassify'); //加载入口
+</script>
+</body>
+
+</html>

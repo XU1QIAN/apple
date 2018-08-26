@@ -1,0 +1,114 @@
+{
+  "respCode": "200",
+  "operDesc": "响应成功",
+  "data": {
+    "swips": [
+      {
+        "src": "../static/common/images/banner03.png"
+      },
+      {
+        "src": "../static/common/images/banner03.png"
+      },
+      {
+        "src": "../static/common/images/banner03.png"
+      }
+    ],
+    "module1": {
+      "background": "../static/common/images/index01.png",
+      "title": "国际品牌",
+      "products": [
+        {
+          "title": "掌上音乐节",
+          "subtitle": "0元抢Beats X",
+          "src": "../static/common/images/index02.png",
+          "link":"productDetail.html"
+        },
+        {
+          "title": "每日特惠",
+          "subtitle": "迷你蓝牙耳机29.9元",
+          "src": "../static/common/images/index03.png",
+          "link":"productDetail.html"
+        },
+        {
+          "title": "苹果X",
+          "subtitle": "最高享24期免息",
+          "src": "../static/common/images/index04.png",
+          "link":"productDetail.html"
+        }
+      ]
+    },
+    "module2": {
+
+      "background": "../static/common/images/index05.png",
+      "title": "限时折扣",
+      "products": [
+        {
+          "title": "华为vs双立人",
+          "subtitle": "科技居家 共同出发",
+          "src": "../static/common/images/index06.png",
+          "link":"productDetail.html"
+        },
+        {
+          "title": "6GB国内流量",
+          "subtitle": "首月放送",
+          "src": "../static/common/images/index07.png",
+          "link":"productDetail.html"
+        },
+        {
+          "title": "推荐奖励",
+          "subtitle": "戳这里领取战果",
+          "src": "../static/common/images/index08.png",
+          "link":"productDetail.html"
+        }
+      ]
+    },
+    "module3": {
+      "title":"商品精选",
+      "subtitle":"DAILYBEST",
+      "products": [
+        {
+          "desc": "佳能750D单反套机数码高清相机中高端触屏翻屏...",
+          "count": "1531人付款",
+          "price": "4999.98",
+          "src":"../static/common/images/index09.png",
+          "link":"productDetail.html"
+        },
+        {
+          "desc": "苏泊尔榨汁机杯家用全自动果蔬多功能迷你学生小型...",
+          "count": "2739人付款",
+          "price": "238.57",
+          "src":"../static/common/images/index10.png",
+          "link":"productDetail.html"
+        },
+        {
+          "desc": "佳能750D单反套机数码高清相机中高端触屏翻屏...",
+          "count": "1531人付款",
+          "price": "4999.98",
+          "src":"../static/common/images/index11.png",
+          "link":"productDetail.html"
+        },
+        {
+          "desc": "苏泊尔榨汁机杯家用全自动果蔬多功能迷你学生小型...",
+          "count": "2739人付款",
+          "price": "4999.98",
+          "src":"../static/common/images/index12.png",
+          "link":"productDetail.html"
+        },
+        {
+          "desc": "苏泊尔榨汁机杯家用全自动果蔬多功能迷你学生小型...",
+          "count": "2739人付款",
+          "price": "4999.98",
+          "src":"../static/common/images/index13.png",
+          "link":"productDetail.html"
+        },
+        {
+          "desc": "苏泊尔榨汁机杯家用全自动果蔬多功能迷你学生小型...",
+          "count": "2739人付款",
+          "price": "4999.98",
+          "src":"../static/common/images/index14.png",
+          "link":"productDetail.html"
+        }
+      ]
+    }
+  }
+}

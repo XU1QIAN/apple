@@ -1,0 +1,30 @@
+body {
+    padding-bottom: 70px;
+    width: 100%;
+    overflow-x: hidden;
+    font-size: 0.28rem;
+}
+ 
+.weui-cells {
+    margin-top: 0.9rem;
+    background-color: #fff;
+}
+
+.weui-cell__bd, .weui-cell__bd .weui-input, .weui-cell__bd .weui-select {
+    text-align: right;
+    color: #888;
+    font-size: 17px;
+}
+
+.weui-cells:before {
+    border-top: none;
+} 
+
+/* 编辑信息 */
+.login-btn-wrap {
+    margin: 20px 15px;
+}
+
+.weui-cell__bd .weui-select {
+    width: auto;
+}

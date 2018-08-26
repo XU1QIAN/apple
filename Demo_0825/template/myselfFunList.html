@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>我的</title>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <link rel="stylesheet" href="../static/common/iconfont/iconfont.css">
+    <link rel="stylesheet" href="../static//third/weui/lib/weui.min.css">
+    <link rel="stylesheet" href="../static/third/weui/css/jquery-weui.min.css">
+    <link rel="stylesheet" href="../static/common/css/public.css">
+    <link rel="stylesheet" href="../static/common/css/common.css">
+    <link rel="stylesheet" href="../static/common/css/myselfFunList.css">
+</head>
+
+<body ontouchstart>
+    <header class="header">
+        <div class="header-button is-left">
+            <a href="javascript:history.go(-1);" class="router-link-active">
+                <button class="mint-button mint-button--default mint-button--normal">
+                  <span class="mint-button-icon">
+                      <i class="icon iconfont icon-fanhui color-black"></i>
+
+                  </span>
+                <label class="mint-button-text"></label>
+            </button>
+            </a>
+        </div>
+        <h1 class="header-title">我的联通会员</h1>
+        <div class="header-button is-right"></div>
+    </header>
+
+    <div id="myselfFunList">
+        <div class="model box">
+
+            <div class=" weui-cells bg-myself">
+
+                <img class="user_bg" :src="user_bg">
+                <img class="user_img" :src="user_img">
+                <span id="name">{{user_name}}</span>
+
+            </div>
+            <div class="weui-cells">
+                <a class="weui-cell weui-cell_access" :href="my_order.link">
+                    <div class="weui-cell__bd">
+
+                        <p class="item"><i class="icon iconfont icon-wodedingdan wodedingdan"></i>{{my_order.title}}</p>
+                    </div>
+                    <div class="radius">{{orders}}</div>
+                    <div class="weui-cell__ft">
+                    </div>
+                </a>
+                <a class="weui-cell weui-cell_access" :href="order_return.link">
+                    <div class="weui-cell__bd">
+                        <p class="item"> <i class="icon iconfont icon-ccgl-tuihuoyugao-2 tuihuoyugao"></i>{{order_return.title}}</p>
+                    </div>
+                    <div class="radius">{{returns}}</div>
+                    <div class="weui-cell__ft">
+                    </div>
+                </a>
+                <a class="weui-cell weui-cell_access" :href="my_collection.link">
+                    <div class="weui-cell__bd">
+                        <p class="item"><i class="icon iconfont icon-shoucang shoucang"></i>{{my_collection.title}}</p>
+                    </div>
+                    <div class="radius">{{collections}}</div>
+                    <div class="weui-cell__ft">
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="model box">
+
+            <div class="weui-cells">
+                <a class="weui-cell weui-cell_access" :href="personal_info.link">
+                    <div class="weui-cell__bd">
+
+                        <p class="item"><i class="icon iconfont icon-laodongzhegerenxinxiqia  laodongzhegerenxinxiqia"></i>{{personal_info.title}}</p>
+                    </div>
+                    <div class="weui-cell__ft">
+                    </div>
+                </a>
+                <a class="weui-cell weui-cell_access" :href="address_manage.link">
+                    <div class="weui-cell__bd">
+                        <p class="item"><i class="icon iconfont icon-shouhuodizhi shouhuodizhi "></i>{{address_manage.title}}</p>
+                    </div>
+                    <div class="weui-cell__ft">
+                    </div>
+                </a>
+                <a class="weui-cell weui-cell_access" :href="ticket_manage.link">
+                    <div class="weui-cell__bd">
+                        <p class="item"><i class="icon iconfont icon-fapiao- fapiao"></i>{{ticket_manage.title}}</p>
+                    </div>
+                    <div class="weui-cell__ft">
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="model box pb2">
+
+            <div class="weui-cells">
+                <a class="weui-cell weui-cell_access" :href="capable_man_apply.link">
+                    <div class="weui-cell__bd">
+
+                        <p class="item"><i class="icon iconfont icon-wode wode"></i>{{capable_man_apply.title}}</p>
+                    </div>
+                    <div class="weui-cell__ft">
+                    </div>
+                </a>
+                <a class="weui-cell weui-cell_access" :href="account_binding.link">
+                    <div class="weui-cell__bd">
+                        <p class="item"><i class="icon iconfont icon-shuaxin1 shuaxin1"></i>{{account_binding.title}}</p>
+                    </div>
+                    <div class="weui-cell__ft">
+                    </div>
+                </a>
+                <a class="weui-cell weui-cell_access" :href="payfee.link">
+                    <div class="weui-cell__bd">
+                        <p class="item"><i class="icon iconfont icon-jf jf"></i>{{payfee.title}}</p>
+                    </div>
+                    <div class="weui-cell__ft">
+                    </div>
+                </a>
+                <a class="weui-cell weui-cell_access" :href="change_password.link">
+                    <div class="weui-cell__bd">
+                        <p class="item"><i class="icon iconfont icon-xiugaimima xiugaimima"></i>{{change_password.title}}</p>
+                    </div>
+                    <div class="weui-cell__ft">
+                    </div>
+                </a>
+                <a class="weui-cell weui-cell_access" :href="nearbyStore.link">
+                    <div class="weui-cell__bd">
+                        <p class="item"><i class="icon iconfont icon-mendian mendian"></i>{{nearbyStore.title}}</p>
+                    </div>
+                    <div class="weui-cell__ft">
+                    </div>
+                </a>
+                <a class="weui-cell weui-cell_access" :href="my_points.link">
+                    <div class="weui-cell__bd">
+                        <p class="item"><i class="icon iconfont icon-Icon_jifen jifen "></i>{{my_points.title}}</p>
+                    </div>
+                    <div class="weui-cell__ft">
+                    </div>
+                </a>
+                <a class="weui-cell weui-cell_access" :href="my_service.link">
+                    <div class="weui-cell__bd">
+                        <p class="item"><i class="icon iconfont icon-fuwu fuwu "></i>{{my_service.title}}</p>
+                    </div>
+                    <div class="weui-cell__ft">
+                    </div>
+                </a>
+            </div>
+        </div>
+
+
+        <!-- footer -->
+        <div class="footer">
+            <div class="footer-col">
+                <a href="index.html">
+                    <p><i class="icon iconfont icon-shouye1"></i></p>
+                    <p>首页</p>
+                </a>
+            </div>
+            <div class="footer-col">
+                <a href="product.html">
+                    <p><i class="icon iconfont icon-shop"></i></p>
+                    <p>全部商品</p>
+                </a>
+            </div>
+            <div class="footer-col">
+                <a href="shoppingCart.html">
+                    <p><i class="icon iconfont icon-gouwuche"></i></p>
+                    <p>购物车</p>
+                </a>
+            </div>
+            <div class="footer-col orange">
+                <a href="myselfFunList.html">
+                    <p><i class="icon iconfont icon-me"></i></p>
+                    <p>我的</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../static/third/weui/lib/jquery-2.1.4.js"></script>
+<script src="../static/third/vue.min.js"></script>
+<script src="../static/third/axios.min.js"></script>
+<script src="../static/busi/myselFunList.js"></script>
+
+
+
+</html>

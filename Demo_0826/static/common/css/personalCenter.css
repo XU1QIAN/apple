@@ -1,0 +1,52 @@
+.layui-body {
+    padding: 10px;
+}
+
+.content-left {
+    float: left;
+}
+
+.blue-btn, .gray {
+    margin-left: 20px;
+    font-size: 12px;
+}
+
+.content-right {
+    float: left;
+    margin-left: 5%;
+}
+
+.layui-upload img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 5px;
+    float: left;
+}
+
+.right-text {
+    float: left;
+    padding-top: 16px;
+    line-height: 24px;
+}
+
+.block-wrapper {
+	margin-top: 10px;
+	font-size: 14px;
+}
+
+#errorText {
+    padding-left: 10px;
+}
+
+.demo-reload {
+    margin-left: 10px;
+}
+
+.edit-part {
+    display: none;
+}
+
+.edit-btn.noValue {
+    display: none;
+}

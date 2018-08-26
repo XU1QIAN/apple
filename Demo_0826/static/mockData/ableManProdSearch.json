@@ -1,0 +1,36 @@
+{
+    "code": 0,
+    "msg": "",
+    "count": 30,
+    "data": [{
+            "storeName": "Apple Watch Series 3智能手表",
+            "storeCode": "69 2546198",
+            "storeParam": "粉",
+            "storePin": "苹果",
+            "storeType": "电子产品-智能手表",
+            "storePrice": "￥2399",
+            "onTime": "2018年12月31日失效",
+            "write": ""
+        },
+        {
+            "storeName": "Apple Watch Series 3智能手表",
+            "storeCode": "69 2546198",
+            "storeParam": "粉",
+            "storePin": "苹果",
+            "storeType": "电子产品-智能手表",
+            "storePrice": "￥2399",
+            "onTime": "2018年12月31日失效",
+            "write": ""
+        },
+        {
+            "storeName": "Apple Watch Series 3智能手表",
+            "storeCode": "69 2546198",
+            "storeParam": "粉",
+            "storePin": "苹果",
+            "storeType": "电子产品-智能手表",
+            "storePrice": "￥2399",
+            "onTime": "2018年12月31日失效",
+            "write": ""
+        }
+    ]
+}

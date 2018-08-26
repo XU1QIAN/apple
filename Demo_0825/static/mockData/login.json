@@ -1,0 +1,10 @@
+{
+    "respCode": "200",
+    "operDesc": "响应成功",
+    "data": {
+        "account": "001",
+        "password": "123331",
+        "tel": "18512599842"
+
+    }
+}

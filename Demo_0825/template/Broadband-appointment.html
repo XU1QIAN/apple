@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge, chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>宽带入网</title>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-touch-fullscreen">
+    <link rel="stylesheet" href="../static/common/iconfont/iconfont.css">
+    <link rel="stylesheet" href="../static/common/css/public.css">
+    <link rel="stylesheet" href="../static/common/css/common.css">
+    <link rel="stylesheet" href="../static/common/css/productDetail.css">
+    <link rel="stylesheet" href="../static/common/css/broadbandapp.css">
+    <link rel="stylesheet" href="../static/third/weui/lib/weui.min.css">
+    <link rel="stylesheet" href="../static/third/weui/css/jquery-weui.min.css">
+
+</head>
+<style>
+    html {
+        font-size: 16px !important;
+    }
+    
+    .header {
+        height: 2.1rem;
+        line-height: 2.1rem;
+    }
+    
+    .header-title {
+        font-size: 1.1rem;
+    }
+    
+    .broadbox {
+        margin-top: 1.4rem;
+    }
+    
+    .broadTcan .title {
+        font-size: 1.1rem;
+    }
+    
+    .g-ul ul li {
+        float: left;
+        font-size: .8rem;
+        color: #3e3e3e;
+        padding: 0 0.2rem;
+        line-height: 1.46rem;
+        margin-bottom: 0.6rem;
+        margin-top: .6rem;
+    }
+    
+    .footer {
+        height: 2.8rem;
+        line-height: 2.8rem;
+    }
+    
+    .picker-calendar-week-days {
+        height: 1.9rem;
+    }
+</style>
+
+<body ontouchstart>
+    <header class="header">
+        <div class="header-button is-left">
+            <a href="javascript:history.go(-1);" class="router-link-active">
+                <button class="mint-button mint-button--default mint-button--normal">
+                  <span class="mint-button-icon">
+                      <i class="icon iconfont icon-fanhui color-black"></i>
+                  </span> 
+                  <label class="mint-button-text"></label>
+                </button>
+            </a>
+        </div>
+        <h1 class="header-title">宽带预约</h1>
+        <div class="header-button is-right"></div>
+    </header>
+    <div class="model box broadbox">
+        <div class="weui-cells weui-cells_form" id="broad">
+            <div class="weui-cell">
+                <div class="weui-cell__hd"><label class="weui-label">安装地址</label></div>
+                <div class="weui-cell__bd areaLabel " id="areaLabel">
+                    <input class="weui-input input-01" type="text" name="Addr" id="Addr">
+                </div>
+                <i class="icon iconfont icon-more color-black"></i>
+            </div>
+            <div class="weui-cell">
+                <label class="weui-label">详细地址</label>
+                <!-- <span class="weui-form-preview__value">请输入详细地址</span> -->
+                <input class="weui-form-preview__value" type="text" v-model="address" placeholder="请输入详细地址" />
+            </div>
+            <!--规格 -->
+            <div class="broadTcan ">
+                <div class="title pt20">套餐</div>
+                <div class="g-ul">
+                    <ul class="gUl">
+                        <li class="active">100M宽带 1400元/年</li>
+                        <li>200M宽带 1999元/年</li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="weui-cell">
+                <div class="weui-cell__hd"><label class="weui-label">机主姓名</label></div>
+                <div class="weui-cell__bd">
+                    <input class="weui-input" type="text" pattern="[0-9]*" placeholder="请输入机主姓名" v-model="hostname">
+                </div>
+            </div>
+            <div class="weui-cell">
+                <div class="weui-cell__hd"><label class="weui-label">身份证号</label></div>
+                <div class="weui-cell__bd">
+                    <input class="weui-input" type="number" pattern="[0-9]*" placeholder="请输入身份证号" v-model="identifyNum">
+                </div>
+            </div>
+            <div class="weui-cell">
+                <div class="weui-cell__hd"><label class="weui-label">联系电话</label></div>
+                <div class="weui-cell__bd">
+                    <input class="weui-input" type="number" pattern="[0-9]*" placeholder="请输入联系电话" v-model="telNum">
+                </div>
+            </div>
+
+            <div class="weui-cell">
+                <div class="weui-cell__hd"><label for="date" class="weui-label">预约安装日期</label></div>
+                <div class="weui-cell__bd">
+                    <input class="weui-input" id="date" type="text">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="inline-calendar"></div>
+    <!-- 选择地址弹出层 -->
+    <div id="addressSelectWrapper">
+        <div id="addressSelect">
+            <div class="tip">
+                <h3>所在地区</h3>
+                <button type="button" id="cancel"></button>
+            </div>
+            <div id="address">
+                <ul class="selected-address">
+                    <li class="lastarea" id="lastprovince">请选择</li>
+                    <li class="lastarea" id="lastcity" style="display: none;">请选择</li>
+                    <li class="lastarea" id="lastarea" style="display: none;">请选择</li>
+                    <li class="lastarea" id="lasttown" style="display: none;">请选择</li>
+                </ul>
+                <div class="address-content">
+                    <ul id="province"></ul>
+                    <ul id="city" style="display: none;"></ul>
+                    <ul id="area" style="display: none;"></ul>
+                    <ul id="town" style="display: none;"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <div class="footer box-flex">
+        <div class="flex3">
+            <P> 合计金额:<span class="color-warning"> ¥1400.00</span></P>
+
+        </div>
+
+        <div class="flex2 ">
+            <p class="btn01">提交预约</p>
+        </div>
+    </div>
+</body>
+
+<script src="../static/third/weui/lib/jquery-2.1.4.js"></script>
+<script src="../static/third/weui/js/jquery-weui.js"></script>
+
+<script src="../static/third/weui/js/swiper.js"></script>
+<script src="../static/busi/productDetail.js"></script>
+<script src="../static/third/vue.min.js"></script>
+<script src="../static/third/axios.min.js"></script>
+<script src="../static/common/js/main.js"></script>
+<script src="../static/busi/city.js"></script>
+<script src="../static/busi/broadbandapp.js"></script>
+<script>
+    $("#date").calendar({
+        onChange: function(p, values, displayValues) {
+            console.log(values, displayValues);
+        }
+    });
+</script>
+
+</html>

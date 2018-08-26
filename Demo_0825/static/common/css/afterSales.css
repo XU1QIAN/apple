@@ -1,0 +1,15 @@
+.textrow .left {
+    color: #3e3e3e;
+    font-size: .28rem;
+}
+
+.textrow {
+    margin-top: .4rem
+}
+
+.textareabox {
+    text-align: right;
+    color: #999;
+    font-size: .28rem;
+    width: 100%;
+}
