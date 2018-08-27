@@ -1,5 +1,6 @@
-.top_left{    /* 左上角 */
-
+.top_left{    /* 左上角*/
+    position:absolute;
+    top:5px;
 }
 
 .top_center{   /* 上中 */
